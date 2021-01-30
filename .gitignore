@@ -1,4 +1,4 @@
 .env
 .idea
-images/uploads
+public/images/uploads
 .DS_Store
