@@ -31,6 +31,9 @@ body {
 .display-6 {
 	font-size: 120%;
 }
+.adjust-text-center {
+	text-align: right;
+}
 
 /* CARDS CSS */
 .card {
@@ -63,6 +66,11 @@ body {
 }
 
 /* Theme Colors */
+
+/* Text*/
+.text-dark { color: #101820 }
+
+/* Background colors */
 .bg-black { background-color: #101820; }
 .bg-blue { background-color: #74D1EA; }
 .bg-green { background-color: #00B388; }
@@ -71,7 +79,26 @@ body {
 .bg-orange { background-color: #FFA300; }
 .bg-glass { background-color: #ffffff59; }
 
-.text-dark { color: #101820 }
+.bg-mod1 { 
+	background-image: url("../images/modulaciones/3.png");
+	background-size: cover;
+}
+.bg-mod2 { 
+	background-image: url("../images/modulaciones/5.png");
+	background-size: contain;
+}
+.bg-mod3 { 
+	background-image: url("../images/modulaciones/4.png");
+	background-size: cover;
+}
+.bg-mod4 { 
+	background-image: url("../images/modulaciones/1.png");
+	background-size: contain;
+}
+
+/* LINKS THEME */
+a { color: #101820; }
+a:hover { color: #00B388;}
 
 /* BUTTONS */
 .dropdown-item:active {
@@ -81,6 +108,19 @@ body {
 .btn {
 	border-radius: 0%;
 }
+
+/* Inputs */
+.form-control {
+	border-radius: 0%;
+}
+
+/* Lists */
+ul.no-bullets {
+	list-style-type: none;
+}
+
+
+
 
 /* Container width SIZE*/
 @media (min-width: 1200px) {
@@ -94,5 +134,12 @@ body {
 	/*Text adjust*/
 	.adjust-mobile{
 		min-width: 100%;
+	}
+	/*Text center on mobile*/
+	.adjust-text-center {
+		text-align: center;
+	}
+	.display-3{
+		font-size: 40px;
 	}
 }
