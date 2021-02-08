@@ -1,5 +1,5 @@
 /* General Demo Style */
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
 
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body, html { font-size: 100%; padding: 0; margin: 0;}
@@ -9,24 +9,25 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 .clearfix:after { clear: both; }
 
 body {
-	font-family: 'Questrial', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	color: black;
 	background-color: white;
 }
 
-.logo {
-	width: 450px;
-}
-
 /* Underline style (Only safari and firefox) */
 .underline {
-	text-decoration-thickness: 6px;
+	text-decoration-thickness: 5px;
 	text-underline-offset: 3px;
 }
 
 /* Parragraphs */
 .lead {
-	text-align: justify;
+	text-align: left;
+	line-height: 200%;
+}
+h3 {
+	text-align: left;
+	line-height: 150%;
 }
 .display-6 {
 	font-size: 120%;
@@ -65,16 +66,23 @@ body {
 	transition:0.2s;
 }
 
+/* BIG Static img */
+.big_img {
+	max-width: 120%
+}
+
 /* Theme Colors */
 
 /* Text*/
 .text-dark { color: #101820 }
+.text-green { color: #00B388 }
 
 /* Background colors */
-.bg-black { background-color: #101820; }
+.bg-black { background-color: black; }
+.bg-gray { background-color: #303030; }
 .bg-blue { background-color: #74D1EA; }
 .bg-green { background-color: #00B388; }
-.bg-pink { background-color: #FC9BB3; } /**/
+.bg-pink { background-color: #FC9BB3; }
 .bg-red { background-color: #FF585D; }
 .bg-orange { background-color: #FFA300; }
 .bg-glass { background-color: #ffffff59; }
@@ -97,8 +105,8 @@ body {
 }
 
 /* LINKS THEME */
-a { color: #101820; }
-a:hover { color: #00B388;}
+a { color: gray; }
+a:hover { color: gray;}
 
 /* BUTTONS */
 .dropdown-item:active {
@@ -114,12 +122,30 @@ a:hover { color: #00B388;}
 	border-radius: 0%;
 }
 
-/* Lists */
-ul.no-bullets {
-	list-style-type: none;
+/* NAVBAR */
+.logo {
+	width: 450px;
 }
-
-
+.logo-footer
+{
+	width: 200px;
+}
+#navbar-logo {
+	width: 0;
+	transition: width 0.2s;
+}
+#navbar-logo.show {
+	opacity: 1 !important;
+	width: 55px !important;
+	transition: width 0.2s;
+}
+.nav-item {
+	text-decoration: none;
+}
+.nav-item:hover {
+	text-decoration: underline;
+	text-decoration-color: gray;
+}
 
 
 /* Container width SIZE*/
@@ -141,5 +167,12 @@ ul.no-bullets {
 	}
 	.display-3{
 		font-size: 40px;
+	}
+	.big_img {
+		max-width: 100%;
+		margin-left: 0;
+		padding-left: 0;
+		left: 0;
+		margin-top: 10%;
 	}
 }

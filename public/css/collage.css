@@ -1,12 +1,12 @@
 /* DESKTOP */
 
-/* First grid */
+/* Grid */
 .wrapper {
     display: grid;
     grid-gap: 15px;
-    grid-template-columns: 29% 29% 20% 20%;
-    background-color: #fff;
-    color: #444;
+    grid-template-columns: 25% 25% 24% 24%;
+    background-color: transparent;
+    color: transparent;
 }
 .box {
     background-color: transparent;
@@ -30,51 +30,26 @@
 }
 .d {
     grid-column: 3 ;
-    grid-row: 2 ;
-}
-/* Second grid */
-.wrapper2 {
-    display: grid;
-    grid-gap: 15px;
-    grid-template-columns: 26% 26% 26% 20%;
-    background-color: #fff;
-    color: #444;
+    grid-row: 2 / 4;
 }
 .e {
-    grid-column: 1;
-    grid-row: 1;
+    grid-column: 1 ;
+    grid-row: 3;
 }
 .f {
-    grid-column: 2;
-    grid-row: 1;
+    grid-column: 2 ;
+    grid-row: 3;
 }
 .g {
-    grid-column: 3;
-    grid-row: 1;
+    grid-column: 4 ;
+    grid-row: 3;
 }
-.h {
-    grid-column: 4;
-    grid-row: 1 / 3;
-}
-.i {
-    grid-column: 1;
-    grid-row: 2;
-}
-.j {
-    grid-column: 2 / 4;
-    grid-row: 2;
-}
+
+
 
 /* MOBILE */
 @media screen and (max-width: 600px) {
     .wrapper {
-        display: grid;
-        grid-gap: 15px;
-        grid-template-columns: 100%;
-        background-color: #fff;
-        color: #444;
-    }
-    .wrapper2 {
         display: grid;
         grid-gap: 15px;
         grid-template-columns: 100%;
@@ -107,19 +82,82 @@
     }
     .g {
         grid-column: 1;
-        grid-row: 6;
-    }
-    .h {
-        grid-column: 1;
         grid-row: 7;
-    }
-    .i {
-        grid-column: 1;
-        grid-row: 8;
-    }
-    .j {
-        grid-column: 1;
-        grid-row: 9;
     }
 }
 
+/* CARDS OVERLAY */
+
+/* green */
+.overlay-green .text{
+    background-color: rgba(0, 179, 136, 0.7);
+    letter-spacing: -1px;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
+    opacity: 1;
+    transition: 0.3s;
+}
+.overlay-green:hover .text{
+    background-color: rgba(0, 179, 136, 1);
+    opacity: 1;
+}
+
+
+/* red */
+.overlay-red .text{
+    background-color: rgba(255, 88, 93, 0.7);
+    letter-spacing: -1px;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
+    opacity: 1;
+    transition: 0.3s;
+}
+.overlay-red:hover .text{
+    background-color: rgba(255, 88, 93, 1);
+    opacity: 1;
+}
+
+
+/* blue */
+.overlay-blue .text{
+    background-color: rgba(116, 209, 234, 0.7);
+    letter-spacing: -1px;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
+    opacity: 1;
+    transition: 0.3s;
+}
+.overlay-blue:hover .text{
+    background-color: rgba(116, 209, 234, 1);
+    opacity: 1;
+}
+
+
+/* orange */
+.overlay-orange .text{
+    background-color: rgba(255, 163, 0, 0.7);
+    letter-spacing: -1px;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
+    opacity: 1;
+    transition: 0.3s;
+}
+.overlay-orange:hover .text{
+    background-color: rgba(255, 163, 0, 1);
+    opacity: 1;
+}
+
+
+/* pink */
+.overlay-pink .text{
+    background-color: rgba(252, 155, 179, 0.7);
+    letter-spacing: -1px;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
+    opacity: 1;
+    transition: 0.3s;
+}
+.overlay-pink:hover .text{
+    background-color: rgba(252, 155, 179, 1);
+    opacity: 1;
+}
