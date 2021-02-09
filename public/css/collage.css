@@ -91,7 +91,7 @@
 /* green */
 .overlay-green .text{
     background-color: rgba(0, 179, 136, 0.7);
-    letter-spacing: -1px;
+    letter-spacing: 0px;
     -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
     opacity: 1;
@@ -106,7 +106,7 @@
 /* red */
 .overlay-red .text{
     background-color: rgba(255, 88, 93, 0.7);
-    letter-spacing: -1px;
+    letter-spacing: 0px;
     -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
     opacity: 1;
@@ -121,7 +121,7 @@
 /* blue */
 .overlay-blue .text{
     background-color: rgba(116, 209, 234, 0.7);
-    letter-spacing: -1px;
+    letter-spacing: 0px;
     -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
     opacity: 1;
@@ -136,7 +136,7 @@
 /* orange */
 .overlay-orange .text{
     background-color: rgba(255, 163, 0, 0.7);
-    letter-spacing: -1px;
+    letter-spacing: 0px;
     -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
     opacity: 1;
@@ -151,7 +151,7 @@
 /* pink */
 .overlay-pink .text{
     background-color: rgba(252, 155, 179, 0.7);
-    letter-spacing: -1px;
+    letter-spacing: 0px;
     -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 90% 0);
     opacity: 1;
