@@ -1,4 +1,4 @@
-/* General Demo Style */
+/* General Style */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
@@ -147,6 +147,13 @@ a:hover { color: gray;}
 	text-decoration-color: gray;
 }
 
+/* ICONS */
+.icon {
+	position: relative;
+	/* Adjust these values accordingly */
+	top: -2px;
+	left: -1px;
+}
 
 /* Container width SIZE*/
 @media (min-width: 1200px) {
