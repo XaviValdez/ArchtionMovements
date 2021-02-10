@@ -1,5 +1,5 @@
 /* General Demo Style */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body, html { font-size: 100%; padding: 0; margin: 0;}
@@ -40,7 +40,7 @@ h3 {
 .card {
 	border: 0px solid transparent;
 	border-radius: 0px 0px 0px;
-	background-color: transparent;
+	background-color: white;
 }
 
 /* IMG HOVER ANIMATIONS */
