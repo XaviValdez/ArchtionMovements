@@ -1,4 +1,7 @@
 .env
 .idea
-images/uploads
+public/images/uploads
+public/images/modulaciones
+public/images/index
+public/images/acerca_de
 .DS_Store
