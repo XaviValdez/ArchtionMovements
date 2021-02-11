@@ -15,9 +15,7 @@
 
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="../css/main.css">
-
-		 <!--CSS GRIDS-->
-		<link rel="stylesheet" type="text/css" href="../css/collage.css">
+		<link rel="stylesheet" type="text/css" href="../css/pricing.css">
 
 	</head>
 	<body>
@@ -96,6 +94,59 @@
 				
 			</div>
 		</div>
+
+		<br>
+		
+		<section class="pricing py-5 mt-3 mb-5">
+			<div class="container">
+				<h1 class="display-4 text-center font-weight-bold mb-2">Beneficios</h1>
+				<br>
+			  <div class="row mt-2">
+				<!-- Free Tier -->
+				<div class="col-lg-6">
+				  <div class="card mb-5 mb-lg-0">
+					<div class="card-body">
+					  <h5 class="card-title text-muted text-uppercase text-center">Gratis</h5>
+					  <h6 class="card-price text-center">$0<span class="period">/mes</span></h6>
+					  <hr>
+					  <ul class="fa-ul">
+						<li><span class="fa-li"><i class="fas fa-check"></i></span>Acceso a las publicaciones</li>
+						<li><span class="fa-li"><i class="fas fa-check"></i></span>Otro beneficio</li>
+						<li><span class="fa-li"><i class="fas fa-check"></i></span>Este es un beneficio</li>
+						<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>No incluye</li>
+						<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Muy pocos beneficios</li>
+						<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Lorem impsum sit dolor amet</li>
+						<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Lorem impsum sit dolor amet</li>
+					  </ul>
+					  <a href="#" class="btn btn-block bg-red text-uppercase">Registrarse</a>
+					</div>
+				  </div>
+				</div>
+				<!-- Plus Tier -->
+				<div class="col-lg-6">
+				  <div class="card mb-5 mb-lg-0">
+					<div class="card-body">
+					  <h5 class="card-title text-muted text-uppercase text-center">Premium</h5>
+					  <h6 class="card-price text-center">$49<span class="period">/mes</span></h6>
+					  <hr>
+					  <ul class="fa-ul">
+						<li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Lorem impsum sit dolor amet</strong></li>
+						<li><span class="fa-li"><i class="fas fa-check"></i></span>Lorem impsum sit dolor amet</li>
+						<li><span class="fa-li"><i class="fas fa-check"></i></span>Lorem impsum sit dolor amet</li>
+						<li><span class="fa-li"><i class="fas fa-check"></i></span>Lorem impsum sit dolor amet</li>
+						<li><span class="fa-li"><i class="fas fa-check"></i></span>Lorem impsum sit dolor amet</li>
+						<li><span class="fa-li"><i class="fas fa-check"></i></span>Lorem impsum sit dolor amet</li>
+						<li><span class="fa-li"><i class="fas fa-check"></i></span>Lorem impsum sit dolor amet</li>
+					  </ul>
+					  <a href="#" class="btn btn-block bg-green text-uppercase">Registrarse</a>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</section>
+
+
 		<footer class="bg-dark text-center text-lg-start mt-3 text-white">
 			<div class="text-center p-3 bg-black">
 				<a href="index.php">

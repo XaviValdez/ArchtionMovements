@@ -177,17 +177,18 @@
 		</div>
 
 		<br>
-
-		<div class="container mt-5 mb-5">
+		
+		<div class="container mt-3 mb-5">
 			<div class="row">
-				<div class="col-sm-4 mt-5">
+				<div class="col-sm-5 mt-5">
 					<h1 class="mt-5 mr-5"><b>Mejorar el mundo a través de una arquitectura sustentable y pertinente.</b></h1>
 					<br>
-					<h3 class="text-muted mt-3 mr-5">Nuestra misión es recopilar proyectos, obras investigación y conectar personas que tengan el objetivo de mejorar una situación particular en el mundo.</h3>
+					<p class="lead mt-3 mr-5">Nuestra misión es recopilar proyectos, obras investigación y conectar personas que tengan el objetivo de mejorar una situación particular en el mundo.</p>
 				</div>
-				<div class="col-sm-8 pl-5"><img src="../images/index/index.png" class="big_img"></div>
+				<div class="col-sm-7 pl-5"><img src="../images/index/index.png" class="big_img"></div>
 			</div>
 		</div>
+
 		<footer class="bg-dark text-center text-lg-start mt-3 text-white">
 			<div class="text-center p-3 bg-black">
 				<a href="index.php">
