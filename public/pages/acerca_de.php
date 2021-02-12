@@ -1,6 +1,8 @@
 <?php include('../templates/_header.html') ?>
 <?php include('../templates/_navbar.html') ?>
 
+<link rel="stylesheet" type="text/css" href="../css/pricing.css">
+
 <div class="container mt-3">
 	<div class="row">
 		<div class="col-sm-5 mt-5">
@@ -8,12 +10,12 @@
 			<br>
 			<p class="lead mt-3 mr-5">En nuestro sitio web encontrarás proyectos, obras, investigación y eventos que cubren temas de caracter social, económico y ambiental en la práctica de la arquitectura y su construcción.</p>
 		</div>
-		<div class="col-sm-7 pl-5"><img src="../images/index/index.png" class="big_img"></div>
+		<div class="col-sm-7 pl-5"><img src="../images/acerca_de/acercade.png" class="big_img"></div>
 	</div>
 
 	<div class="row mt-0">
 		<div class="col-sm-5 mt-0">
-			<img class="img-fluid" src="https://via.placeholder.com/600x720">
+			<img class="img-fluid" src="../images/acerca_de/acercade2.png">
 		</div>
 		<div class="col-sm-7 pl-5 mt-5">
 			<br>
@@ -29,53 +31,76 @@
 
 <br>
 
-<section class="pricing py-5 mt-3 mb-5">
-	<div class="container">
-		<h1 class="display-4 text-center font-weight-bold mb-2">Beneficios</h1>
-		<br>
-		<div class="row mt-2">
-		<!-- Free Tier -->
-		<div class="col-lg-6">
-			<div class="card mb-5 mb-lg-0">
-			<div class="card-body">
-				<h5 class="card-title text-muted text-uppercase text-center">Gratis</h5>
-				<h6 class="card-price text-center">$0<span class="period">/mes</span></h6>
-				<hr>
-				<ul class="fa-ul">
-				<li><span class="fa-li"><i class="fas fa-check"></i></span>Acceso a las publicaciones</li>
-				<li><span class="fa-li"><i class="fas fa-check"></i></span>Otro beneficio</li>
-				<li><span class="fa-li"><i class="fas fa-check"></i></span>Este es un beneficio</li>
-				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>No incluye</li>
-				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Muy pocos beneficios</li>
-				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Lorem impsum sit dolor amet</li>
-				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Lorem impsum sit dolor amet</li>
-				</ul>
-				<a href="#" class="btn btn-block bg-red text-uppercase">Registrarse</a>
-			</div>
-			</div>
-		</div>
-		<!-- Plus Tier -->
-		<div class="col-lg-6">
-			<div class="card mb-5 mb-lg-0">
-			<div class="card-body">
-				<h5 class="card-title text-muted text-uppercase text-center">Premium</h5>
-				<h6 class="card-price text-center">$49<span class="period">/mes</span></h6>
-				<hr>
-				<ul class="fa-ul">
-				<li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Lorem impsum sit dolor amet</strong></li>
-				<li><span class="fa-li"><i class="fas fa-check"></i></span>Lorem impsum sit dolor amet</li>
-				<li><span class="fa-li"><i class="fas fa-check"></i></span>Lorem impsum sit dolor amet</li>
-				<li><span class="fa-li"><i class="fas fa-check"></i></span>Lorem impsum sit dolor amet</li>
-				<li><span class="fa-li"><i class="fas fa-check"></i></span>Lorem impsum sit dolor amet</li>
-				<li><span class="fa-li"><i class="fas fa-check"></i></span>Lorem impsum sit dolor amet</li>
-				<li><span class="fa-li"><i class="fas fa-check"></i></span>Lorem impsum sit dolor amet</li>
-				</ul>
-				<a href="#" class="btn btn-block bg-green text-uppercase">Registrarse</a>
-			</div>
-			</div>
-		</div>
-		</div>
-	</div>
+<section class="pricing py-5 mt-5">
+  <div class="container">
+  	<h1 class="display-4 text-center font-weight-bold mb-2">Beneficios</h1>
+	<br>
+    <div class="row">
+      <!-- Free Tier -->
+      <div class="col-lg-4">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase text-center">Free</h5>
+            <h6 class="card-price text-center">$0<span class="period">/month</span></h6>
+            <hr>
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Single User</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>5GB Storage</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Unlimited Private Projects</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Dedicated Phone Support</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+            </ul>
+            <a href="#" class="btn btn-block bg-orange text-uppercase">Registrarse</a>
+          </div>
+        </div>
+      </div>
+      <!-- Plus Tier -->
+      <div class="col-lg-4">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
+            <h6 class="card-price text-center">$9<span class="period">/month</span></h6>
+            <hr>
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>5 Users</strong></li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>50GB Storage</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Subdomain</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+            </ul>
+            <a href="#" class="btn btn-block bg-blue text-uppercase">Registrarse</a>
+          </div>
+        </div>
+      </div>
+      <!-- Pro Tier -->
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+            <h6 class="card-price text-center">$49<span class="period">/month</span></h6>
+            <hr>
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited Users</strong></li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>150GB Storage</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> Free Subdomains</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Monthly Status Reports</li>
+            </ul>
+            <a href="#" class="btn btn-block bg-red text-uppercase">Registrarse</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <?php include('../templates/_footer.html') ?>
