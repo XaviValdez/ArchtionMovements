@@ -1,9 +1,10 @@
 <?php include('../templates/_header.html') ?>
 <?php include('../templates/_navbar.html') ?>
+<link rel="stylesheet" type="text/css" href="../css/contacto.css">
 <div class="container mt-3">
 	<h1 class="display-5 font-weight-bold mt-5">Contáctanos</h1>
 	<div class="row mt-3">
-		<div class="col-sm-7 mr-5">
+		<div class="col-sm-7 mr-5 cut">
 			<div class="row">
 				<div class="col-sm-7 bg-light adjust-mobile">
 					<br>
