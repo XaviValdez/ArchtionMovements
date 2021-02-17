@@ -4,47 +4,39 @@
 <div class="container mt-4">
 
 	<!-- MENU -->
-	<div class="row mt-4 mb-4">
-		<div class="col-md-4 mt-2 adjust-text-center">
-			<h2 class="display-5 font-weight-bold">BUSCAR</h2>
+	<div class="row mt-3 mb-4">
+		<div class="col-sm-6 mt-2">
+			<form>
+			<!-- <input type="text" id="lname" name="lname" placeholder="Buscar en Archtion Movements"> -->
+			<input class="form-control form-control-lg" type="text" placeholder="Buscar en Archtion Movements">
+			</form>
 		</div>
 
-		<div class="col-md-3 bg-light">
-			<div class="bg-light">
-				<div class="dropdown">
-					<a class="btn btn-lg btn-block text-center btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Categoría
-					</a>
-					
-					<div class="dropdown-menu text-center w-100" aria-labelledby="dropdownMenuLink">
-						<a class="dropdown-item" href="#">Uno</a>
-						<a class="dropdown-item" href="#">Dos</a>
-						<a class="dropdown-item" href="#">Tres</a>
-					</div>
-					</div>
-			</div>
-		</div>
-
-		<div class="col-md-3 bg-light">
-			<div class="bg-light">
-				<div class="bg-light">
-					<div class="dropdown">
-						<a class="btn btn-lg btn-block text-center btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Categoría
-						</a>
-						
-						<div class="dropdown-menu text-center w-100" aria-labelledby="dropdownMenuLink">
-							<a class="dropdown-item" href="#">Uno</a>
-							<a class="dropdown-item" href="#">Dos</a>
-							<a class="dropdown-item" href="#">Tres</a>
-						</div>
-						</div>
+		<div class="col-sm-3 mt-2">
+			<div class="dropdown">
+				<a class="btn btn-lg btn-block text-center bg-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Categoría
+				</a>
+				
+				<div class="dropdown-menu text-center w-100" aria-labelledby="dropdownMenuLink">
+					<a class="dropdown-item" href="#">Uno</a>
+					<a class="dropdown-item" href="#">Dos</a>
+					<a class="dropdown-item" href="#">Tres</a>
 				</div>
 			</div>
 		</div>
 
-		<div class="col-md-3 ">
-			<div class="bg-dark">
+		<div class="col-sm-3 mt-2">
+			<div class="dropdown">
+				<a class="btn btn-lg btn-block text-center bg-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Categoría
+				</a>
+				
+				<div class="dropdown-menu text-center w-100" aria-labelledby="dropdownMenuLink">
+					<a class="dropdown-item" href="#">Uno</a>
+					<a class="dropdown-item" href="#">Dos</a>
+					<a class="dropdown-item" href="#">Tres</a>
+				</div>
 			</div>
 		</div>
 	</div>

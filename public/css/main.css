@@ -34,15 +34,15 @@ h3 {
 .display-6 {
 	font-size: 120%;
 }
-.adjust-text-center {
-	text-align: right;
-}
 
 /* CARDS CSS */
 .card {
 	border: 0px solid transparent;
 	border-radius: 0px 0px 0px;
 	background-color: white;
+}
+.card img {
+	border-radius: 0.6rem;
 }
 
 /* IMG HOVER ANIMATIONS */
@@ -70,14 +70,18 @@ h3 {
 
 /* BIG Static img */
 .big_img {
-	max-width: 120%
+	max-width: 120%;
+}
+/* Medium Static Img */
+.med_img {
+	max-width: 160%;
 }
 
 /* Theme Colors */
 
 /* Text*/
-.text-dark { color: #101820 }
-.text-green { color: #00B388 }
+.text-dark { color: #101820; }
+.text-green { color: #00B388; }
 
 /* Background colors */
 .bg-black { background-color: black; }
@@ -110,18 +114,34 @@ h3 {
 a { color: gray; }
 a:hover { color: gray;}
 
-/* BUTTONS */
+/* Dropdown */
 .dropdown-item:active {
 	background-color: black;
 	color: white;
 }
-.btn {
-	border-radius: 0%;
+.dropdown .btn {
+	border-radius: 0.6rem;
+	border-color: #10182049;
+	border-width: 2px;
+}
+.dropdown .btn:focus
+{
+	border-color: #101820;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0);
 }
 
 /* Inputs */
 .form-control {
-	border-radius: 0%;
+	width: 100%;
+	padding: 10px 20px;
+	border-radius: 0.6rem;
+	border-color: #10182049;
+	border-width: 2px;
+}
+
+.form-control:focus {
+	border-color: #101820;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0);
 }
 
 /* NAVBAR */
@@ -179,6 +199,13 @@ a:hover { color: gray;}
 	}
 	.big_img {
 		max-width: 100%;
+		margin-left: 0;
+		padding-left: 0;
+		left: 0;
+		margin-top: 10%;
+	}
+	.disapear {
+		max-width: 0%;
 		margin-left: 0;
 		padding-left: 0;
 		left: 0;

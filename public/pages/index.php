@@ -23,7 +23,7 @@
 				<img class="card-img" src="https://via.placeholder.com/400x250" alt="Card image">
 				<div class="card-img-overlay overlay-red d-flex flex-column justify-content-end p-0">
 					<div class="text p-3">
-						<h2 class="card-text font-weight-bold">Acerca de</h2>
+						<h3 class="card-text font-weight-bold">Acerca de</h3>
 					</div>
 				</div>
 			</div>
@@ -34,7 +34,7 @@
 				<img class="card-img" src="https://via.placeholder.com/600x720">
 				<div class="card-img-overlay overlay-blue d-flex flex-column justify-content-end p-0">
 					<div class="text p-3">
-						<h2 class="card-text font-weight-bold">Convocatoria</h2>
+						<h3 class="card-text font-weight-bold">Convocatoria</h3>
 					</div>
 				</div>
 			</div>
@@ -45,7 +45,7 @@
 				<img class="card-img" src="https://via.placeholder.com/400x540">
 				<div class="card-img-overlay overlay-orange d-flex flex-column justify-content-end p-0">
 					<div class="text p-3">
-						<h2 class="card-text font-weight-bold">Evento del mes</h2>
+						<h3 class="card-text font-weight-bold">Evento del mes</h3>
 					</div>
 				</div>
 			</div>
@@ -55,7 +55,7 @@
 				<img class="card-img" src="https://via.placeholder.com/400x300">
 				<div class="card-img-overlay overlay-orange d-flex flex-column justify-content-end p-0">
 					<div class="text p-3">
-						<h2 class="card-text font-weight-bold">Investigación</h2>
+						<h3 class="card-text font-weight-bold">Investigación</h3>
 					</div>
 				</div>
 			</div>
@@ -65,7 +65,7 @@
 				<img class="card-img" src="https://via.placeholder.com/400x300">
 				<div class="card-img-overlay overlay-pink d-flex flex-column justify-content-end p-0">
 					<div class="text p-3">
-						<h2 class="card-text font-weight-bold">Tienda</h2>
+						<h3 class="card-text font-weight-bold">Tienda</h3>
 					</div>
 				</div>
 			</div>
@@ -75,7 +75,7 @@
 				<img class="card-img" src="https://via.placeholder.com/400x314">
 				<div class="card-img-overlay overlay-green d-flex flex-column justify-content-end p-0">
 					<div class="text p-3">
-						<h2 class="card-text font-weight-bold">Red de trabajo</h2>
+						<h3 class="card-text font-weight-bold">Red de trabajo</h3>
 					</div>
 				</div>
 			</div>
@@ -93,7 +93,7 @@
 			<br>
 			<p class="lead mt-3 mr-5">Nuestra misión es recopilar proyectos, obras investigación y conectar personas que tengan el objetivo de mejorar una situación particular en el mundo.</p>
 		</div>
-		<div class="col-sm-7 pl-5"><img src="../images/index/index.png" class="big_img"></div>
+		<div class="col-sm-7 pl-5"><img src="../images/index/index.png" class="big_img disapear"></div>
 	</div>
 </div>
 
