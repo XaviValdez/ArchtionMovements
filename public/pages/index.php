@@ -8,11 +8,11 @@
 		
 		<div class="box a hover_img_big">  
 			<div class="card text-white">
-				<img class="card-img" src="https://via.placeholder.com/900x500" alt="Card image">
+				<img class="card-img" src="../images/index/proyecto.jpg" alt="Card image">
 				<div class="card-img-overlay overlay-green d-flex flex-column justify-content-end p-0">
 					<div class="text p-3">
-						<h1 class="card-text font-weight-bold">Proyecto del mes</h1>
-						<p class="card-text lead">Puebla, Mex.</p>
+						<h1 class="card-text font-weight-bold" id="adjust-title">Proyecto del mes</h1>
+						<p class="card-text lead" id="hide-mobile">Puebla, Mex.</p>
 					</div>
 				</div>
 			</div>
@@ -20,7 +20,7 @@
 
 		<div class="box b hover_img">
 			<div class="card text-white">
-				<img class="card-img" src="https://via.placeholder.com/400x250" alt="Card image">
+				<img class="card-img" src="../images/index/acerca_de.jpg" alt="Card image">
 				<div class="card-img-overlay overlay-red d-flex flex-column justify-content-end p-0">
 					<div class="text p-3">
 						<h3 class="card-text font-weight-bold">Acerca de</h3>
@@ -31,7 +31,7 @@
 
 		<div class="box c hover_img">
 			<div class="card text-white">
-				<img class="card-img" src="https://via.placeholder.com/600x720">
+				<img class="card-img" src="../images/index/convocatoria.jpg">
 				<div class="card-img-overlay overlay-blue d-flex flex-column justify-content-end p-0">
 					<div class="text p-3">
 						<h3 class="card-text font-weight-bold">Convocatoria</h3>
@@ -42,7 +42,7 @@
 
 		<div class="box d hover_img">
 			<div class="card text-white">
-				<img class="card-img" src="https://via.placeholder.com/400x540">
+				<img class="card-img" src="../images/index/evento.png">
 				<div class="card-img-overlay overlay-orange d-flex flex-column justify-content-end p-0">
 					<div class="text p-3">
 						<h3 class="card-text font-weight-bold">Evento del mes</h3>
@@ -52,7 +52,7 @@
 		</div> <!--D-->
 		<div class="box e hover_img">
 			<div class="card text-white">
-				<img class="card-img" src="https://via.placeholder.com/400x300">
+				<img class="card-img" src="../images/index/investigacion.jpg">
 				<div class="card-img-overlay overlay-orange d-flex flex-column justify-content-end p-0">
 					<div class="text p-3">
 						<h3 class="card-text font-weight-bold">Investigación</h3>
@@ -62,7 +62,7 @@
 		</div> <!--e-->
 		<div class="box f hover_img">
 			<div class="card text-white">
-				<img class="card-img" src="https://via.placeholder.com/400x300">
+				<img class="card-img" src="../images/index/tienda.jpg">
 				<div class="card-img-overlay overlay-pink d-flex flex-column justify-content-end p-0">
 					<div class="text p-3">
 						<h3 class="card-text font-weight-bold">Tienda</h3>
@@ -72,7 +72,7 @@
 		</div> <!--f-->
 		<div class="box g hover_img">
 			<div class="card text-white">
-				<img class="card-img" src="https://via.placeholder.com/400x314">
+				<img class="card-img" src="../images/index/red_de_trabajo.jpg">
 				<div class="card-img-overlay overlay-green d-flex flex-column justify-content-end p-0">
 					<div class="text p-3">
 						<h3 class="card-text font-weight-bold">Red de trabajo</h3>

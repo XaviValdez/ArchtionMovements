@@ -1,0 +1,5 @@
+/* Cutted edge style*/
+.cut {
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%, 85% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%, 85% 0);
+}

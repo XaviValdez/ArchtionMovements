@@ -14,11 +14,11 @@
 
 		<div class="col-sm-3 mt-2">
 			<div class="dropdown">
-				<a class="btn btn-lg btn-block text-center bg-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<a class="btn btn-lg btn-block text-center bg-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					Categoría
 				</a>
 				
-				<div class="dropdown-menu text-center w-100" aria-labelledby="dropdownMenuLink">
+				<div class="dropdown-menu text-center w-100" aria-labelledby="dropdownMenuLink1">
 					<a class="dropdown-item" href="#">Uno</a>
 					<a class="dropdown-item" href="#">Dos</a>
 					<a class="dropdown-item" href="#">Tres</a>
@@ -28,11 +28,11 @@
 
 		<div class="col-sm-3 mt-2">
 			<div class="dropdown">
-				<a class="btn btn-lg btn-block text-center bg-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<a class="btn btn-lg btn-block text-center bg-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					Categoría
 				</a>
 				
-				<div class="dropdown-menu text-center w-100" aria-labelledby="dropdownMenuLink">
+				<div class="dropdown-menu text-center w-100" aria-labelledby="dropdownMenuLink2">
 					<a class="dropdown-item" href="#">Uno</a>
 					<a class="dropdown-item" href="#">Dos</a>
 					<a class="dropdown-item" href="#">Tres</a>
@@ -101,17 +101,5 @@
 	</div>
 </div>
 
-<script src="../js/modernizr.custom.js"></script>
-<script src="../js/masonry.pkgd.min.js"></script>
-<script src="../js/imagesloaded.js"></script>
-<script src="../js/classie.js"></script>
-<script src="../js/AnimOnScroll.js"></script>
-<script>
-	new AnimOnScroll( document.getElementById( 'grid' ), {
-		minDuration : 0.4,
-		maxDuration : 0.7,
-		viewportFactor : 0.2
-	} );
-</script>
 
 <?php include('../templates/_footer.html') ?>
