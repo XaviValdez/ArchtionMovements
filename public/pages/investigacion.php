@@ -127,84 +127,70 @@
 
 			</div>
 		</div>
-		<div class="col-sm-8 bg-light p-3">
-
-			<div class="card flex-row flex-wrap mb-3">
-				<div class="card-header border-0">
-				<img src="//placehold.it/200" alt="">
-
+		<div class="col-sm-8 bg-light pl-5 pr-5">
+			<div class="row p-4 bg-white my-rounded mt-4">
+				<div class="col-sm-3">
+					<img class="img-fluid" src="//placehold.it/200">
 				</div>
-				<div class="card-block p-5">
-					<div class="row">
-						<div class="col-sm-11">
-							<h4 class="card-title">Nombre del artículo Nombre del artículo</h4>
-							<p class="card-text"><b> Nombre Apellido</b><br></p>
-							<p class="card-text text-muted"><b> Enero 2021</b><br></p>
-						</div>
-						<div class="col-sm-1">
-							<a href="#" class="btn btn-dark">Leer</a>
-						</div>
-						
-					</div>
-					
+				<div class="col-sm-6">
+					<h4 class="card-title">Nombre del artículo Nombre del artículo</h4>
+					<p class="card-text"><b> Nombre Apellido</b><br></p>
+					<p class="card-text text-muted"><b> Enero 2021</b><br></p>
 				</div>
-				
-
-				
+				<div class="col-sm-3 text-center">
+					<a href="#" class="btn btn-lg btn-dark">Leer</a><br><br>
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+					<path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6z"/>
+					</svg>
+				</div>
 			</div>
 
-
-			<div class="card flex-row flex-wrap mb-3">
-				<div class="card-header border-0">
-				<img src="//placehold.it/200" alt="">
-
+			<div class="row p-4 bg-white my-rounded mt-4">
+				<div class="col-sm-3">
+					<img class="img-fluid" src="//placehold.it/200">
 				</div>
-				<div class="card-block p-5">
-					<div class="row">
-						<div class="col-sm-11">
-							<h4 class="card-title">Nombre del artículo Nombre del artículo</h4>
-							<p class="card-text"><b> Nombre Apellido</b><br></p>
-							<p class="card-text text-muted"><b> Enero 2021</b><br></p>
-						</div>
-						<div class="col-sm-1">
-							<a href="#" class="btn btn-dark">Leer</a>
-						</div>
-						
-					</div>
-					
+				<div class="col-sm-6">
+					<h4 class="card-title">Nombre del artículo Nombre del artículo</h4>
+					<p class="card-text"><b> Nombre Apellido</b><br></p>
+					<p class="card-text text-muted"><b> Enero 2021</b><br></p>
 				</div>
-				
-
-				
+				<div class="col-sm-3 text-center">
+					<a href="#" class="btn btn-lg btn-dark">Leer</a><br><br>
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+					<path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6z"/>
+					</svg>
+				</div>
 			</div>
 
-			<div class="card flex-row flex-wrap mb-3">
-				<div class="card-header border-0">
-				<img src="//placehold.it/200" alt="">
-
+			<div class="row p-4 bg-white my-rounded mt-4">
+				<div class="col-sm-3">
+					<img class="img-fluid" src="//placehold.it/200">
 				</div>
-				<div class="card-block p-5">
-					<div class="row">
-						<div class="col-sm-11">
-							<h4 class="card-title">Nombre del artículo Nombre del artículo</h4>
-							<p class="card-text"><b> Nombre Apellido</b><br></p>
-							<p class="card-text text-muted"><b> Enero 2021</b><br></p>
-						</div>
-						<div class="col-sm-1">
-							<a href="#" class="btn btn-dark">Leer</a>
-						</div>
-						
-					</div>
-					
+				<div class="col-sm-6">
+					<h4 class="card-title">Nombre del artículo Nombre del artículo</h4>
+					<p class="card-text"><b> Nombre Apellido</b><br></p>
+					<p class="card-text text-muted"><b> Enero 2021</b><br></p>
 				</div>
-				
-
-				
+				<div class="col-sm-3 text-center">
+					<a href="#" class="btn btn-lg btn-dark">Leer</a><br><br>
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+					<path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6z"/>
+					</svg>
+				</div>
 			</div>
 
 		</div>
-
 	</div>
 </div>
 
+<?php include('../templates/_loginmodal.html') ?>
 <?php include('../templates/_footer.html') ?>

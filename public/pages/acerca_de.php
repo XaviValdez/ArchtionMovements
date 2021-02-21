@@ -1,7 +1,7 @@
 <?php include('../templates/_header.html') ?>
 <?php include('../templates/_navbar.html') ?>
 
-<link rel="stylesheet" type="text/css" href="../css/pricing.css">
+<link rel="stylesheet" type="text/css" href="../css/table.css">
 
 <div class="container mt-3">
 	<div class="row">
@@ -31,67 +31,20 @@
 
 <br>
 
-<section class="pricing py-5 mt-5">
-  <div class="container">
-  	<h1 class="display-4 text-center font-weight-bold mb-2">Beneficios</h1>
-	<br>
-    <div class="row">
-      <!-- Free Tier -->
-      <div class="col-lg-4">
-        <div class="card mb-5 mb-lg-0">
-          <div class="card-body">
-            <h5 class="card-title text-muted text-uppercase text-center">Free</h5>
-            <h6 class="card-price text-center">$0<span class="period">/month</span></h6>
-            <hr>
-            <ul class="fa-ul">
-              <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Ejemplo </strong></li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Ejemplo</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Ejemplo</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Ejemplo</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Ejemplo</li>            
-            </ul>
-            <a href="#" class="btn btn-block bg-orange text-uppercase">Registrarse</a>
-          </div>
-        </div>
-      </div>
-      <!-- Plus Tier -->
-      <div class="col-lg-4">
-        <div class="card mb-5 mb-lg-0">
-          <div class="card-body">
-            <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
-            <h6 class="card-price text-center">$9<span class="period">/month</span></h6>
-            <hr>
-            <ul class="fa-ul">
-              <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Ejemplo </strong></li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Ejemplo</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Ejemplo</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Ejemplo</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Ejemplo</li>            
-            </ul>
-            <a href="#" class="btn btn-block bg-blue text-uppercase">Registrarse</a>
-          </div>
-        </div>
-      </div>
-      <!-- Pro Tier -->
-      <div class="col-lg-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
-            <h6 class="card-price text-center">$49<span class="period">/month</span></h6>
-            <hr>
-            <ul class="fa-ul">
-              <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Ejemplo </strong></li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Ejemplo</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Ejemplo</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Ejemplo</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Ejemplo</li>            
-            </ul>
-            <a href="#" class="btn btn-block bg-red text-uppercase">Registrarse</a>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="container bg-light p-5">
+  <ul class="nav nav-tabs justify-content-end" id="myTab" role="tablist">
+    <li class="nav-item border-green border-bottom-0">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><h3>Planes para usuarios</h3></a>
+    </li>
+    <li class="nav-item border-blue border-bottom-0 border-left-0">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><h3>Planes publicitarios</h3></a>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active bg-white p-5 border-green border-rounded" id="home" role="tabpanel" aria-labelledby="home-tab">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur dui ut lobortis lobortis. Nam vitae diam cursus, ultricies nisi id, congue ligula. Morbi a ex mauris. Cras quis pulvinar enim. In sed massa sed elit iaculis luctus. Integer egestas sit amet nibh ac blandit. Ut mauris ex, rutrum sed dignissim sed, finibus sit amet magna.</div>
+    <div class="tab-pane fade bg-white p-5 border-blue border-rounded" id="profile" role="tabpanel" aria-labelledby="profile-tab">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur dui ut lobortis lobortis. Nam vitae diam cursus, ultricies nisi id, congue ligula. Morbi a ex mauris. Cras quis pulvinar enim. In sed massa sed elit iaculis luctus. Integer egestas sit amet nibh ac blandit. Ut mauris ex, rutrum sed dignissim sed, finibus sit amet magna.</div>
   </div>
-</section>
+</div>
 
+<?php include('../templates/_loginmodal.html') ?>
 <?php include('../templates/_footer.html') ?>

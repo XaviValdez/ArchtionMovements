@@ -3,75 +3,49 @@
 
 <link rel="stylesheet" type="text/css" href="../css/enviar_material.css">
 
-<main class="container mb-5">
-	<div class="row mt-5">
-		<div class="col-md-4 bg-light pl-5 pt-5 cut">
-			<div class="mb-3">
-				<h1 class="display-5 font-weight-bold">Subir proyecto</h1>
-				<form class="mr-5">
+<!-- ----------- BANNER ----------------- -->
+<div class="container text-center mt-3">
+	<img src="../images/enviar_material/quequiereshacer.png" class="banner">
+</div>
 
-					<div class="form-group">
-						<label for="exampleInputEmail1">Nombre</label>
-						<input type="email" class="form-control" id="a" aria-describedby="emailHelp" placeholder="Nombre*">
-					</div>
-
-					<div class="form-group">
-						<label for="exampleInputPassword1">Email</label>
-						<input type="password" class="form-control" id="a" placeholder="Email*">
-					</div>
-
-					<div class="form-group">
-						<label for="exampleInputPassword1">Nombre del proyecto</label>
-						<input type="password" class="form-control" id="a" placeholder="Nombre del proyecto*">
-					</div>
-
-					<div class="form-group">
-						<label for="exampleInputPassword1">Ubicación</label>
-						<input type="password" class="form-control" id="a" placeholder="Ubicación*">
-					</div>
-
-					<div class="form-group">
-						<label for="exampleFormControlTextarea1">Descripción</label>
-						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje"></textarea>
-					</div>
-
-				</form>
-
-				<button class="btn btn-dark">Enviar</button>
-
-			</div>
+<!-- ----------- COLOR CARDS ----------------- -->
+<div class="container mt-3 mb-5">
+	<div class="row text-center mb-5">
+		
+		<div class="col-sm-2 m-3 bg-green p-3 text-white cut hover_animation" style="cursor: pointer;" onclick="location.href='enviar_proyecto';">
+			<p class="text-center"><img class="img-fluid mt-5 local_icon" src="../images/icons/1.png"></p>
+			<br>
+			<h4 class="mt-3"><b>Compartir Proyectos y Obras</b></h4>
 		</div>
-	
-		<div class="col-md-8">
-			<div class="row">
-				<div class="col-sm-4 pl-5">
-					<br>
-					<br>
-					<h1 class="display-4">01</h1>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
-				</div>
-				<div class="col-sm-4 pl-5">
-					<br>
-					<br>
-					<h1 class="display-4">02</h1>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
 
-				</div>
-				<div class="col-sm-4 pl-5">
-					<br>
-					<br>
-					<h1 class="display-4">03</h1>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
-
-				</div>
-			</div>
-			
+		<div class="col-sm-2 m-3 bg-blue p-3 text-white cut hover_animation" style="cursor: pointer;" onclick="location.href='enviar_investigacion';">
+			<p class="text-center"><img class="img-fluid mt-5 local_icon" src="../images/icons/2.png"></p>
+			<br>
+			<h4 class="mt-3"><b>Compartir Investigación</b></h4>
 		</div>
-	
-	
-	
-	</div><!-- /.row -->
-	
-</main><!-- /.container -->
 
+		<div class="col-sm-2 m-3 bg-orange p-3 text-white cut hover_animation" style="cursor: pointer;" onclick="location.href='red_trabajo';">
+			<p class="text-center"><img class="img-fluid mt-5 local_icon" src="../images/icons/3.png"></p>
+			<br>
+			<h4 class="mt-3"><b>Inscripción a Red de trabajo</b></h4>
+		</div>
+
+		<div class="col-sm-2 m-3 bg-red p-3 text-white cut hover_animation" style="cursor: pointer;" onclick="location.href='eventos';">
+			<p class="text-center"><img class="img-fluid mt-5 local_icon" src="../images/icons/4.png"></p>
+			<br>
+			<h4 class="mt-3"><b>Inscripción a Eventos</b></h4>
+		</div>
+
+		<div class="col-sm-2 m-3 bg-pink p-3 text-white cut hover_animation" style="cursor: pointer;" onclick="location.href='tienda';">
+			<p class="text-center"><img class="img-fluid mt-5 local_icon" src="../images/icons/5.png"></p>
+			<br>
+			<h4 class="mt-3"><b>Comprar en tienda</b></h4>
+		</div>
+
+	</div>
+	
+	
+</div>
+
+<?php include('../templates/_loginmodal.html') ?>
 <?php include('../templates/_footer.html') ?>

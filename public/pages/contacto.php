@@ -67,4 +67,5 @@
 	</div>
 </div>
 
+<?php include('../templates/_loginmodal.html') ?>
 <?php include('../templates/_footer.html') ?>

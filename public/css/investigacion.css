@@ -2,3 +2,6 @@
 .banner {
     max-width: 100%;
 }
+.my-rounded {
+    border-radius: 1em;
+}

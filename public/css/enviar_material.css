@@ -1,5 +1,29 @@
 /* Cutted edge style*/
 .cut {
-    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%, 85% 0);
-    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%, 85% 0);
+    -webkit-clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%, 0 12%);
+    clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%, 0 12%);
+}
+
+.banner {
+    max-width: 100%;
+}
+
+/* CENTER THE COLUMNS*/
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.hover_animation {
+    transition:0.2s;
+}
+
+.hover_animation:hover {
+    transform: scale(1.04);
+    transition: 0.2s;
+    opacity: 0.9;
+}
+
+.local_icon {
+    width: 100px;
 }
