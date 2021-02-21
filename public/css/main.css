@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 html{
 	scroll-behavior: smooth;
+	zoom: 90%;
 }
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body, html { font-size: 100%; padding: 0; margin: 0;}
@@ -34,6 +35,9 @@ h3 {
 .display-6 {
 	font-size: 120%;
 }
+.text-justify { 
+	text-align: justify;
+}
 
 /* CARDS CSS */
 .card {
@@ -43,6 +47,9 @@ h3 {
 }
 .card img {
 	border-radius: 0.6rem;
+}
+.card .border-sharp {
+	border-radius: 0rem !important;
 }
 
 /* IMG HOVER ANIMATIONS */
@@ -92,6 +99,7 @@ h3 {
 .bg-red { background-color: #FF585D; }
 .bg-orange { background-color: #FFA300; }
 .bg-glass { background-color: #ffffff59; }
+.bg-white { background-color: whitesmoke; }
 
 .bg-mod1 { 
 	background-image: url("../images/modulaciones/3.png");
@@ -177,6 +185,17 @@ a:hover { color: gray;}
 	left: -1px;
 }
 
+/* MODAL FIX BUG */
+.modal-backdrop
+{
+    width: 200%;
+    height: 200%;
+}
+.center {
+	display: flex;
+    justify-content: center;
+}
+
 /* Container width SIZE*/
 @media (min-width: 1200px) {
     .container{
@@ -206,9 +225,12 @@ a:hover { color: gray;}
 	}
 	.disapear {
 		max-width: 0%;
-		margin-left: 0;
-		padding-left: 0;
-		left: 0;
-		margin-top: 10%;
+		display: none;
+		opacity: 0;
+	}
+	#hide-mobile { display:none; }
+
+	#adjust-title {
+		font-size: 30px;
 	}
 }

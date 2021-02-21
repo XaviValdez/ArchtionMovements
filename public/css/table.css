@@ -1,0 +1,14 @@
+.border-green {
+    border: 6px solid #00B388;
+}
+
+.border-blue {
+    border: 6px solid #74D1EA;
+}
+
+.border-rounded {
+    border-top-left-radius:     1em;
+    border-top-right-radius:    0em;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius:  1em;
+}

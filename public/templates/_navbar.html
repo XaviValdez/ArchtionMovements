@@ -1,6 +1,6 @@
 <div class="header bg-light py-2">
     <div class="container mt-2">
-        <div class="row">
+        <div class="row" id="hide-mobile">
             <div class="col-6">
                 <a href="contacto">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -24,7 +24,7 @@
                 </span>
                 |
                 <span class="ml-2">
-                    <a href="registro">
+                    <a href="registro" data-toggle="modal" data-target="#ModalLogin">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-person-circle icon" viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -45,7 +45,7 @@
 </div>
 <nav class="navbar navbar-expand-sm sticky-top navbar-light bg-light underline">
     <div class="container">
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar1">
+        <button id="hide-mobile" class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar1">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbar1">
@@ -62,7 +62,7 @@
                     <a class="nav-link" href="proyectos">Proyectos & Obras</a>
                 </li>
                 <li class="nav-item m-3 active">
-                    <a class="nav-link" href="#">Investigación</a>
+                    <a class="nav-link" href="investigacion">Investigación</a>
                 </li>
                 <li class="nav-item m-3 active">
                     <a class="nav-link" href="#">Red de trabajo</a>
