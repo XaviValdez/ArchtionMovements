@@ -48,3 +48,19 @@ Route::get('enviarProyecto', function() {
 Route::get('publicacion/{id}', function() {
     return view('publicacion');
 })->name('publicacion');
+
+Route::get('investigacion', function() {
+    return view('investigacion');
+})->name('investigacion');
+
+Route::get('eventos', function() {
+    return view('eventos');
+})->name('eventos');
+
+Route::get('evento_individual', function() {
+    return view('evento_individual');
+})->name('evento_individual');
+
+Route::get('registro', function() {
+    return view('registro');
+})->name('registro');

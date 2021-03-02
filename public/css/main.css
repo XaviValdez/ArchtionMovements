@@ -89,6 +89,7 @@ h3 {
 /* Text*/
 .text-dark { color: #101820; }
 .text-green { color: #00B388; }
+.text-blue { color: #74D1EA; }
 
 /* Background colors */
 .bg-black { background-color: black; }
@@ -138,6 +139,17 @@ a:hover { color: gray;}
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0);
 }
 
+.btn-border {
+	border-radius: 0.6rem;
+	border-color: #10182049;
+	border-width: 2px;
+}
+
+.btn-border:focus {
+	border-color: #101820;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0);
+}
+
 /* Inputs */
 .form-control {
 	width: 100%;
@@ -183,6 +195,9 @@ a:hover { color: gray;}
 	/* Adjust these values accordingly */
 	top: -2px;
 	left: -1px;
+}
+.premio-icon {
+	width: 40px;
 }
 
 /* MODAL FIX BUG */

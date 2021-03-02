@@ -38,7 +38,7 @@
                 </div>
                 <div class="center">
                     <div class="col-md-4 text-center mt-3">
-                      <button type="submit" class=" btn btn-block mybtn btn-dark tx-tfm">Registrarme</button>
+                      <a href="{{ route('registro') }}" class="btn btn-block mybtn btn-dark tx-tfm">Registrarme</a>
                     </div>
                 </div>
               </form>

@@ -1,0 +1,51 @@
+@extends('template')
+
+@section('body')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/registro.css') }}">
+
+<div class="container mt-3 mb-5">
+	<div class="row">
+        <div class="col-md-6">
+            <img src="{{ asset('https://via.placeholder.com/1000x1000') }}" class="img-fluid disapear">
+        </div>
+
+        <div class="col-md-6 bg-light p-3">
+            <img class="img-fluid" src="{{ asset('img/patron.png') }}">
+            <h1 class="mt-5 text-center"><b>Regístrate</b></h1>
+            <div class="row justify-content-center mt-4">
+                <div class="col-6">
+                    <form>
+                        <label class="text-left">Nombre</label>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="a" aria-describedby="emailHelp" placeholder="Nombre*">
+                        </div>
+
+                        <label class="text-left">Apellidos</label>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="a" placeholder="Apellidos*">
+                        </div>
+
+                        <label class="text-left">Email</label>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="a" placeholder="Email*">
+                        </div>
+
+                        <label class="text-left">Contraseña</label>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="a" placeholder="Contraseña*">
+                        </div>
+                        
+                        <label class="text-center mt-3">Al registrarme acepto y estoy de acuerdo con los <a href="terminosycondiciones">términos y condiciones</a></label>
+                        <div class="center">
+                            <button type="submit" class="btn btn-block mybtn bg-green tx-tfm">Registrarme</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br><br><br><br>
+
+@endsection

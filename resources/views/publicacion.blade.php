@@ -62,7 +62,8 @@
 	</div>
 
 	<img class="img-fluid w-100 mt-5" src="https://via.placeholder.com/1280x720">
-	<h3 class="mt-5"><b>Objetivo</b></h3>
+	
+	<h3 class="mt-5 mb-5"><b><br>Objetivo</b></h3>
 	<div class="row">
 		<div class="col-6 pr-5">
 			<p class="lead text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -79,5 +80,5 @@
 
 
 </div>
-
+<br><br><br><br><br><br>
 @endsection

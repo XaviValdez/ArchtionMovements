@@ -93,25 +93,25 @@
     background-color: rgba(0, 179, 136, 0.7);
     letter-spacing: 0px;
     opacity: 1;
-    transition: 0.3s;
+    transition: 0.6s;
 
     position: absolute;
     left: 0;
     right: 0;
     overflow: hidden;
     width: 100%;
-    height: 25%;
+    height: 100%;
 }
 .text .lead { /* ANIMATION SLIDE TEXT */
-    opacity: 0;
-    transition: 0.3s;
-}
-.overlay-green:hover .lead {
     opacity: 1;
     transition: 0.3s;
 }
+.overlay-green:hover .lead {
+    opacity: 0;
+    transition: 0.5s;
+}
 .overlay-green:hover .text {
-    height: 40%;
+    height: 15%;
     opacity: 1;
 }
 
@@ -121,10 +121,18 @@
     background-color: rgba(255, 88, 93, 0.7);
     letter-spacing: 0px;
     opacity: 1;
-    transition: 0.3s;
+    transition: 0.5s;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 .overlay-red:hover .text{
-    background-color: rgba(255, 88, 93, 1);
+    background-color: rgba(255, 88, 93, 0.7);
+    height: 25%;
     opacity: 1;
 }
 
@@ -134,10 +142,18 @@
     background-color: rgba(116, 209, 234, 0.7);
     letter-spacing: 0px;
     opacity: 1;
-    transition: 0.3s;
+    transition: 0.5s;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 .overlay-blue:hover .text{
-    background-color: rgba(116, 209, 234, 1);
+    background-color: rgba(116, 209, 234, 0.7);
+    height: 23%;
     opacity: 1;
 }
 
@@ -147,10 +163,37 @@
     background-color: rgba(255, 163, 0, 0.7);
     letter-spacing: 0px;
     opacity: 1;
-    transition: 0.3s;
+    transition: 0.6s;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 .overlay-orange:hover .text{
-    background-color: rgba(255, 163, 0, 1);
+    background-color: rgba(255, 163, 0, 0.7);
+    height: 13%;
+    opacity: 1;
+}
+
+.overlay-orange2 .text{
+    background-color: rgba(255, 163, 0, 0.7);
+    letter-spacing: 0px;
+    opacity: 1;
+    transition: 0.6s;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.overlay-orange2:hover .text{
+    background-color: rgba(255, 163, 0, 0.7);
+    height: 22%;
     opacity: 1;
 }
 
@@ -160,10 +203,18 @@
     background-color: rgba(252, 155, 179, 0.7);
     letter-spacing: 0px;
     opacity: 1;
-    transition: 0.3s;
+    transition: 0.5s;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 .overlay-pink:hover .text{
-    background-color: rgba(252, 155, 179, 1);
+    background-color: rgba(252, 155, 179, 0.7);
+    height: 22%;
     opacity: 1;
 }
 
