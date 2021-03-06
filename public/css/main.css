@@ -1,9 +1,13 @@
 /* General Style */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 html{
 	scroll-behavior: smooth;
 	zoom: 90%;
+	overflow-x: hidden;
+    overflow-y: scroll; 
 }
+
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body, html { font-size: 100%; padding: 0; margin: 0;}
 
@@ -75,6 +79,16 @@ h3 {
 	transition:0.2s;
 }
 
+.hover-opacity {
+	opacity: 1;
+	transition:0.2s;
+}
+
+.hover-opacity:hover {
+	opacity: 2;
+	transition:0.2s;
+}
+
 /* BIG Static img */
 .big_img {
 	max-width: 120%;
@@ -82,6 +96,9 @@ h3 {
 /* Medium Static Img */
 .med_img {
 	max-width: 160%;
+}
+.long-img {
+	width: 160%;
 }
 
 /* Theme Colors */

@@ -796,9 +796,10 @@
 	<div class="row">
 		<div class="col-md-5"></div>
 		<div class="col-md-7">
-			<img class="big_img disapear" src="{{ asset('img/index/patron.png') }}" alt="Card image">
+			<img class="long-img disapear" src="{{ asset('img/index/patron.png') }}" alt="Card image">
 		</div>
 	</div>
 </div>
+<br>
 
 @endsection

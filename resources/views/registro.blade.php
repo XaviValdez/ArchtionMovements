@@ -3,17 +3,15 @@
 @section('body')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/registro.css') }}">
 
-<div class="container mt-3 mb-5">
+<div class="container mt-3 mb-5 bg-light">
+    <div class="row">
+        <img class="img-fluid" src="{{ asset('img/patron-lg.png') }}">
+    </div>
 	<div class="row">
-        <div class="col-md-6">
-            <img src="{{ asset('https://via.placeholder.com/1000x1000') }}" class="img-fluid disapear">
-        </div>
-
-        <div class="col-md-6 bg-light p-3">
-            <img class="img-fluid" src="{{ asset('img/patron.png') }}">
-            <h1 class="mt-5 text-center"><b>Regístrate</b></h1>
+        <div class="col-md-12 p-3">
+            <h1 class="mt-3 text-center"><b>Regístrate</b></h1>
             <div class="row justify-content-center mt-4">
-                <div class="col-6">
+                <div class="col-4 mb-5">
                     <form>
                         <label class="text-left">Nombre</label>
                         <div class="form-group">
