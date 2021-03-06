@@ -6,6 +6,8 @@ $("#login_admin").on('submit', function (event) {
 	    success: function (data, status, xhr) {
 	    	if(data.success){
 	    		window.location.href = '/ArchtionMovements/admin/index.php'; //Will take you to Google.
+	    	}else{
+	    		//TODO: show error
 	    	}
 	    },
 	    error: function (jqXhr, textStatus, errorMessage) {

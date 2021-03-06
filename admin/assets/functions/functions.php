@@ -33,4 +33,16 @@ function getAdminUser($user_name,$status=1){
 function logout(){
     session_destroy();
 }
+
+function setAdminUser($user_name,$password,$status=1){
+    global $DBH;
+    $q='insert into usuarios_admin (name,password,status) VALUES(:user_name,:password,:status)';
+    $query = $DBH->prepare($q);
+    $query->execute(array(
+        ':user_name'=>$user_name,
+        ':password'=>hash('sha256', $password),
+        ':status'=>$status
+    ));
+}
+
 ?>
