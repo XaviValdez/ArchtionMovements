@@ -62,7 +62,7 @@
 		
 
 		<div class="col-sm-4">
-			<img src="../images/contacto/contacto.png" class="med_img disapear">
+			<img src="../img/contacto/contacto.png" class="med_img disapear">
 		</div>
 	</div>
 </div>

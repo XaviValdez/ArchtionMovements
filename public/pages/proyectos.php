@@ -1,10 +1,10 @@
 <?php include('../templates/_header.html') ?>
 <?php include('../templates/_navbar.html') ?>
 
-<div class="container mt-4">
+<div class="container mt-3">
 
 	<!-- MENU -->
-	<div class="row mt-3 mb-4">
+	<div class="row mb-5">
 		<div class="col-sm-3 mt-2">
 			<form>
 			<input class="form-control form-control-lg" type="text" placeholder="Palabra clave">
@@ -34,7 +34,7 @@
 			</div>
 		</div>
 
-		<div class="col-sm-3 mt-2">
+		<div class="col-sm-2 mt-2">
 			<div class="dropdown">
 				<a class="btn btn-lg btn-block text-center bg-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					Sector
@@ -51,7 +51,7 @@
 			</div>
 		</div>
 
-		<div class="col-sm-3 mt-2">
+		<div class="col-sm-2 mt-2">
 			<div class="dropdown">
 				<a class="btn btn-lg btn-block text-center bg-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					Tipo
@@ -64,6 +64,9 @@
 			</div>
 		</div>
 
+		<div class="col-sm-2 mt-2">
+			<a href="#" class="btn btn-lg btn-block text-center bg-white btn-border">Mostrar todo</a>
+		</div>
 	</div>
 	<!-- CARDS -->
 	<div class="row">
@@ -72,6 +75,22 @@
 				<a href="publicacion.php">
 					<img class="card-img-top" src="https://via.placeholder.com/500x300" alt="Card image cap">
 				</a>
+				<div class="mt-3">
+					<div class="row">
+						<div class="col-6">
+							<h5 class="card-title">Card title</h5>
+							<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+						</div>
+						<div class="col-5 text-right">
+							<h5 class="card-title"><img class="img-fluid premio-icon" src="../img/icons/premio.png"></h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 pr-1">
+			<div class="card mb-4 box-shadow hover_img">
+			<img class="card-img-top" src="https://via.placeholder.com/500x300" alt="Card image cap">
 				<div class="mt-3">
 					<h5 class="card-title">Card title</h5>
 					<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
@@ -82,8 +101,8 @@
 			<div class="card mb-4 box-shadow hover_img">
 			<img class="card-img-top" src="https://via.placeholder.com/500x300" alt="Card image cap">
 				<div class="mt-3">
-						<h5 class="card-title">Card title</h5>
-						<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+					<h5 class="card-title">Card title</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
 				</div>
 			</div>
 		</div>
@@ -91,8 +110,8 @@
 			<div class="card mb-4 box-shadow hover_img">
 			<img class="card-img-top" src="https://via.placeholder.com/500x300" alt="Card image cap">
 				<div class="mt-3">
-						<h5 class="card-title">Card title</h5>
-						<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+					<h5 class="card-title">Card title</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
 				</div>
 			</div>
 		</div>
@@ -100,17 +119,8 @@
 			<div class="card mb-4 box-shadow hover_img">
 			<img class="card-img-top" src="https://via.placeholder.com/500x300" alt="Card image cap">
 				<div class="mt-3">
-						<h5 class="card-title">Card title</h5>
-						<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 pr-1">
-			<div class="card mb-4 box-shadow hover_img">
-			<img class="card-img-top" src="https://via.placeholder.com/500x300" alt="Card image cap">
-				<div class="mt-3">
-						<h5 class="card-title">Card title</h5>
-						<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+					<h5 class="card-title">Card title</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
 				</div>
 			</div>
 		</div>

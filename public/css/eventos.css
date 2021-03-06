@@ -1,0 +1,39 @@
+.card {
+	border: 1px solid gainsboro;
+	border-radius: 0px 0px 0px;
+	background-color: #f7f7f7;
+}
+.card img {
+	border-radius: 0em;
+}
+
+/* IMAGE ON IMAGE OVERLAY */
+.card .circled-img
+{
+    border: 2px solid gainsboro;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    position: absolute;
+    top: 33%;
+    left: 40%;
+    width: 20%;
+}
+
+/* IMAGE ON IMAGE OVERLAY para proyecto abierto */
+.card .circled-img-big
+{
+    border: 2px solid gainsboro;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 10%;
+}
+
+.card-img-overlay {
+    padding-left: 17%;
+    padding-top: 6%;
+}

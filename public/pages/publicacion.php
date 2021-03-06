@@ -34,7 +34,7 @@
 
 		<div class="col-sm-4 cut">
 			<div class="bg-blue p-5">
-				<p class="text-center"><img class="img-fluid local_icon mt-5" src="../images/icons/social.png"></p>
+				<p class="text-center"><img class="img-fluid local_icon mt-5" src="../img/icons/social.png"></p>
 				<p class="text-center text-white lead" style="letter-spacing: 5px;">SOCIAL</p>
 				<p class="p-4 lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
 
@@ -43,7 +43,7 @@
 
 		<div class="col-sm-4 cut">
 			<div class="bg-green p-5">
-				<p class="text-center"><img class="img-fluid local_icon mt-5" src="../images/icons/ambiental.png"></p>
+				<p class="text-center"><img class="img-fluid local_icon mt-5" src="../img/icons/ambiental.png"></p>
 				<p class="text-center text-white lead" style="letter-spacing: 5px;">AMBIENTAL</p>
 				<p class="p-4 lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
 
@@ -52,7 +52,7 @@
 
 		<div class="col-sm-4 cut">
 			<div class="bg-orange p-5">
-				<p class="text-center"><img class="img-fluid local_icon mt-5" src="../images/icons/economico.png"></p>
+				<p class="text-center"><img class="img-fluid local_icon mt-5" src="../img/icons/economico.png"></p>
 				<p class="text-center text-white lead" style="letter-spacing: 5px;">ECONÓMICO</p>
 				<p class="p-4 lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
 			</div>
@@ -78,6 +78,6 @@
 
 
 </div>
-
+<br><br><br><br>
 <?php include('../templates/_loginmodal.html') ?>
 <?php include('../templates/_footer.html') ?>
