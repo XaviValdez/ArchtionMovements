@@ -45,4 +45,51 @@ function logout(){
 //     ));
 // }
 
+function setUser($first_name,$last_name,$email,$password,$status=1){
+    global $DBH;
+    $q='insert into users_arch (first_name,last_name,email,password,status) VALUES(:first_name,:last_name,:email,:password,:status)';
+    $query = $DBH->prepare($q);
+    $query->execute(array(
+        ':first_name'=>$first_name,
+        ':last_name'=>$last_name,
+        ':email'=>$email,
+        ':password'=>hash('sha256', $password),
+        ':status'=>$status
+    ));
+    return $DBH->lastInsertId();
+}
+
+// Update last login
+function UpdateLastLogin($p_id){
+    global $DBH;
+    $q='UPDATE users_arch SET last_login_date=CURRENT_TIMESTAMP WHERE id=:p_id';
+    $query = $DBH->prepare($q);
+    $query->execute(array(
+        ':p_id'=>$p_id
+    ));
+}
+
+// Return a clean single entry 
+function cleaner($p) {
+    return $p = htmlspecialchars($p);
+}
+
+// Return a clean array
+function array_cleaner($arr){
+    foreach($arr as &$key){
+        $key = cleaner($key);
+    }
+    return $arr;
+}
+
+// Return true if all required entries are filled
+function verify_entries($arr, $required_entries){
+    foreach ($required_entries as $entry){
+        if(!isset($arr[$entry]) || $arr[$entry]==""){
+            return false;
+        }
+    }
+    return true;
+}
+
 ?>
