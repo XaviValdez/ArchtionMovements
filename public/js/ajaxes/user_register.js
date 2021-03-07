@@ -16,7 +16,7 @@ $("#register_user").on('submit', function (event) {
 				alert("Alguien ya se ha registrado con ese correo");
 			}
 			else {
-				alert("Error inesperado");
+				alert("¡Error inesperado!");
 			}
 	    },
 	    error: function (jqXhr, textStatus, errorMessage) {
