@@ -1,5 +1,5 @@
 <?php include('../templates/_header.php') ?>
-<?php include('../templates/_navbar.html') ?>
+<?php include('../templates/_navbar.php') ?>
 
 <!--CSS GRIDS-->
 <link rel="stylesheet" type="text/css" href="../css/collage.css">

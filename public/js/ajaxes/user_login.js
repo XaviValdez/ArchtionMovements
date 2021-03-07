@@ -6,6 +6,7 @@ $("#login_user").on('submit', function (event) {
 	    type: 'POST',  // http method
 	    data: $("#login_user").serialize(),  // data to submit
 	    success: function (data, status, xhr) {
+	    	debugger;
 	    	if(data.success){
 	    		window.location.href = '/ArchtionMovements/public/pages/index.php';
 	    	}
