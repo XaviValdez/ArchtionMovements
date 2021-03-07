@@ -13,16 +13,16 @@
 
         <div id="first">
           <div class="myform form">
-              <form action="" method="post" name="login">
+              <form id="login_user" method="post" name="login">
                 <div class="center">
                     <div class="col-md-6 text-center mt-3">
 
                       <div class="form-group">
-                        <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Correo electrónico">
+                        <input type="email" name="email"  class="form-control" placeholder="Correo electrónico">
                       </div>
                     
                       <div class="form-group">
-                        <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Contraseña">
+                        <input type="password" name="password" class="form-control" placeholder="Contraseña">
                       </div>
                       
                       <div class="form-group">
@@ -33,7 +33,7 @@
                 </div>
                 <div class="center">
                     <div class="col-md-4 text-center">
-                      <button type="submit" class=" btn btn-block mybtn bg-green tx-tfm">Iniciar sesión</button>
+                      <button type="submit" class="btn btn-block mybtn bg-green tx-tfm">Iniciar sesión</button>
                     </div>
                 </div>
                 <div class="center">
@@ -47,8 +47,11 @@
 
       </div>
       <div class="modal-footer mt-5">
-        <img class="img-fluid" src="../images/patron.png">
+        <img class="img-fluid" src="../img/patron.png">
       </div>
     </div>
   </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/ajaxes/user_login.js"></script>

@@ -1,4 +1,4 @@
-<?php include('../templates/_header.html') ?>
+<?php include('../templates/_header.php') ?>
 <?php include('../templates/_navbar.html') ?>
 
 <link rel="stylesheet" type="text/css" href="../css/registro.css">
@@ -46,5 +46,5 @@
 
 <br><br><br><br><br>
 
-<?php include('../templates/_loginmodal.html') ?>
+<?php include('../templates/_loginmodal.php') ?>
 <?php include('../templates/_footer.html') ?>

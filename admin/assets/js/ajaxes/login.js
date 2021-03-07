@@ -5,7 +5,7 @@ $("#login_admin").on('submit', function (event) {
 	    data: $("#login_admin").serialize(),  // data to submit
 	    success: function (data, status, xhr) {
 	    	if(data.success){
-	    		window.location.href = '/ArchtionMovements/admin/index.php'; //Will take you to Google.
+	    		window.location.href = '/ArchtionMovements/admin/index.php';
 	    	}else{
 	    		//TODO: show error
 	    	}
