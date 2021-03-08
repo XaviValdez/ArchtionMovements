@@ -30,6 +30,19 @@ function getEmail($email,$status=1){
     return false;
 }
 
+// Fetch data from about table
+function getAcercaDe(){
+    global $DBH;
+    $query = $DBH->prepare('SELECT * FROM about');
+    $query->execute();
+    $query->setFetchMode(PDO::FETCH_ASSOC);
+    $row = $query->fetch();
+    if($row) {
+        return $row;
+    }
+    return false;
+}
+
 function logout(){
     session_destroy();
 }
