@@ -46,34 +46,13 @@ if(isCurrentActiveSession()){
 
 <body class="user-profile">
   <div class="wrapper ">
-    <div class="sidebar" data-color="orange">
+    <div class="sidebar" data-color="blue">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
-      <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-          AM
-        </a>
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Archtion Movements
-        </a>
-      </div>
-      <div class="sidebar-wrapper" id="sidebar-wrapper">
-        <ul class="nav">
-          <li>
-            <a href="./dashboard.html">
-              <i class="now-ui-icons design_app"></i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-          <li>
-            <a href="./icons.html">
-              <i class="now-ui-icons education_atom"></i>
-              <p>Projects</p>
-            </a>
-          </li>          
-        </ul>
-      </div>
+      <?php
+      require_once("partial/navbar.php");
+      ?>
     </div>
     <div class="main-panel" id="main-panel">
       <!-- Navbar -->
@@ -135,8 +114,6 @@ if(isCurrentActiveSession()){
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap.min.js"></script>
   <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-  <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chart JS -->
   <script src="assets/js/plugins/chartjs.min.js"></script>
   <!--  Notifications Plugin    -->
@@ -144,7 +121,7 @@ if(isCurrentActiveSession()){
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
-  <script src="assets/js/ajaxes/login.js?v="<?php echo $version; ?>></script>
+  <script src="assets/js/ajaxes/login.js?v=<?php echo $version; ?>"></script>
 </body>
 
 </html>
