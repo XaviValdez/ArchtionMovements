@@ -2,7 +2,7 @@
 require_once("../../config/config.php");
 require_once("../functions.php");
 $response=array();
-$project_by_name=getProyects(1,null,$_POST['name']);
+$project_by_name=getProyects(null,null,$_POST['name']);
 if(empty($project_by_name)){
 	//means project is new
 	$project_id=insertProject($_POST['name'], $_POST['user_id']);

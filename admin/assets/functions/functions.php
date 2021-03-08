@@ -45,9 +45,9 @@ function setAdminUser($user_name,$password,$status=1){
     ));
 }
 
-function getProyects($status,$id=null,$name=null){
+function getProyects($status=null,$id=null,$name=null){
     global $DBH;
-    if(!empty($status) && empty($id) && empty($name)){
+    if(!empty($status)){
         //get them all
         $query = $DBH->prepare('SELECT u.id as "u_id", p.id as "p_id", name, ptxt.description, ptxt.social, ptxt.environment, ptxt.economy, ptxt.objective, p.crated_date, p.`status`                    FROM `projects` p 
                                 STRAIGHT_JOIN projects_text_fields ptxt ON p.id=ptxt.project_id
@@ -76,7 +76,7 @@ function getProyects($status,$id=null,$name=null){
         ));
     }
     $query->setFetchMode(PDO::FETCH_ASSOC);
-        $row = $query->fetchAll();
+    $row = $query->fetchAll();
 
     if($row)
         return $row;
@@ -84,8 +84,9 @@ function getProyects($status,$id=null,$name=null){
 }
 
 function table_helper_projects($array,$table_head){
+    $table='';
     foreach ($array as $value) {
-        $table= $table_head.'
+        $table.= $table_head.'
               <tr>
                 <td>
                   '.$value["p_id"].'

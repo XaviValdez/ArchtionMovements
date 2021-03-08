@@ -105,7 +105,7 @@ global $version;
       <div class="content">
       <?php
         $projects_actives=getProyects(1);
-        $projects_inactives=getProyects(0);
+        $projects_inactives=getProyects(4);
         $projects_pending=getProyects(2);
         $projects_rejected=getProyects(3);
         $table_head='<table class="table">
