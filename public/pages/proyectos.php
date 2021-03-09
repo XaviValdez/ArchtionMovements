@@ -1,5 +1,11 @@
 <?php include('../templates/_header.php') ?>
 <?php include('../templates/_navbar.php') ?>
+<?php 
+	require_once("../assets/config/config.php");
+	require_once("../assets/functions/functions.php");
+
+	$projects = getProjects(1);
+?>
 
 <div class="container mt-3">
 
@@ -70,69 +76,35 @@
 	</div>
 	<!-- CARDS -->
 	<div class="row">
-		<div class="col-md-4 pr-1">
-			<div class="card mb-4 box-shadow hover_img">
-				<a href="publicacion.php">
-					<img class="card-img-top" src="https://via.placeholder.com/500x300" alt="Card image cap">
-				</a>
-				<div class="mt-3">
-					<div class="row">
-						<div class="col-6">
-							<h5 class="card-title">Card title</h5>
-							<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+		<?php
+			foreach ($projects as $project) {
+
+				$img = getImg($project["p_id"]);
+				
+				//Get 10 first words of descr
+				$pieces = explode(" ", $project["description"]);
+				$first_part = implode(" ", array_splice($pieces, 0, 6));
+
+				echo '<div class="col-md-4 pr-1">
+						<div class="card mb-4 box-shadow hover_img">
+							<a href="publicacion.php?id=' . $project["p_id"] . '">
+								<img class="card-img-top standarized_img" src="../img/uploads/' . $img[0]["url"] . '" alt="Card image cap">
+							</a>
+							<div class="mt-3">
+								<div class="row">
+									<div class="col-10">
+										<h5 class="card-title">' . $project["name"] . '</h5>
+										<h6 class="card-subtitle mb-2 text-muted">' . $first_part . '...' . '</h6>
+									</div>
+									<div class="col-2 text-right">
+										<h5 class="card-title"><img class="img-fluid premio-icon" src="../img/icons/premio.png"></h5>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="col-5 text-right">
-							<h5 class="card-title"><img class="img-fluid premio-icon" src="../img/icons/premio.png"></h5>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 pr-1">
-			<div class="card mb-4 box-shadow hover_img">
-			<img class="card-img-top" src="https://via.placeholder.com/500x300" alt="Card image cap">
-				<div class="mt-3">
-					<h5 class="card-title">Card title</h5>
-					<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 pr-1">
-			<div class="card mb-4 box-shadow hover_img">
-			<img class="card-img-top" src="https://via.placeholder.com/500x300" alt="Card image cap">
-				<div class="mt-3">
-					<h5 class="card-title">Card title</h5>
-					<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 pr-1">
-			<div class="card mb-4 box-shadow hover_img">
-			<img class="card-img-top" src="https://via.placeholder.com/500x300" alt="Card image cap">
-				<div class="mt-3">
-					<h5 class="card-title">Card title</h5>
-					<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 pr-1">
-			<div class="card mb-4 box-shadow hover_img">
-			<img class="card-img-top" src="https://via.placeholder.com/500x300" alt="Card image cap">
-				<div class="mt-3">
-					<h5 class="card-title">Card title</h5>
-					<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 pr-1">
-			<div class="card mb-4 box-shadow hover_img">
-			<img class="card-img-top" src="https://via.placeholder.com/500x300" alt="Card image cap">
-				<div class="mt-3">
-					<h5 class="card-title">Card title</h5>
-					<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-				</div>
-			</div>
-		</div>
+					</div>';
+			}
+		?>
 	</div>
 </div>
 

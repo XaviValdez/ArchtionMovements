@@ -55,6 +55,11 @@ h3 {
 .card .border-sharp {
 	border-radius: 0rem !important;
 }
+.standarized_img {
+	object-fit: cover;
+	width: 100%;
+	height: 300px;
+}
 
 /* IMG HOVER ANIMATIONS */
 .hover_img {

@@ -12,9 +12,9 @@
 <div class="container mt-3">
 	<div class="row">
 		<div class="col-sm-5 mt-5">
-			<h1 class="mt-5 mr-5"><b><?php echo $data["title"]; ?></b></h1>
+			<h1 class="mt-5 mr-5"><b><?php echo utf8_encode($data["title"]); ?></b></h1>
 			<br>
-			<p class="lead mt-3 mr-5"><?php echo ($data["subtitle1"]); ?></p>
+			<p class="lead mt-3 mr-5"><?php echo utf8_encode($data["subtitle1"]); ?></p>
 		</div>
 		<div class="col-sm-7 pl-5"><img src="../img/acerca_de/acercade.png" class="big_img disapear"></div>
 	</div>
@@ -25,7 +25,7 @@
 		</div>
 		<div class="col-sm-7 pl-5 mt-5">
 			<br>
-			<p class="lead mt-3 mr-5"><?php echo ($data["subtitle2"]); ?></p><br>
+			<p class="lead mt-3 mr-5"><?php echo utf8_encode($data["subtitle2"]); ?></p><br>
 			<p class="lead mt-3 mr-5 text-green font">¡Gracias por tu preferencia! Esperamos que encuentres valiosa la recopilación de información compartida en este sitio web.</p>
 		</div>
 		
