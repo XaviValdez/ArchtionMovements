@@ -16,6 +16,10 @@ function isCurrentActiveSession(){
     }
 }
 
+function logout(){
+    session_destroy();
+}
+
 function getProjects($status=null,$id=null,$name=null){
     global $DBH;
     if(!empty($status)){
@@ -109,17 +113,11 @@ function getImg($p_id,$status=1){
     
     if($rows) {
         return $rows;
-    }
-        
+    }   
     return false;
-
-
 }
 
-function logout(){
-    session_destroy();
-}
-
+// Insert new user into DB
 function setUser($first_name,$last_name,$email,$password,$status=1){
     global $DBH;
     $q='insert into users_arch (first_name,last_name,email,password,status) VALUES(:first_name,:last_name,:email,:password,:status)';
@@ -132,6 +130,19 @@ function setUser($first_name,$last_name,$email,$password,$status=1){
         ':status'=>$status
     ));
     return $DBH->lastInsertId();
+}
+
+// Insert new user into DB
+function sendContact($p_name,$p_email,$p_message,$p_status){
+    global $DBH;
+    $q='insert into contact (name,email,message,status) VALUES(:p_name,:p_email,:p_message,:p_status)';
+    $query = $DBH->prepare($q);
+    $query->execute(array(
+        ':p_name'=>$p_name,
+        ':p_email'=>$p_email,
+        ':p_message'=>$p_message,
+        ':p_status'=>$p_status
+    ));
 }
 
 // Update last login

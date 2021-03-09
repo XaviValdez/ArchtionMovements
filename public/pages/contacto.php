@@ -11,18 +11,18 @@
 				<div class="col-sm-7 bg-light adjust-mobile">
 					<br>
 					<h2 class="display-5 font-weight-bold pl-3 mt-5">Escríbenos</h2>
-					<form class="m-3 mb-5">
+					<form id="contact_form" class="m-3 mb-5">
 					<div class="form-group">
 						<label for="name">Nombre</label>
-						<input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Nombre">
+						<input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Nombre">
 					</div>
 					<div class="form-group">
 						<label for="mail">Email</label>
-						<input type="text" class="form-control" id="mail" placeholder="Email">
+						<input type="email" class="form-control" name="email" placeholder="Email">
 					</div>
 					<div class="form-group">
 						<label for="message">Tu mensaje</label>
-						<textarea class="form-control" id="message" rows="3" placeholder="Mensaje" style="border-width: 2px; border-radius: 0.6rem; padding: 10px 20px;"></textarea>
+						<textarea class="form-control" name="message" rows="3" placeholder="Mensaje" style="border-width: 2px; border-radius: 0.6rem; padding: 10px 20px;"></textarea>
 					</div>
 					<button type="submit" class="btn btn-dark">Enviar</button>
 					</form>
@@ -66,6 +66,9 @@
 		</div>
 	</div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/ajaxes/contact.js"></script>
 
 <?php include('../templates/_loginmodal.php') ?>
 <?php include('../templates/_footer.html') ?>
