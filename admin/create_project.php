@@ -129,6 +129,12 @@ global $version;
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
+                        <label>Ubicación</label>
+                        <textarea type="text" class="form-control" placeholder="Country" name='location' required=""> </textarea> 
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
                         <label>Social</label>
                         <textarea type="text" class="form-control" placeholder="Country" name='social' required=""> </textarea> 
                       </div>

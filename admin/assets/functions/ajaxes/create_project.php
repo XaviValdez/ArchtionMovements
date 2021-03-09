@@ -7,7 +7,7 @@ if(empty($project_by_name)){
 	//means project is new
 	$project_id=insertProject($_POST['name'], $_POST['user_id']);
 	if(!empty($project_id)){
-		insertProjectTxn($_POST['description'], $_POST['social'], $_POST['environment'], $_POST['economy'], $_POST['objective'], $project_id);
+		insertProjectTxn($_POST['description'],$_POST['location'], $_POST['social'], $_POST['environment'], $_POST['economy'], $_POST['objective'], $project_id);
 		// File upload configuration 
 	    $targetDir = "../../../../../ArchtionMovements/public/img/uploads/"; 
 	    $allowTypes = array('jpg','png','jpeg','gif'); 

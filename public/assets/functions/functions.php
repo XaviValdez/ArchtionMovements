@@ -24,7 +24,7 @@ function getProjects($status=null,$id=null,$name=null){
     global $DBH;
     if(!empty($status)){
         //get them all
-        $query = $DBH->prepare('SELECT u.id as "u_id", p.id as "p_id", name, ptxt.description, ptxt.social, ptxt.environment, ptxt.economy, ptxt.objective, p.crated_date, p.`status`                    FROM `projects` p 
+        $query = $DBH->prepare('SELECT u.id as "u_id", p.id as "p_id", name, ptxt.description, ptxt.location, ptxt.social, ptxt.environment, ptxt.economy, ptxt.objective, p.crated_date, p.`status`                    FROM `projects` p 
                                 STRAIGHT_JOIN projects_text_fields ptxt ON p.id=ptxt.project_id
                                 STRAIGHT_JOIN users_arch u ON u.id=p.user_id
                                 WHERE p.status=:status;');
@@ -33,7 +33,7 @@ function getProjects($status=null,$id=null,$name=null){
         ));
     }else if(!empty($id)){
         //searching for specific project
-        $query = $DBH->prepare('SELECT u.id as "u_id", p.id as "p_id", name, ptxt.description, ptxt.social, ptxt.environment, ptxt.economy, ptxt.objective, p.crated_date, p.`status`                    FROM `projects` p 
+        $query = $DBH->prepare('SELECT u.id as "u_id", p.id as "p_id", name, ptxt.description, ptxt.location, ptxt.social, ptxt.environment, ptxt.economy, ptxt.objective, p.crated_date, p.`status`                    FROM `projects` p 
                                 STRAIGHT_JOIN projects_text_fields ptxt ON p.id=ptxt.project_id
                                 STRAIGHT_JOIN users_arch u ON u.id=p.user_id
                                 WHERE p.id=:project_id;');
@@ -42,7 +42,7 @@ function getProjects($status=null,$id=null,$name=null){
         ));
     }else if(!empty($name)){
         //searching for specific project
-        $query = $DBH->prepare('SELECT u.id as "u_id", p.id as "p_id", name, ptxt.description, ptxt.social, ptxt.environment, ptxt.economy, ptxt.objective, p.crated_date, p.`status`                    FROM `projects` p 
+        $query = $DBH->prepare('SELECT u.id as "u_id", p.id as "p_id", name, ptxt.description, ptxt.location, ptxt.social, ptxt.environment, ptxt.economy, ptxt.objective, p.crated_date, p.`status`                    FROM `projects` p 
                                 STRAIGHT_JOIN projects_text_fields ptxt ON p.id=ptxt.project_id
                                 STRAIGHT_JOIN users_arch u ON u.id=p.user_id
                                 WHERE p.name=:name;');
@@ -58,6 +58,7 @@ function getProjects($status=null,$id=null,$name=null){
     return false;
 }
 
+// Get Email of users_arch
 function getEmail($email,$status=1){
     global $DBH;
     $query = $DBH->prepare('SELECT * FROM users_arch WHERE email=:email and status=:status');
@@ -87,7 +88,7 @@ function getUsername($p_id,$status=1){
     return false;
 }
 
-// Fetch data from about table
+// Fetch data from ABOUT table
 function getAcercaDe(){
     global $DBH;
     $query = $DBH->prepare('SELECT * FROM about');

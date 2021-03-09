@@ -171,12 +171,13 @@ function insertProject($name, $user_id, $status=1){
     ));
     return $DBH->lastInsertId();
 }
-function insertProjectTxn($description, $social, $environment, $economy, $objective, $project_id){
+function insertProjectTxn($description,$location, $social, $environment, $economy, $objective, $project_id){
     global $DBH;
-    $q='insert into projects_text_fields (description,social,environment,economy,objective,project_id) VALUES(:description,:social,:environment,:economy,:objective,:project_id)';
+    $q='insert into projects_text_fields (description,location,social,environment,economy,objective,project_id) VALUES(:description,:location,:social,:environment,:economy,:objective,:project_id)';
     $query = $DBH->prepare($q);
     $query->execute(array(
         ':description'=>$description,
+        ':location'=>$location,
         ':social'=>$social,
         ':environment'=>$environment,
         ':economy'=>$economy,

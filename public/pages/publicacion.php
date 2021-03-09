@@ -19,7 +19,7 @@
 	<!-- TÍTULO Y FOTO -->
 	<div class="row mt-5">
 		<div class="col-sm-4">
-			<p class="mr-5" style="letter-spacing: 5px;">UBICACIÓN</p>
+			<p class="mr-5" style="letter-spacing: 5px;"><?php echo $project["location"] ?></p>
 			<h1 class="mr-5"><b><?php echo $project["name"] ?></b></h1>
 		</div>
 
