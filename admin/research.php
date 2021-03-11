@@ -104,47 +104,36 @@ global $version;
 
       <div class="content">
       <?php
-        $projects_actives=getProyects(1);
-        $projects_inactives=getProyects(4);
-        $projects_pending=getProyects(2);
-        $projects_rejected=getProyects(3);
+        $research_actives=getResearch(1);
+        $research_inactives=getResearch(2);
         $table_head='<table class="table">
           <thead class=" text-primary">
             <th>
               ID
             </th>
             <th>
-              User id
-            </th>
-            <th>
               Nombre
             </th>
             <th>
-              Descripción
+              Autor
             </th>
             <th>
-              Social
+              Autor contact
             </th>
             <th>
-              Ambiente
+              Tipo
             </th>
             <th>
-              Economía
-            </th>
-            <th>
-              Objetivo
-            </th>
-            <th>
-              Creado
+              Idioma
             </th>
             <th>
               Estado
             </th>
           </thead>
           <tbody>';
-        if(!empty($projects_actives)){
+        if(!empty($research_actives)){
           //get the actives
-          $table_actives=table_helper_projects($projects_actives,$table_head);
+          $table_actives=table_helper_research($research_actives,$table_head);
           $table_actives.='</tbody>
                   </table>';
           $row_active='<div class="row">
@@ -162,9 +151,9 @@ global $version;
             </div>
           </div>';
           echo $row_active;
-        }else if(!empty($projects_inactives)){
+        }else if(!empty($research_inactives)){
           //get the inactives
-          $table_inactive=table_helper_projects($projects_inactives,$table_head);
+          $table_inactive=table_helper_research($research_inactives,$table_head);
           $table_inactive.='</tbody>
                   </table>';
           $row_inactive='<div class="row">
@@ -182,56 +171,16 @@ global $version;
             </div>
           </div>';
           echo $row_inactive;
-        }else if(!empty($projects_pending)){
-          //get the pendings
-          $table_pending=table_helper_projects($projects_pending,$table_head);
-          $table_pending.='</tbody>
-                  </table>';
-          $row_pending='<div class="row">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-header">
-                  <h4 class="card-title"> Proyectos pendientes</h4>
-                </div>
-                <div class="card-body">
-                  <div class="table-responsive">
-                     '.$table_pending.'
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>';
-          echo $row_pending;
-        }else if(!empty($projects_rejected)){
-          //get the rejected
-          $table_rejected=table_helper_projects($projects_rejected,$table_head);
-          $table_rejected.='</tbody>
-                  </table>';
-          $row_rejected='<div class="row">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-header">
-                  <h4 class="card-title"> Proyectos rechazados</h4>
-                </div>
-                <div class="card-body">
-                  <div class="table-responsive">
-                     '.$table_rejected.'
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>';
-          echo $row_rejected;
         }
         $no_table='<div class="row">
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header">
-                  <h4 class="card-title"> Crea proyectos</h4>
+                  <h4 class="card-title"> Crea investigaciones</h4>
                 </div>
                 <div class="card-body">
                   <div class="col-md-6 offset-md-3">
-                      <a href="create_project.php">
+                      <a href="create_research.php">
                         <button class="btn btn-primary btn-block">Crear</button>
                       </a>
                   </div>

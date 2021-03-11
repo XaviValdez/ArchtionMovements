@@ -19,6 +19,12 @@
               <i class="now-ui-icons education_atom"></i>
               <p>Projects</p>
             </a>
-          </li>          
+          </li>
+          <li>
+            <a href="./research.php">
+              <i class="now-ui-icons education_atom"></i>
+              <p>Research</p>
+            </a>
+          </li>               
         </ul>
       </div>

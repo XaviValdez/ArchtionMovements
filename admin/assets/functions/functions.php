@@ -123,6 +123,37 @@ function table_helper_projects($array,$table_head){
     }
     return $table;
 }
+function table_helper_research($array,$table_head){
+    $table='';
+    foreach ($array as $value) {
+        $table.= $table_head.'
+              <tr>
+                <td>
+                  '.$value["id"].'
+                </td>
+                <td>
+                  '.$value["name"].'
+                </td>
+                <td>
+                  '.$value["author"].'
+                </td>
+                <td>
+                  mobile: '.$value["author_mobile"].', email:'.$value["author_email"].'
+                </td>
+                <td>
+                  '.$value["type"].'
+                </td>
+                <td>
+                  '.$value["small_lang"].'
+                </td>
+                <td>
+                  '.$value["status"].'
+                </td>
+              </tr>
+            ';
+    }
+    return $table;
+}
 
 function getListUser($status, $id=null){
     global $DBH;
@@ -150,6 +181,65 @@ function getListUser($status, $id=null){
     echo "<pre>";
     print_r($row);
 }
+function getListTypesResearch($status, $id=null){
+    global $DBH;
+        $query = $DBH->prepare('SELECT * from research_types;');
+        $query->execute();
+    
+    $query->setFetchMode(PDO::FETCH_ASSOC);
+    $row = $query->fetchAll();
+    if($row)
+        return $row;
+    return false;
+    echo "<pre>";
+    print_r($row);
+}
+function getListLanguajes($status, $id=null){
+    global $DBH;
+    
+        $query = $DBH->prepare('SELECT * from research_languajes;');
+        $query->execute();
+    
+
+    $query->setFetchMode(PDO::FETCH_ASSOC);
+    $row = $query->fetchAll();
+    if($row)
+        return $row;
+    return false;
+    echo "<pre>";
+    print_r($row);
+}
+function getListCountry($country_code=null, $id=null){
+    global $DBH;
+    if(empty($id) && !empty($country_code)){
+        //get them by country_code
+        $query = $DBH->prepare('SELECT * from ciudades
+                                WHERE country_code=:country_code;');
+        $query->execute(array(
+            ':country_code'=>$country_code
+        ));
+    }else if(empty($country_code) && !empty($id)){
+        //searching for specific id
+        $query = $DBH->prepare('SELECT * from ciudades
+                                WHERE id=:id;');
+        $query->execute(array(
+            ':id'=>$id
+        ));
+    }else{
+        //get all countries
+        $query = $DBH->prepare('SELECT distinct(country_code) as "country_code" from ciudades;');
+        $query->execute();
+    }
+
+    $query->setFetchMode(PDO::FETCH_ASSOC);
+    $row = $query->fetchAll();
+    if($row)
+        return $row;
+    return false;
+    echo "<pre>";
+    print_r($row);
+}
+
 function insertImagesProject($id, $filename, $status=1){
     global $DBH;
     $q='insert into project_images (project_id,url,status) VALUES(:project_id,:url,:status)';
@@ -186,4 +276,65 @@ function insertProjectTxn($description,$location, $social, $environment, $econom
     ));
 }
 
+function getResearch($status=null,$id=null,$name=null){
+    global $DBH;
+    if(!empty($status)){
+        //get them all
+        $query = $DBH->prepare('SELECT r.id, name, author, author_mobile, author_email, published_date, rt.description as "type", c.city, c.country_code, rl.small_lang, status
+                                from research r
+                                STRAIGHT_JOIN research_types rt ON r.type=rt.id
+                                STRAIGHT_JOIN ciudades c on r.published_place= c.id
+                                STRAIGHT_JOIN research_languajes rl ON r.languaje=rl.id
+                                WHERE r.`status`=:status;');
+        $query->execute(array(
+            ':status'=>$status
+        ));
+    }else if(!empty($id)){
+        //searching for specific project
+        $query = $DBH->prepare('SELECT r.id, name, author, author_mobile, author_email, published_date, rt.description as "type", c.city, c.country_code, rl.small_lang, status
+                                from research r
+                                STRAIGHT_JOIN research_types rt ON r.type=rt.id
+                                STRAIGHT_JOIN ciudades c on r.published_place= c.id
+                                STRAIGHT_JOIN research_languajes rl ON r.languaje=rl.id
+                                WHERE r.`id`=:project_id;');
+        $query->execute(array(
+            ':project_id'=>$id
+        ));
+    }else if(!empty($name)){
+        //searching for specific project
+        $query = $DBH->prepare('SELECT r.id, name, author, author_mobile, author_email, published_date, rt.description as "type", c.city, c.country_code, rl.small_lang, status
+                                from research r
+                                STRAIGHT_JOIN research_types rt ON r.type=rt.id
+                                STRAIGHT_JOIN ciudades c on r.published_place= c.id
+                                STRAIGHT_JOIN research_languajes rl ON r.languaje=rl.id
+                                WHERE r.`name`=:name;');
+        $query->execute(array(
+            ':name'=>$name
+        ));
+    }
+    $query->setFetchMode(PDO::FETCH_ASSOC);
+    $row = $query->fetchAll();
+
+    if($row)
+        return $row;
+    return false;
+}
+function insertResearch($name, $author, $type, $url, $languaje, $author_mobile, $author_email, $published_date, $published_place, $status=1){
+    global $DBH;
+    $q='insert into research(name,author,type,url, languaje,author_mobile, author_email, published_date,published_place,status) values(:name, :author, :type, :url, :languaje, :author_mobile, :author_email, :published_date, :published_place, :status)';
+    $query = $DBH->prepare($q);
+    $query->execute(array(
+        ':name'=>$name,
+        ':author'=>$author,
+        ':type'=>$type,
+        ':url'=>$url,
+        ':languaje'=>$languaje,
+        ':author_mobile'=>$author_mobile,
+        ':author_email'=>$author_email,
+        ':published_date'=>$published_date,
+        ':published_place'=>$published_place,
+        ':status'=>$status
+    ));
+    return $DBH->lastInsertId();
+}
 ?>
