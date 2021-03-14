@@ -13,7 +13,8 @@ $("#create_project").on('submit', function (event) {
 	    	}
 	    },
 	    error: function (jqXhr, textStatus, errorMessage) {
-	            $('p').append('Error' + errorMessage);
+	            //$('p').append('Error' + errorMessage);
+				console.log(errorMessage);
 	    }
 	});
 });

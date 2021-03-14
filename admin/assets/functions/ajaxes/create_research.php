@@ -30,7 +30,8 @@ if(empty($reseach_by_name)){
                 	$author_email=$_POST['author_email'];
                 	$published_date=$_POST['published_date'];
                 	$published_place=$_POST['city'];
-                    insertResearch($name, $author, $type, $fileName, $languaje, $author_mobile, $author_email, $published_date, $published_place);
+                    $id=insertResearch($name, $author, $type, $fileName, $languaje, $author_mobile, $author_email, $published_date, $published_place);
+                    generatePreview($id); // generates image from pdf
                     $response['success']=true;
 					$response['error']="project_uploaded";
                 }else{ 

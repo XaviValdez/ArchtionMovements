@@ -280,7 +280,7 @@ function getResearch($status=null,$id=null,$name=null){
     global $DBH;
     if(!empty($status)){
         //get them all
-        $query = $DBH->prepare('SELECT r.id, name, author, author_mobile, author_email, published_date, rt.description as "type", c.city, c.country_code, rl.small_lang, status
+        $query = $DBH->prepare('SELECT r.id, name, author, url, author_mobile, author_email, published_date, rt.description as "type", c.city, c.country_code, rl.small_lang, status
                                 from research r
                                 STRAIGHT_JOIN research_types rt ON r.type=rt.id
                                 STRAIGHT_JOIN ciudades c on r.published_place= c.id
@@ -291,7 +291,7 @@ function getResearch($status=null,$id=null,$name=null){
         ));
     }else if(!empty($id)){
         //searching for specific project
-        $query = $DBH->prepare('SELECT r.id, name, author, author_mobile, author_email, published_date, rt.description as "type", c.city, c.country_code, rl.small_lang, status
+        $query = $DBH->prepare('SELECT r.id, name, author, url, author_mobile, author_email, published_date, rt.description as "type", c.city, c.country_code, rl.small_lang, status
                                 from research r
                                 STRAIGHT_JOIN research_types rt ON r.type=rt.id
                                 STRAIGHT_JOIN ciudades c on r.published_place= c.id
@@ -302,7 +302,7 @@ function getResearch($status=null,$id=null,$name=null){
         ));
     }else if(!empty($name)){
         //searching for specific project
-        $query = $DBH->prepare('SELECT r.id, name, author, author_mobile, author_email, published_date, rt.description as "type", c.city, c.country_code, rl.small_lang, status
+        $query = $DBH->prepare('SELECT r.id, name, author, url, author_mobile, author_email, published_date, rt.description as "type", c.city, c.country_code, rl.small_lang, status
                                 from research r
                                 STRAIGHT_JOIN research_types rt ON r.type=rt.id
                                 STRAIGHT_JOIN ciudades c on r.published_place= c.id
@@ -319,6 +319,7 @@ function getResearch($status=null,$id=null,$name=null){
         return $row;
     return false;
 }
+
 function insertResearch($name, $author, $type, $url, $languaje, $author_mobile, $author_email, $published_date, $published_place, $status=1){
     global $DBH;
     $q='insert into research(name,author,type,url, languaje,author_mobile, author_email, published_date,published_place,status) values(:name, :author, :type, :url, :languaje, :author_mobile, :author_email, :published_date, :published_place, :status)';
@@ -337,4 +338,35 @@ function insertResearch($name, $author, $type, $url, $languaje, $author_mobile, 
     ));
     return $DBH->lastInsertId();
 }
+
+
+function generatePreview($id) {
+
+    $data = findResearch($id)[0];
+    $pdf_url = $data["url"];
+    $withoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $pdf_url);
+
+    $im = new Imagick();
+    $im->setResolution(200, 200);     //set the resolution of the resulting jpg
+    $im->readImage($_SERVER['DOCUMENT_ROOT'].'/ArchtionMovements/public/uploaded_files_research/'.$pdf_url.'[0]');    //[0] for the first page
+    $im->setImageFormat('jpg');
+
+    file_put_contents($_SERVER['DOCUMENT_ROOT'].'/ArchtionMovements/public/previews/'. $withoutExt . '.png', $im); // save img 
+}
+
+function findResearch($p_id) {
+    global $DBH;
+    $query = $DBH->prepare('SELECT * FROM `research` WHERE `id`=:p_id');
+    $query->execute(array(
+        ':p_id'=>$p_id
+    ));
+
+    $query->setFetchMode(PDO::FETCH_ASSOC);
+    $row = $query->fetchAll();
+
+    if($row)
+        return $row;
+    return false;
+}
+
 ?>
