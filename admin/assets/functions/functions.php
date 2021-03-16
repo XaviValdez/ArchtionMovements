@@ -344,7 +344,8 @@ function generatePreview($id) {
 
     $data = findResearch($id)[0];
     $pdf_url = $data["url"];
-    $withoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $pdf_url);
+    $name = $data["name"];
+    $withoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $name);
 
     $im = new Imagick();
     $im->setResolution(200, 200);     //set the resolution of the resulting jpg
@@ -352,6 +353,14 @@ function generatePreview($id) {
     $im->setImageFormat('jpg');
 
     file_put_contents($_SERVER['DOCUMENT_ROOT'].'/ArchtionMovements/public/previews/'. $withoutExt . '.png', $im); // save img 
+
+    $im2 = new Imagick();
+    $im2->setResolution(200, 200);     //set the resolution of the resulting jpg
+    $im2->readImage($_SERVER['DOCUMENT_ROOT'].'/ArchtionMovements/public/uploaded_files_research/'.$pdf_url.'[1]');    //[0] for the first page
+    $im2->setImageFormat('jpg');
+
+    file_put_contents($_SERVER['DOCUMENT_ROOT'].'/ArchtionMovements/public/previews/'. $withoutExt . '2.png', $im2); // save img 
+
 }
 
 function findResearch($p_id) {

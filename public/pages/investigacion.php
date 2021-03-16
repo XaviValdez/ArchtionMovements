@@ -198,11 +198,11 @@
 							<div class="col-sm-6">
 								<h4 class="card-title">'. $investigacion["name"] .'</h4>
 								<p class="card-text"><b>'. $investigacion["author"] .'</b><br></p>
-								<p class="card-text text-muted"><b> Publicado el: '. $investigacion["published_date"] .'</b><br></p>
+								<p class="card-text text-muted"><b> Publicado el: '. substr($investigacion["published_date"], 0, -8) .'</b><br></p>
 							</div>
 							<div class="col-sm-3 text-center">
 								<div class="row mb-4">
-								<a href="../uploaded_files_research/'. $investigacion["url"] .'" class="btn btn-block btn-dark">Leer</a>
+								<a href="leer.php?id='. $investigacion["r_id"] .'" class="btn btn-block btn-dark">Leer</a>
 								</div>
 								<div class="row mb-4">
 								<a href="preview.php'. "?id=" . $investigacion["r_id"] .'" class="btn btn-block bg-green">Previsualizar</a>
