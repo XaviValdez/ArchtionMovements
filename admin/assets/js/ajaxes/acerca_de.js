@@ -1,7 +1,7 @@
-$("#create_project").on('submit', function (event) {
+$("#create_acerca_de").on('submit', function (event) {
 	event.preventDefault();
 	debugger;
-	$.ajax('/ArchtionMovements/admin/assets/functions/ajaxes/create_project.php', {
+	$.ajax('/ArchtionMovements/admin/assets/functions/ajaxes/create_acerca_de.php', {
 	    type: 'POST',  // http method
 	    data : new FormData(this),  // data to submit
 	    contentType:false,

@@ -15,6 +15,12 @@
             </a>
           </li>
           <li>
+            <a href="./acerca_de.php">
+              <i class="now-ui-icons design_app"></i>
+              <p>Acerca de</p>
+            </a>
+          </li>
+          <li>
             <a href="./projects.php">
               <i class="now-ui-icons education_atom"></i>
               <p>Projects</p>

@@ -44,7 +44,7 @@ global $version;
   <link href="assets/demo/demo.css" rel="stylesheet" />
 </head>
 
-<body class="user-profile">
+<body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="orange">
       <!--
@@ -66,7 +66,7 @@ global $version;
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Crear proyecto</a>
+            <a class="navbar-brand" href="#pablo">Acerca de</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -74,7 +74,16 @@ global $version;
             <span class="navbar-toggler-bar navbar-kebab"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
-            
+            <form>
+              <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="Search...">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <i class="now-ui-icons ui-1_zoom-bold"></i>
+                  </div>
+                </div>
+              </div>
+            </form>
             <ul class="navbar-nav">
               
               <li class="nav-item">
@@ -92,96 +101,68 @@ global $version;
       <!-- End Navbar -->
       <div class="panel-header panel-header-sm">
       </div>
+
       <div class="content">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="title">Crea un proyecto</h5>
-              </div>
-              <div class="card-body">
-                <form id="create_project" enctype="multipart/form-data">
-                  <div class="row">
-                    <div class="col-md-5 pr-1">
-                      <div class="form-group">
-                        <label>Nombre</label>
-                        <input type="text" class="form-control" placeholder="Nombre" name='name'>
-                      </div>
-                    </div>
-                    <div class="col-md-4 pr-1">
-                      <div class="form-group">
-                        <label>Usuario</label>
-                        <select name='user_id' class="form-control">
-                          <?php
-                          $users=getListUser(1);//getting active users
-                          foreach ($users as $value) {
-                            echo '<option value="'.$value['id'].'">'.$value['first_name'].' '.$value['last_name'].' '.$value['email'].'</option>';
-                          }
-                          ?>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Descripción</label>
-                        <textarea type="text" class="form-control" placeholder="Country" name='description' required=""> </textarea> 
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Ubicación</label>
-                        <textarea type="text" class="form-control" placeholder="Country" name='location' required=""> </textarea> 
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Social</label>
-                        <textarea type="text" class="form-control" placeholder="Country" name='social' required=""> </textarea> 
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Ambiente</label>
-                        <textarea type="text" class="form-control" placeholder="Country" name='environment' required=""> </textarea> 
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Economico</label>
-                        <textarea type="text" class="form-control" placeholder="Country" name='economy' required=""> </textarea> 
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Objetivo</label>
-                        <textarea type="text" class="form-control" placeholder="Country" name='objective' required=""> </textarea> 
-                      </div>
-                    </div>
+      <?php
+        $acercade=getAcercaDe(1);
+        $table_head='<table class="table">
+          <thead class=" text-primary">
+            <th>
+              Título
+            </th>
+            <th>
+              sub texto 1
+            </th>
+            <th>
+              sub texto 2
+            </th>
+            <th>
+              Editar
+            </th>
+          </thead>
+          <tbody>';
+        if(!empty($acercade)){
+          //get the actives
+          $table_actives=table_helper_about($acercade,$table_head);
+          $table_actives.='</tbody>
+                  </table>';
+          $row_active='<div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title"> Acerca de</h4>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                     '.$table_actives.'
                   </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Selecciona una o varias imágenes secundarias</label> 
-                        <i class="now-ui-icons arrows-1_cloud-upload-94"></i>
-                        <input class="form-control" type="file" name="files[]" id="files" multiple required=""/>
-                        <div class="min_img">
-                          
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <button class="btn btn-primary btn-block" type="submit">Crear</button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
+          </div>';
+          echo $row_active;
+        }else{
+          $no_table='<div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title"> Crea acercade</h4>
+                </div>
+                <div class="card-body">
+                  <div class="col-md-6 offset-md-3">
+                      <a href="create_acerca_de.php">
+                        <button class="btn btn-primary btn-block">Crear</button>
+                      </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>';
+          echo $no_table;
+        }
+        
+      ?>
+        
       </div>
       <footer class="footer">
         <div class=" container-fluid ">
@@ -202,7 +183,7 @@ global $version;
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
-  <script src='assets/js/ajaxes/projects.js?v=<?php echo $version; ?>'></script>
+  <script src="assets/js/ajaxes/acerca_de.js?v=<?php echo $version; ?>"></script>
 
 </body>
 

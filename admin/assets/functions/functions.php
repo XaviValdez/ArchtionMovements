@@ -337,4 +337,61 @@ function insertResearch($name, $author, $type, $url, $languaje, $author_mobile, 
     ));
     return $DBH->lastInsertId();
 }
+function getAcercaDe(){
+    global $DBH;
+    
+    $query = $DBH->prepare('SELECT *
+                            from about;');
+    $query->execute();
+    
+    $query->setFetchMode(PDO::FETCH_ASSOC);
+    $row = $query->fetchAll();
+
+    if($row)
+        return $row;
+    return false;
+}
+function table_helper_about($array,$table_head){
+    $table='';
+    foreach ($array as $value) {
+        $table.= $table_head.'
+              <tr>
+                <td>
+                  '.$value["title"].'
+                </td>
+                <td>
+                  '.$value["subtitle1"].'
+                </td>
+                <td>
+                  '.$value["subtitle2"].'
+                </td>
+                <td>
+                  <a href="edit_acerca_de.php">
+                    <button class="btn btn-primary btn-block">Editar</button>
+                  </a>
+                </td>
+              </tr>
+            ';
+    }
+    return $table;
+}
+function insertAcercade($title,$subtitle1,$subtitle2, $img1, $img2){
+    global $DBH;
+    $q='insert into about (title,subtitle1,subtitle2,image1,image2) VALUES(:title,:subtitle1,:subtitle2,:image1,:image2)';
+    $query = $DBH->prepare($q);
+    $query->execute(array(
+        ':title'=>$title,
+        ':subtitle1'=>$subtitle1,
+        ':subtitle2'=>$subtitle2,
+        ':image1'=>$img1,
+        ':image2'=>$img2
+    ));
+    return $DBH->lastInsertId();
+}
+function deleteAcercade(){
+    global $DBH;
+    $q='delete from about;';
+    $query = $DBH->prepare($q);
+    $query->execute();
+}
 ?>

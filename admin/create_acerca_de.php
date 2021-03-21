@@ -66,7 +66,7 @@ global $version;
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Crear proyecto</a>
+            <a class="navbar-brand" href="#pablo">Crear Acerca de</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -97,71 +97,35 @@ global $version;
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h5 class="title">Crea un proyecto</h5>
+                <h5 class="title">Crea</h5>
               </div>
               <div class="card-body">
-                <form id="create_project" enctype="multipart/form-data">
+                <form id="create_acerca_de" enctype="multipart/form-data">
                   <div class="row">
                     <div class="col-md-5 pr-1">
                       <div class="form-group">
-                        <label>Nombre</label>
-                        <input type="text" class="form-control" placeholder="Nombre" name='name'>
-                      </div>
-                    </div>
-                    <div class="col-md-4 pr-1">
-                      <div class="form-group">
-                        <label>Usuario</label>
-                        <select name='user_id' class="form-control">
-                          <?php
-                          $users=getListUser(1);//getting active users
-                          foreach ($users as $value) {
-                            echo '<option value="'.$value['id'].'">'.$value['first_name'].' '.$value['last_name'].' '.$value['email'].'</option>';
-                          }
-                          ?>
-                        </select>
+                        <label>Título</label>
+                        <input type="text" class="form-control" placeholder="Nombre" name='title'>
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label>Descripción</label>
-                        <textarea type="text" class="form-control" placeholder="Country" name='description' required=""> </textarea> 
+                        <label>Subtexto 1</label>
+                        <textarea type="text" class="form-control" placeholder="Country" name='subtitle1' required=""> </textarea> 
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label>Ubicación</label>
-                        <textarea type="text" class="form-control" placeholder="Country" name='location' required=""> </textarea> 
+                        <label>Subtexto 2</label>
+                        <textarea type="text" class="form-control" placeholder="Country" name='subtitle2' required=""> </textarea> 
                       </div>
                     </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Social</label>
-                        <textarea type="text" class="form-control" placeholder="Country" name='social' required=""> </textarea> 
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Ambiente</label>
-                        <textarea type="text" class="form-control" placeholder="Country" name='environment' required=""> </textarea> 
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Economico</label>
-                        <textarea type="text" class="form-control" placeholder="Country" name='economy' required=""> </textarea> 
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Objetivo</label>
-                        <textarea type="text" class="form-control" placeholder="Country" name='objective' required=""> </textarea> 
-                      </div>
-                    </div>
+                    
                   </div>
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label>Selecciona una o varias imágenes secundarias</label> 
+                        <label>Selecciona una o varias imágenes</label> 
                         <i class="now-ui-icons arrows-1_cloud-upload-94"></i>
                         <input class="form-control" type="file" name="files[]" id="files" multiple required=""/>
                         <div class="min_img">
@@ -202,7 +166,7 @@ global $version;
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
-  <script src='assets/js/ajaxes/projects.js?v=<?php echo $version; ?>'></script>
+  <script src='assets/js/ajaxes/acerca_de.js?v=<?php echo $version; ?>'></script>
 
 </body>
 

@@ -186,6 +186,9 @@ global $version;
                         <label>Selecciona la publicación</label> 
                         <i class="now-ui-icons arrows-1_cloud-upload-94"></i>
                         <input class="form-control" type="file" name="files[]" id="files" required=""/>
+                        <div class="min_img">
+                          
+                        </div>
                       </div>
                     </div>
                   </div>
