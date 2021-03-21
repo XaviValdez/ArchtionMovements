@@ -7,7 +7,7 @@ $("#login_user").on('submit', function (event) {
 	    data: $("#login_user").serialize(),  // data to submit
 	    success: function (data, status, xhr) {
 	    	if(data.success){
-	    		window.location.href = '/ArchtionMovements/public/pages/index.php';
+	    		window.location.href = window.location.href;
 	    	}
 			else if (data.error == "user_not_found" || data.error == "pass_incorrect") {
 				alert("Email o contraseña incorrectos");

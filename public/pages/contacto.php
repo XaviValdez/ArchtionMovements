@@ -22,7 +22,7 @@
 					</div>
 					<div class="form-group">
 						<label for="message">Tu mensaje</label>
-						<textarea class="form-control" name="message" rows="3" placeholder="Mensaje" style="border-width: 2px; border-radius: 0.6rem; padding: 10px 20px;"></textarea>
+						<textarea class="form-control" id="message" name="message" rows="3" placeholder="Mensaje" style="border-width: 2px; border-radius: 0.6rem; padding: 10px 20px;"></textarea>
 					</div>
 					<button type="submit" class="btn btn-dark">Enviar</button>
 					</form>

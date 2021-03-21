@@ -20,6 +20,7 @@ function logout(){
     session_destroy();
 }
 
+// FETCH PROJECTS
 function getProjects($status=null,$id=null,$name=null){
     global $DBH;
     if(!empty($status)){
@@ -50,6 +51,67 @@ function getProjects($status=null,$id=null,$name=null){
             ':name'=>$name
         ));
     }
+    $query->setFetchMode(PDO::FETCH_ASSOC);
+    $row = $query->fetchAll();
+
+    if($row)
+        return $row;
+    return false;
+}
+
+// FETCH RESEARCH
+function getResearch($status=null,$id=null,$name=null){
+    global $DBH;
+    if(!empty($status)){
+        //get them all
+        $query = $DBH->prepare('SELECT r.id as "r_id", name, author, url, author_mobile, author_email, published_date, rt.description as "type", c.city, c.country_code, rl.small_lang, status
+                                from research r
+                                STRAIGHT_JOIN research_types rt ON r.type=rt.id
+                                STRAIGHT_JOIN ciudades c on r.published_place= c.id
+                                STRAIGHT_JOIN research_languajes rl ON r.languaje=rl.id
+                                WHERE r.`status`=:status;');
+        $query->execute(array(
+            ':status'=>$status
+        ));
+    }else if(!empty($id)){
+        //searching for specific project
+        $query = $DBH->prepare('SELECT r.id, name, author, url, author_mobile, author_email, published_date, rt.description as "type", c.city, c.country_code, rl.small_lang, status
+                                from research r
+                                STRAIGHT_JOIN research_types rt ON r.type=rt.id
+                                STRAIGHT_JOIN ciudades c on r.published_place= c.id
+                                STRAIGHT_JOIN research_languajes rl ON r.languaje=rl.id
+                                WHERE r.`id`=:project_id;');
+        $query->execute(array(
+            ':project_id'=>$id
+        ));
+    }else if(!empty($name)){
+        //searching for specific project
+        $query = $DBH->prepare('SELECT r.id, name, author, url, author_mobile, author_email, published_date, rt.description as "type", c.city, c.country_code, rl.small_lang, status
+                                from research r
+                                STRAIGHT_JOIN research_types rt ON r.type=rt.id
+                                STRAIGHT_JOIN ciudades c on r.published_place= c.id
+                                STRAIGHT_JOIN research_languajes rl ON r.languaje=rl.id
+                                WHERE r.`name`=:name;');
+        $query->execute(array(
+            ':name'=>$name
+        ));
+    }
+    $query->setFetchMode(PDO::FETCH_ASSOC);
+    $row = $query->fetchAll();
+
+    if($row)
+        return $row;
+    return false;
+}
+
+
+function findResearch($p_id) {
+    global $DBH;
+    $query = $DBH->prepare('SELECT * FROM `research` WHERE `id`=:p_id');
+    $query->execute(array(
+        ':p_id'=>$p_id
+    ));
+
     $query->setFetchMode(PDO::FETCH_ASSOC);
     $row = $query->fetchAll();
 
