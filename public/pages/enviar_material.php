@@ -16,21 +16,21 @@
 				<h2 class="mt-4 mb-3">Compartir tus propuestas</h2>
 			</div>
 			<div class="row text-center mb-5">
-				<div class="col-sm-3 m-3 bg-green p-3 text-white cut hover_animation" style="cursor: pointer;" onclick="location.href='enviar_proyecto';">
+				<div class="m-3 bg-green p-3 text-white cut hover_animation block" style="cursor: pointer;" onclick="location.href='enviar_proyecto';">
 					<p class="text-center"><img class="img-fluid mt-5 local_icon" src="../img/icons/1.png"></p>
-					<br>
-					<h4 class="mt-3"><b>Compartir Proyectos y Obras</b></h4>
+
+					<h4><b>Compartir Proyectos y Obras</b></h4>
 				</div>
 
-				<div class="col-sm-3 m-3 bg-blue p-3 text-white cut hover_animation" style="cursor: pointer;" onclick="location.href='enviar_investigacion';">
+				<div class="m-3 bg-blue p-3 text-white cut hover_animation block" style="cursor: pointer;" onclick="location.href='enviar_investigacion';">
 					<p class="text-center"><img class="img-fluid mt-5 local_icon" src="../img/icons/2.png"></p>
-					<br>
-					<h4 class="mt-3"><b>Subir perfil para red social</b></h4>
+
+					<h4><b>Subir perfil para red social</b></h4>
 				</div>
 
-				<div class="col-sm-3 m-3 bg-orange p-3 text-white cut hover_animation" style="cursor: pointer;" onclick="location.href='red_trabajo';">
+				<div class="m-3 bg-orange p-3 text-white cut hover_animation block" style="cursor: pointer;" onclick="location.href='red_trabajo';">
 					<p class="text-center"><img class="img-fluid mt-5 local_icon" src="../img/icons/3.png"></p>
-					<br>
+
 					<h4 class="mt-3"><b>Compartir Investigación</b></h4>
 				</div>
 			</div>
@@ -41,16 +41,16 @@
 				<h2 class="mt-4 mb-3">Convocatorias y eventos</h2>
 			</div>
 			<div class="row text-center mb-5">
-				<div class="col-sm-4 m-3 bg-red p-3 text-white cut hover_animation" style="cursor: pointer;" onclick="location.href='{{ route('enviarProyecto')}}';">
+				<div class="m-3 bg-red p-3 text-white cut hover_animation block" style="cursor: pointer;" onclick="location.href='{{ route('enviarProyecto')}}';">
 					<p class="text-center"><img class="img-fluid mt-5 local_icon" src="../img/icons/4.png"></p>
-					<br>
-					<h4 class="mt-3"><b>Inscripción a<br> Eventos</b></h4><br>
+
+					<h4><b>Inscripción a<br> Eventos</b></h4><br>
 				</div>
 
-				<div class="col-sm-4 m-3 bg-pink p-3 text-white cut hover_animation" style="cursor: pointer;" onclick="location.href='enviar_investigacion';">
+				<div class="m-3 bg-pink p-3 text-white cut hover_animation block" style="cursor: pointer;" onclick="location.href='enviar_investigacion';">
 					<p class="text-center"><img class="img-fluid mt-5 local_icon" src="../img/icons/5.png"></p>
-					<br>
-					<h4 class="mt-3"><b>Comprar en<br> tienda</b></h4><br>
+
+					<h4><b>Comprar en<br> tienda</b></h4><br>
 				</div>
 			</div>
 		</div>

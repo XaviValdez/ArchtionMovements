@@ -33,9 +33,9 @@
 		<div class="box c hover_img cut-left-down">
 			<div class="card text-white">
 				<img class="card-img border-sharp" src="../img/index/convocatoria.jpg">
-				<div class="card-img-overlay overlay-green d-flex flex-column justify-content-end p-0">
+				<div class="card-img-overlay d-flex flex-column justify-content-end p-0">
 					<div class="text p-3">
-						<h4 class="card-text font-weight-bold text-right">Convocatoria</h4>
+						<h4 class="card-text font-weight-bold text-right"></h4>
 					</div>
 				</div>
 			</div>
@@ -87,7 +87,7 @@
 
 <br>
 
-<div class="container mt-3 mb-5">
+<div class="container mt-3 mb-5 disapear">
 	<div class="row">
 		<div class="col-sm-5 mt-5">
 			<h1 class="mt-5 mr-5"><b>Mejorar el mundo a través de una arquitectura sustentable y pertinente.</b></h1>
@@ -100,7 +100,7 @@
 
 <br>
 <!-- ---------------- Planes para usuarios ------------------- -->
-<div class="container bg-light p-5 border-rounded border-green mb-3">
+<div class="container bg-light p-5 border-rounded border-green mb-3 disapear">
 	
 	<div class="bg-light">
 		<div class="row mb-5">
@@ -136,64 +136,14 @@
 		<div class="row border-top">
 			<div class="col-2 bg-light p-3 border-right">
 				<div>
-				<h4>Perfil</h4>
+				<h4 class="text-green"><b>Perfil</b></h4>
 				</div>
 			</div>
-			<div class="col-6 bg-light p-3 border-right">
+			<div class="col-6 bg-light p-0 border-right">
 				<div>
-					<h4>Cuenta de sitio</h4>
-				</div>
-			</div>
-			<div class="col-2 bg-light p-3 border-right text-center">
-				<div>
-					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-					</svg>
-				</div>
-			</div>
-			<div class="col-2 bg-light p-3 text-center">
-				<div>
-					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-					</svg>
-				</div>
-			</div>
-		</div>
-
-		<div class="row border-top">
-			<div class="col-2 bg-light p-3 border-right">
-				<div>
-				<h4>Perfil</h4>
-				</div>
-			</div>
-			<div class="col-6 bg-light p-3 border-right">
-				<div>
-					<h4>Perfil personalizado (Guardar preferencias y "fav".)</h4>
-				</div>
-			</div>
-			<div class="col-2 bg-light p-3 border-right text-center">
-				<div>
-					<h4></h4>
-				</div>
-			</div>
-			<div class="col-2 bg-light p-3 text-center">
-				<div>
-					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-					</svg>
-				</div>
-			</div>
-		</div>
-
-		<div class="row border-top">
-			<div class="col-2 bg-light p-3 border-right">
-				<div>
-				<h4>Proyectos y obras</h4>
-				</div>
-			</div>
-			<div class="col-6 bg-light p-3 border-right">
-				<div>
-					<h4>Compartir obra o proyecto para revisión y publicación</h4>
+					<p class="lead"><svg class="text-green" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Cuenta de sitio</p>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 border-right text-center">
@@ -215,17 +165,19 @@
 		<div class="row border-top">
 			<div class="col-2 bg-light p-3 border-right">
 				<div>
-				<h4>Proyectos y obras</h4>
+				<h4 class="text-green"><b>Perfil</b></h4>
 				</div>
 			</div>
-			<div class="col-6 bg-light p-3 border-right">
+			<div class="col-6 bg-light p-0 border-right">
 				<div>
-					<h4>Contactar al autor de otras obras o proyectos publicados</h4>
+					<p class="lead"><svg class="text-green" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Perfil personalizado (Guardar preferencias y "fav".)</p>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 border-right text-center">
 				<div>
-					<h4></h4>
+					<h4 class="text-green"><b></b></h4>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 text-center">
@@ -240,37 +192,14 @@
 		<div class="row border-top">
 			<div class="col-2 bg-light p-3 border-right">
 				<div>
-				<h4>Proyectos y obras</h4>
+				<h4 class="text-green"><b>Proyectos y obras</b></h4>
 				</div>
 			</div>
-			<div class="col-6 bg-light p-3 border-right">
+			<div class="col-6 bg-light p-0 border-right">
 				<div>
-					<h4>Archivos descargables</h4>
-				</div>
-			</div>
-			<div class="col-2 bg-light p-3 border-right text-center">
-				<div>
-					<h4></h4>
-				</div>
-			</div>
-			<div class="col-2 bg-light p-3 text-center">
-				<div>
-					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-					</svg>
-				</div>
-			</div>
-		</div>
-
-		<div class="row border-top">
-			<div class="col-2 bg-light p-3 border-right">
-				<div>
-				<h4>Investigación</h4>
-				</div>
-			</div>
-			<div class="col-6 bg-light p-3 border-right">
-				<div>
-					<h4>Compartir formatos de investigación para revisión y publicación.</h4>
+					<p class="lead"><svg class="text-green" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Compartir obra o proyecto para revisión y publicación</p>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 border-right text-center">
@@ -292,17 +221,19 @@
 		<div class="row border-top">
 			<div class="col-2 bg-light p-3 border-right">
 				<div>
-				<h4>Investigación</h4>
+				<h4 class="text-green"><b>Proyectos y obras</b></h4>
 				</div>
 			</div>
-			<div class="col-6 bg-light p-3 border-right">
+			<div class="col-6 bg-light p-0 border-right">
 				<div>
-					<h4>Contactar al autor de la investigación compartida en el sitio</h4>
+					<p class="lead"><svg class="text-green" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Contactar al autor de otras obras o proyectos publicados</p>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 border-right text-center">
 				<div>
-					<h4></h4>
+					<h4 class="text-green"><b></b></h4>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 text-center">
@@ -317,17 +248,19 @@
 		<div class="row border-top">
 			<div class="col-2 bg-light p-3 border-right">
 				<div>
-				<h4>Investigación</h4>
+				<h4 class="text-green"><b>Proyectos y obras</b></h4>
 				</div>
 			</div>
-			<div class="col-6 bg-light p-3 border-right">
+			<div class="col-6 bg-light p-0 border-right">
 				<div>
-					<h4>Archivos descargables</h4>
+					<p class="lead"><svg class="text-green" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Archivos descargables</p>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 border-right text-center">
 				<div>
-					<h4></h4>
+					<h4 class="text-green"><b></b></h4>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 text-center">
@@ -342,64 +275,14 @@
 		<div class="row border-top">
 			<div class="col-2 bg-light p-3 border-right">
 				<div>
-				<h4>Red de trabajo</h4>
+				<h4 class="text-green"><b>Investigación</b></h4>
 				</div>
 			</div>
-			<div class="col-6 bg-light p-3 border-right">
+			<div class="col-6 bg-light p-0 border-right">
 				<div>
-					<h4>Creación de perfil visible para todos los usuarios</h4>
-				</div>
-			</div>
-			<div class="col-2 bg-light p-3 border-right text-center">
-				<div>
-					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-					</svg>
-				</div>
-			</div>
-			<div class="col-2 bg-light p-3 text-center">
-				<div>
-					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-					</svg>
-				</div>
-			</div>
-		</div>
-
-		<div class="row border-top">
-			<div class="col-2 bg-light p-3 border-right">
-				<div>
-				<h4>Red de trabajo</h4>
-				</div>
-			</div>
-			<div class="col-6 bg-light p-3 border-right">
-				<div>
-					<h4>Contactar a los demás a través del sitio web</h4>
-				</div>
-			</div>
-			<div class="col-2 bg-light p-3 border-right text-center">
-				<div>
-					<h4></h4>
-				</div>
-			</div>
-			<div class="col-2 bg-light p-3 text-center">
-				<div>
-					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-					</svg>
-				</div>
-			</div>
-		</div>
-
-		<div class="row border-top">
-			<div class="col-2 bg-light p-3 border-right">
-				<div>
-				<h4>Eventos</h4>
-				</div>
-			</div>
-			<div class="col-6 bg-light p-3 border-right">
-				<div>
-					<h4>Consultar eventos</h4>
+					<p class="lead"><svg class="text-green" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Compartir formatos de investigación para revisión y publicación.</p>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 border-right text-center">
@@ -421,17 +304,19 @@
 		<div class="row border-top">
 			<div class="col-2 bg-light p-3 border-right">
 				<div>
-					<h4>Eventos</h4>
+				<h4 class="text-green"><b>Investigación</b></h4>
 				</div>
 			</div>
-			<div class="col-6 bg-light p-3 border-right">
+			<div class="col-6 bg-light p-0 border-right">
 				<div>
-					<h4>Inscripción a eventos</h4>
+					<p class="lead"><svg class="text-green" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Contactar al autor de la investigación compartida en el sitio</p>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 border-right text-center">
 				<div>
-					<h4></h4>
+					<h4 class="text-green"><b></b></h4>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 text-center">
@@ -446,12 +331,153 @@
 		<div class="row border-top">
 			<div class="col-2 bg-light p-3 border-right">
 				<div>
-				<h4>Tienda</h4>
+				<h4 class="text-green"><b>Investigación</b></h4>
 				</div>
 			</div>
-			<div class="col-6 bg-light p-3 border-right">
+			<div class="col-6 bg-light p-0 border-right">
 				<div>
-					<h4>Comprar en tienda</h4>
+					<p class="lead"><svg class="text-green" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Archivos descargables</p>
+				</div>
+			</div>
+			<div class="col-2 bg-light p-3 border-right text-center">
+				<div>
+					<h4 class="text-green"><b></b></h4>
+				</div>
+			</div>
+			<div class="col-2 bg-light p-3 text-center">
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="row border-top">
+			<div class="col-2 bg-light p-3 border-right">
+				<div>
+				<h4 class="text-green"><b>Red de trabajo</b></h4>
+				</div>
+			</div>
+			<div class="col-6 bg-light p-0 border-right">
+				<div>
+					<p class="lead"><svg class="text-green" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Creación de perfil visible para todos los usuarios</p>
+				</div>
+			</div>
+			<div class="col-2 bg-light p-3 border-right text-center">
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+					</svg>
+				</div>
+			</div>
+			<div class="col-2 bg-light p-3 text-center">
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="row border-top">
+			<div class="col-2 bg-light p-3 border-right">
+				<div>
+				<h4 class="text-green"><b>Red de trabajo</b></h4>
+				</div>
+			</div>
+			<div class="col-6 bg-light p-0 border-right">
+				<div>
+					<p class="lead"><svg class="text-green" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Contactar a los demás a través del sitio web</p>
+				</div>
+			</div>
+			<div class="col-2 bg-light p-3 border-right text-center">
+				<div>
+					<h4 class="text-green"><b></b></h4>
+				</div>
+			</div>
+			<div class="col-2 bg-light p-3 text-center">
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="row border-top">
+			<div class="col-2 bg-light p-3 border-right">
+				<div>
+				<h4 class="text-green"><b>Eventos</b></h4>
+				</div>
+			</div>
+			<div class="col-6 bg-light p-0 border-right">
+				<div>
+					<p class="lead"><svg class="text-green" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Consultar eventos</p>
+				</div>
+			</div>
+			<div class="col-2 bg-light p-3 border-right text-center">
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+					</svg>
+				</div>
+			</div>
+			<div class="col-2 bg-light p-3 text-center">
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="row border-top">
+			<div class="col-2 bg-light p-3 border-right">
+				<div>
+					<h4 class="text-green"><b>Eventos</b></h4>
+				</div>
+			</div>
+			<div class="col-6 bg-light p-0 border-right">
+				<div>
+					<p class="lead"><svg class="text-green" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Inscripción a eventos</p>
+				</div>
+			</div>
+			<div class="col-2 bg-light p-3 border-right text-center">
+				<div>
+					<h4 class="text-green"><b></b></h4>
+				</div>
+			</div>
+			<div class="col-2 bg-light p-3 text-center">
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="row border-top">
+			<div class="col-2 bg-light p-3 border-right">
+				<div>
+				<h4 class="text-green"><b>Tienda</b></h4>
+				</div>
+			</div>
+			<div class="col-6 bg-light p-0 border-right">
+				<div>
+					<p class="lead"><svg class="text-green" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Comprar en tienda</p>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 border-right text-center">
@@ -476,19 +502,19 @@
 				<h4></h4>
 				</div>
 			</div>
-			<div class="col-6 bg-light p-3">
+			<div class="col-6 bg-light p-0">
 				<div>
 					<h4></h4>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 text-center">
 				<div>
-				<a class="btn btn-dark" href="#" role="button">REGISTRARSE</a>
+				<a class="btn btn-dark mt-3 fixed-btn-size" href="#" role="button">Registrarse</a>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 text-center">
 				<div>
-				<a class="btn btn-dark" href="#" role="button">REGISTRARSE</a>
+				<a class="btn btn-dark mt-3 fixed-btn-size" href="#" role="button">Registrarse</a>
 				</div>
 			</div>
 		</div>
@@ -499,7 +525,7 @@
 <!-- PLANES PUBLICITARIOS -->
 <br>
 <br>
-<div class="container bg-light p-5 border-rounded border-blue mt-5 mb-5">
+<div class="container bg-light p-5 border-rounded border-blue mt-5 mb-5 disapear">
 	
 	<div class="bg-light">
 		<div class="row mb-5">
@@ -535,64 +561,14 @@
 		<div class="row border-top">
 			<div class="col-2 bg-light p-3 border-right">
 				<div>
-				<h4>Perfil</h4>
+				<h4 class="text-blue"><b>Perfil</b></h4>
 				</div>
 			</div>
-			<div class="col-6 bg-light p-3 border-right">
+			<div class="col-6 bg-light p-0 border-right">
 				<div>
-					<h4>Cuenta de sitio</h4>
-				</div>
-			</div>
-			<div class="col-2 bg-light p-3 border-right text-center">
-				<div>
-					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-					</svg>
-				</div>
-			</div>
-			<div class="col-2 bg-light p-3 text-center">
-				<div>
-					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-					</svg>
-				</div>
-			</div>
-		</div>
-
-		<div class="row border-top">
-			<div class="col-2 bg-light p-3 border-right">
-				<div>
-				<h4>Perfil</h4>
-				</div>
-			</div>
-			<div class="col-6 bg-light p-3 border-right">
-				<div>
-					<h4>Recomendación de vistas en perfil personalizado de usuarios</h4>
-				</div>
-			</div>
-			<div class="col-2 bg-light p-3 border-right text-center">
-				<div>
-					<h4></h4>
-				</div>
-			</div>
-			<div class="col-2 bg-light p-3 text-center">
-				<div>
-					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-					</svg>
-				</div>
-			</div>
-		</div>
-
-		<div class="row border-top">
-			<div class="col-2 bg-light p-3 border-right">
-				<div>
-				<h4>Proyectos y obras</h4>
-				</div>
-			</div>
-			<div class="col-6 bg-light p-3 border-right">
-				<div>
-					<h4>Asesoramiento para pertenecer al top 5 de los proyectos más vistos</h4>
+					<p class="lead"><svg class="text-blue" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Cuenta de sitio</p>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 border-right text-center">
@@ -614,17 +590,19 @@
 		<div class="row border-top">
 			<div class="col-2 bg-light p-3 border-right">
 				<div>
-				<h4>Proyectos y obras</h4>
+				<h4 class="text-blue"><b>Perfil</b></h4>
 				</div>
 			</div>
-			<div class="col-6 bg-light p-3 border-right">
+			<div class="col-6 bg-light p-0 border-right">
 				<div>
-					<h4>Anuncio publicitario de producto en sección: "Proyectos y obras"</h4>
+					<p class="lead"><svg class="text-blue" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Recomendación de vistas en perfil personalizado de usuarios</p>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 border-right text-center">
 				<div>
-					<h4></h4>
+					<h4 class="text-blue"></h4>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 text-center">
@@ -639,64 +617,14 @@
 		<div class="row border-top">
 			<div class="col-2 bg-light p-3 border-right">
 				<div>
-				<h4>Investigación</h4>
+				<h4 class="text-blue"><b>Proyectos y obras</b></h4>
 				</div>
 			</div>
-			<div class="col-6 bg-light p-3 border-right">
+			<div class="col-6 bg-light p-0 border-right">
 				<div>
-					<h4>Asesoramiento publicitario para pertenecer al top 5 de los proyectos más vistos</h4>
-				</div>
-			</div>
-			<div class="col-2 bg-light p-3 border-right text-center">
-				<div>
-					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-					</svg>
-				</div>
-			</div>
-			<div class="col-2 bg-light p-3 text-center">
-				<div>
-					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-					</svg>
-				</div>
-			</div>
-		</div>
-
-		<div class="row border-top">
-			<div class="col-2 bg-light p-3 border-right">
-				<div>
-				<h4>Investigación</h4>
-				</div>
-			</div>
-			<div class="col-6 bg-light p-3 border-right">
-				<div>
-					<h4>Anuncio publicitario de producto en sección: "Investigación"</h4>
-				</div>
-			</div>
-			<div class="col-2 bg-light p-3 border-right text-center">
-				<div>
-					<h4></h4>
-				</div>
-			</div>
-			<div class="col-2 bg-light p-3 text-center">
-				<div>
-					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-					</svg>
-				</div>
-			</div>
-		</div>
-
-		<div class="row border-top">
-			<div class="col-2 bg-light p-3 border-right">
-				<div>
-				<h4>Red de trabajo</h4>
-				</div>
-			</div>
-			<div class="col-6 bg-light p-3 border-right">
-				<div>
-					<h4>Recomendación para hacer networking</h4>
+					<p class="lead"><svg class="text-blue" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Asesoramiento para pertenecer al top 5 de los proyectos más vistos</p>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 border-right text-center">
@@ -718,17 +646,19 @@
 		<div class="row border-top">
 			<div class="col-2 bg-light p-3 border-right">
 				<div>
-				<h4>Red de trabajo</h4>
+				<h4 class="text-blue"><b>Proyectos y obras</b></h4>
 				</div>
 			</div>
-			<div class="col-6 bg-light p-3 border-right">
+			<div class="col-6 bg-light p-0 border-right">
 				<div>
-					<h4>Anuncio publicitario en sección: "Red de trabajo"</h4>
+					<p class="lead"><svg class="text-blue" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Anuncio publicitario de producto en sección: "Proyectos y obras"</p>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 border-right text-center">
 				<div>
-					<h4></h4>
+					<h4 class="text-blue"></h4>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 text-center">
@@ -743,12 +673,126 @@
 		<div class="row border-top">
 			<div class="col-2 bg-light p-3 border-right">
 				<div>
-				<h4>Tienda</h4>
+				<h4 class="text-blue"><b>Investigación</b></h4>
 				</div>
 			</div>
-			<div class="col-6 bg-light p-3 border-right">
+			<div class="col-6 bg-light p-0 border-right">
 				<div>
-					<h4>Rentar espacio para venta de productos</h4>
+					<p class="lead"><svg class="text-blue" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Asesoramiento para pertenecer al top 5 de las investigaciones más vistas</p>
+				</div>
+			</div>
+			<div class="col-2 bg-light p-3 border-right text-center">
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+					</svg>
+				</div>
+			</div>
+			<div class="col-2 bg-light p-3 text-center">
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="row border-top">
+			<div class="col-2 bg-light p-3 border-right">
+				<div>
+				<h4 class="text-blue"><b>Investigación</b></h4>
+				</div>
+			</div>
+			<div class="col-6 bg-light p-0 border-right">
+				<div>
+					<p class="lead"><svg class="text-blue" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Anuncio publicitario de producto en sección: "Investigación"</p>
+				</div>
+			</div>
+			<div class="col-2 bg-light p-3 border-right text-center">
+				<div>
+					<h4 class="text-blue"></h4>
+				</div>
+			</div>
+			<div class="col-2 bg-light p-3 text-center">
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="row border-top">
+			<div class="col-2 bg-light p-3 border-right">
+				<div>
+				<h4 class="text-blue"><b>Red de trabajo</b></h4>
+				</div>
+			</div>
+			<div class="col-6 bg-light p-0 border-right">
+				<div>
+					<p class="lead"><svg class="text-blue" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Recomendación para hacer networking</p>
+				</div>
+			</div>
+			<div class="col-2 bg-light p-3 border-right text-center">
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+					</svg>
+				</div>
+			</div>
+			<div class="col-2 bg-light p-3 text-center">
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="row border-top">
+			<div class="col-2 bg-light p-3 border-right">
+				<div>
+				<h4 class="text-blue"><b>Red de trabajo</b></h4>
+				</div>
+			</div>
+			<div class="col-6 bg-light p-0 border-right">
+				<div>
+					<p class="lead"><svg class="text-blue" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Anuncio publicitario en sección: "Red de trabajo"</p>
+				</div>
+			</div>
+			<div class="col-2 bg-light p-3 border-right text-center">
+				<div>
+					<h4 class="text-blue"></h4>
+				</div>
+			</div>
+			<div class="col-2 bg-light p-3 text-center">
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+						<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="row border-top">
+			<div class="col-2 bg-light p-3 border-right">
+				<div>
+				<h4 class="text-blue"><b>Tienda</b></h4>
+				</div>
+			</div>
+			<div class="col-6 bg-light p-0 border-right">
+				<div>
+					<p class="lead"><svg class="text-blue" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+					<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+					</svg>Rentar espacio para venta de productos</p>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 border-right text-center">
@@ -773,34 +817,27 @@
 				<h4></h4>
 				</div>
 			</div>
-			<div class="col-6 bg-light p-3">
+			<div class="col-6 bg-light p-0">
 				<div>
 					<h4></h4>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 text-center">
 				<div>
-				<a class="btn btn-dark" href="#" role="button">REGISTRARSE</a>
+				<a class="btn btn-dark mt-3 fixed-btn-size" href="#" role="button">Registrarse</a>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3 text-center">
 				<div>
-				<a class="btn btn-dark" href="#" role="button">REGISTRARSE</a>
+				<a class="btn btn-dark mt-3 fixed-btn-size" href="#" role="button">Registrarse</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+<br><br><br><br><br>
 
-<div class="container mb-5">
-	<div class="row">
-		<div class="col-md-5"></div>
-		<div class="col-md-7">
-			<img class="long-img disapear" src="../img/index/patron.png" alt="Card image">
-		</div>
-	</div>
-</div>
-<br>
+<img class="long-img disapear mb-5 mt-5" src="../img/index/longpatron.png" alt="Card image">
 
 <?php include('../templates/_loginmodal.php') ?>
 <?php include('../templates/_footer.html') ?>

@@ -20,6 +20,40 @@
     width: 20%;
 }
 
+.card .circled-img-center
+{
+    border: 2px solid gainsboro;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    position: absolute;
+    top: 7%;
+    left: 37%;
+    width: 26%;
+}
+
+.card .circled-img-left
+{
+    border: 2px solid gainsboro;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    position: absolute;
+    top: 30%;
+    left: 33%;
+}
+
+.card .circled-img-right
+{
+    border: 2px solid gainsboro;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    position: absolute;
+    top: 30%;
+    right: 33%;
+}
+
 /* IMAGE ON IMAGE OVERLAY para proyecto abierto */
 .card .circled-img-big
 {

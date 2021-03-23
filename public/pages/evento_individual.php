@@ -6,7 +6,7 @@
 <div class="container mt-3">
 
 	<!-- CARDS -->
-	<div class="row">
+	<div class="row disapear">
 		<div class="col-12">
 		<div class="card">
 			<img class="card-img-top" src="https://via.placeholder.com/1200x200">
@@ -52,7 +52,7 @@
 			<div class="bg-light p-5 mb-3">
 				<div class="row">
 					<div class="col-md-2">
-					<p class="text-center"><img class="img-fluid rounded-circle" src="https://via.placeholder.com/100x100"></p>
+					<p class="text-center disapear"><img class="img-fluid rounded-circle" src="https://via.placeholder.com/100x100"></p>
 					</div>
 					<div class="col-md-10">
 						<h4><b>Nombre apellido</b></h4>
@@ -70,20 +70,14 @@
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare bibendum fermentum. Fusce vitae egestas lectus. Cras faucibus diam quis nisl elementum convallis. Nam mollis nibh turpis, nec ullamcorper nulla imperdiet sed. Nunc et mi et nisl hendrerit lacinia vitae et nibh. Quisque arcu nunc, vestibulum id orci eget, fringilla ultrices magna. Mauris congue scelerisque molestie. Phasellus ornare porta ex elementum pellentesque. Praesent interdum lorem lacinia lacinia laoreet. Ut finibus purus tellus, mollis vulputate arcu facilisis sit amet.
 			</p>
 			<br>
-			<h3><b>Módulo 1</b></h3>
-			<p class="lead">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare bibendum fermentum. Fusce vitae egestas lectus. Cras faucibus diam quis nisl elementum convallis. Nam mollis nibh turpis, nec ullamcorper nulla imperdiet sed. Nunc et mi et nisl hendrerit lacinia vitae et nibh. Quisque arcu nunc, vestibulum id orci eget, fringilla ultrices magna. Mauris congue scelerisque molestie. Phasellus ornare porta ex elementum pellentesque. Praesent interdum lorem lacinia lacinia laoreet. Ut finibus purus tellus, mollis vulputate arcu facilisis sit amet.
-			</p>
-			<br>
-			<h3><b>Módulo 2</b></h3>
-			<p class="lead">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare bibendum fermentum. Fusce vitae egestas lectus. Cras faucibus diam quis nisl elementum convallis. Nam mollis nibh turpis, nec ullamcorper nulla imperdiet sed. Nunc et mi et nisl hendrerit lacinia vitae et nibh. Quisque arcu nunc, vestibulum id orci eget, fringilla ultrices magna. Mauris congue scelerisque molestie. Phasellus ornare porta ex elementum pellentesque. Praesent interdum lorem lacinia lacinia laoreet. Ut finibus purus tellus, mollis vulputate arcu facilisis sit amet.
-			</p>
+			<div class="bg-light p-5 mb-3">
+				<iframe width="100%" height="545" src="https://www.youtube.com/embed/y9j-BL5ocW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
 
 		</div>
 
 		<div class="col-md-4">
-		<img class="img-fluid" src="https://via.placeholder.com/500x1000">
+		<img class="img-fluid disapear" src="https://via.placeholder.com/500x1000">
 		</div>
 	</div>
 	<br><br><br><br><br><br>

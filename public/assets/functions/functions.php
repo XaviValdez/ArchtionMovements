@@ -195,7 +195,7 @@ function setUser($first_name,$last_name,$email,$password,$status=1){
     return $DBH->lastInsertId();
 }
 
-// Insert new user into DB
+// Insert new contact into DB
 function sendContact($p_name,$p_email,$p_message,$p_status){
     global $DBH;
     $q='insert into contact (name,email,message,status) VALUES(:p_name,:p_email,:p_message,:p_status)';
@@ -205,6 +205,33 @@ function sendContact($p_name,$p_email,$p_message,$p_status){
         ':p_email'=>$p_email,
         ':p_message'=>$p_message,
         ':p_status'=>$p_status
+    ));
+}
+
+// Insert new project into DB
+function insertProject($name, $user_id, $status=1){
+    global $DBH;
+    $q='insert into projects (name,user_id,status) VALUES(:name,:user_id,:status)';
+    $query = $DBH->prepare($q);
+    $query->execute(array(
+        ':name'=>$name,
+        ':user_id'=>$user_id,
+        ':status'=>$status
+    ));
+    return $DBH->lastInsertId();
+}
+function insertProjectTxn($description,$location, $social, $environment, $economy, $objective, $project_id){
+    global $DBH;
+    $q='insert into projects_text_fields (description,location,social,environment,economy,objective,project_id) VALUES(:description,:location,:social,:environment,:economy,:objective,:project_id)';
+    $query = $DBH->prepare($q);
+    $query->execute(array(
+        ':description'=>$description,
+        ':location'=>$location,
+        ':social'=>$social,
+        ':environment'=>$environment,
+        ':economy'=>$economy,
+        ':objective'=>$objective,
+        ':project_id'=>$project_id
     ));
 }
 

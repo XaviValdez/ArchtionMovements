@@ -35,7 +35,7 @@
                         
                         <label class="text-center mt-3">Al registrarme acepto y estoy de acuerdo con los <a href="terminosycondiciones">términos y condiciones</a></label>
                         <div class="center">
-                            <button type="submit" class="btn btn-block mybtn bg-green tx-tfm">Registrarme</button>
+                            <button type="submit" class="btn btn-block mybtn bg-green fixed-btn-size">Registrarme</button>
                         </div>
                     </form>
                 </div>

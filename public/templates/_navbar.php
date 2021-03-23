@@ -1,4 +1,4 @@
-<div class="header bg-light py-2">
+<div class="header bg-white py-2">
     <div class="container mt-2">
         <div class="row" id="hide-mobile">
             <div class="col-6">
@@ -34,7 +34,7 @@
                                 <path fill-rule="evenodd"
                                     d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                             </svg>
-                            Logout
+                            Cerrar sesión
                         </a>
                     </span>
                     <?php
@@ -65,7 +65,7 @@
         </div>
     </div>
 </div>
-<nav class="navbar navbar-expand-sm sticky-top navbar-light bg-light underline">
+<nav class="navbar navbar-expand-sm sticky-top navbar-light bg-white underline">
     <div class="container">
         <button id="hide-mobile" class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar1">
             <span class="navbar-toggler-icon"></span>
@@ -78,22 +78,66 @@
 
             <ul class="navbar-nav">
                 <li class="nav-item m-3 active">
-                    <a class="nav-link" href="acerca_de">Acerca de</a>
+                    <?php $current_url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
+                    <?php 
+                    if(strpos($current_url, 'acerca_de')) {
+                        echo '<a class="nav-link" href="acerca_de"><u>Acerca de</u></a>';
+                    }
+                    else {
+                        echo '<a class="nav-link" href="acerca_de">Acerca de</a>';
+                    }
+                    ?>
+                    
                 </li>
                 <li class="nav-item m-3 active">
-                    <a class="nav-link" href="proyectos">Proyectos & Obras</a>
+                    <?php 
+                    if(strpos($current_url, 'proyectos') || strpos($current_url, 'publicacion')) {
+                        echo '<a class="nav-link" href="proyectos"><u>Proyectos & Obras</u></a>';
+                    }
+                    else {
+                        echo '<a class="nav-link" href="proyectos">Proyectos & Obras</a>';
+                    }
+                    ?>
                 </li>
                 <li class="nav-item m-3 active">
-                    <a class="nav-link" href="investigacion">Investigación</a>
+                    <?php 
+                    if(strpos($current_url, 'investigacion') || strpos($current_url, 'preview') || strpos($current_url, 'leer')) {
+                        echo '<a class="nav-link" href="investigacion"><u>Investigación</u></a>';
+                    }
+                    else {
+                        echo '<a class="nav-link" href="investigacion">Investigación</a>';
+                    }
+                    ?>
                 </li>
                 <li class="nav-item m-3 active">
-                    <a class="nav-link" href="#">Red de trabajo</a>
+                    <?php 
+                    if(strpos($current_url, 'red')) {
+                        echo '<a class="nav-link" href="#"><u>Red de trabajo</u></a>';
+                    }
+                    else {
+                        echo '<a class="nav-link" href="#">Red de trabajo</a>';
+                    }
+                    ?>
                 </li>
                 <li class="nav-item m-3 active">
-                    <a class="nav-link" href="eventos">Eventos</a>
+                    <?php 
+                    if(strpos($current_url, 'evento')) {
+                        echo '<a class="nav-link" href="eventos"><u>Eventos</u></a>';
+                    }
+                    else {
+                        echo '<a class="nav-link" href="eventos">Eventos</a>';
+                    }
+                    ?>
                 </li>
                 <li class="nav-item m-3 active">
-                    <a class="nav-link" href="#">Tienda</a>
+                    <?php 
+                    if(strpos($current_url, 'tienda')) {
+                        echo '<a class="nav-link" href="#"><u>Tienda</u></a>';
+                    }
+                    else {
+                        echo '<a class="nav-link" href="#">Tienda</a>';
+                    }
+                    ?>
                 </li>
             </ul>
         </div>

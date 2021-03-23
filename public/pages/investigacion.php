@@ -10,11 +10,11 @@
 
 <link rel="stylesheet" type="text/css" href="../css/investigacion.css">
 
-<div class="container text-center mt-3">
+<div class="container text-center">
 	<img src="../img/investigacion/investigacionbanner.png" class="banner">
 </div>
 
-<div class="container mt-3">
+<div class="container mt-4">
 	<div class="row mt-3 mb-4">
 		<div class="col-sm-4 mt-2">
 			<form>
@@ -108,7 +108,7 @@
 				<div class="form-check">
 				<input class="form-check-input" type="checkbox" value="" id="otros"/>
 				<label class="form-check-label" for="otros">
-					<h5>otros</h5>
+					<h5>Otros</h5>
 				</label>
 				</div>
 
@@ -149,16 +149,16 @@
 								<img class="img-fluid" src="//placehold.it/300x400">
 							</div>
 							<div class="col-sm-6">
-								<h4 class="card-title">'. $investigacion["name"] .'</h4>
-								<p class="card-text"><b>'. $investigacion["author"] .'</b><br></p>
+								<h4 class="card-title text-green"><b>'. $investigacion["name"] .'</b></h4>
+								<p class="card-text mb-0 mt-4"><b>'. $investigacion["author"] .'</b><br></p>
 								<p class="card-text text-muted"><b> Publicado el: '. $investigacion["published_date"] .'</b><br></p>
 							</div>
 							<div class="col-sm-3 text-center">
 								<div class="row mb-4">
-								<a href="registro" data-toggle="modal" data-target="#ModalLogin"'. $investigacion["url"] .'" class="btn btn-block btn-dark">Leer</a>
+								<a href="registro" data-toggle="modal" data-target="#ModalLogin"'. $investigacion["url"] .'" class="btn btn-block btn-outline-dark">Leer</a>
 								</div>
 								<div class="row mb-4">
-								<a href="preview.php'. "?id=" . $investigacion["r_id"] .'" class="btn btn-block bg-green">Previsualizar</a>
+								<a href="preview.php'. "?id=" . $investigacion["r_id"] .'" class="btn btn-block btn-outline-success">Previsualizar</a>
 								</div>
 								<div class="row">
 									<div class="col-4">
@@ -202,10 +202,10 @@
 							</div>
 							<div class="col-sm-3 text-center">
 								<div class="row mb-4">
-								<a href="leer.php?id='. $investigacion["r_id"] .'" class="btn btn-block btn-dark">Leer</a>
+								<a href="leer.php?id='. $investigacion["r_id"] .'" class="btn btn-block btn-outline-dark">Leer</a>
 								</div>
 								<div class="row mb-4">
-								<a href="preview.php'. "?id=" . $investigacion["r_id"] .'" class="btn btn-block bg-green">Previsualizar</a>
+								<a href="preview.php'. "?id=" . $investigacion["r_id"] .'" class="btn btn-block btn-outline-success">Previsualizar</a>
 								</div>
 								<div class="row">
 									<div class="col-4">

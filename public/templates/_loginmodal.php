@@ -2,7 +2,7 @@
 <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="ModalLogin" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content bg-light">
-      <div class="modal-header">
+      <div class="modal-header border-bottom-0">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -46,7 +46,7 @@
         </div>
 
       </div>
-      <div class="modal-footer mt-5">
+      <div class="modal-footer mt-5 pb-0 pr-0 pl-0 border-top-0">
         <img class="img-fluid" src="../img/patron.png">
       </div>
     </div>

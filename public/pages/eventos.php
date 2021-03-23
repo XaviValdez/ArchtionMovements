@@ -27,8 +27,8 @@
 		<div class="col-md-8">
 			<div class="row mb-4">
 				<div class="col-md-6">
-					<div class="card">
-					<img class="card-img-top" src="https://via.placeholder.com/500x200">
+				<div class="card">
+					<img class="card-img-top" src="../img/eventos/blue.png">
 					<img class="circled-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdDvt33vWhZe9pUL-Lt3RBIkVH6dki5iAgNw&usqp=CAU">
 					<div class="card-body text-center mt-5">
 						<p class="card-text"><b>Webinar: Lorem ipsum dolor</b></p>
@@ -50,7 +50,7 @@
 						<p class="card-text text-muted">Mañana 12:00<br>90 asistentes</p>
 						<div class="row justify-content-center">
 							<div class="col-6">
-								<a href="#" class="btn btn-block btn-outline-dark" role="button">Ver</a>
+								<a href="evento_individual" class="btn btn-block btn-outline-dark" role="button">Ver</a>
 							</div>
 						</div>
 					</div>
@@ -61,32 +61,42 @@
 			<div class="row mb-4">
 				<div class="col-md-6">
 					<div class="card">
-					<img class="card-img-top" src="https://via.placeholder.com/500x200">
-					<img class="circled-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdDvt33vWhZe9pUL-Lt3RBIkVH6dki5iAgNw&usqp=CAU">
-					<div class="card-body text-center mt-5">
-						<p class="card-text"><b>Webinar: Lorem ipsum dolor</b></p>
-						<p class="card-text text-muted">Mañana 12:00<br>90 asistentes</p>
-						<div class="row justify-content-center">
-							<div class="col-6">
-								<a href="#" class="btn btn-block btn-outline-dark" role="button">Ver</a>
+						<div class="row mb-5">
+							<div class="col-8">
+								<div class="card-body text-center mt-5">
+									<p class="card-text"><b>Webinar: Lorem ipsum dolor</b></p>
+									<p class="card-text text-muted">Mañana 12:00<br>90 asistentes</p>
+									<div class="row justify-content-center">
+										<div class="col-6">
+											<a href="evento_individual" class="btn btn-block btn-outline-dark" role="button">Ver</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-4">
+								<img width="80%" class="circled-img-right" src="../img/eventos/pink_am.png">
 							</div>
 						</div>
-					</div>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="card">
-					<img class="card-img-top" src="https://via.placeholder.com/500x200">
-					<img class="circled-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdDvt33vWhZe9pUL-Lt3RBIkVH6dki5iAgNw&usqp=CAU">
-					<div class="card-body text-center mt-5">
-						<p class="card-text"><b>Webinar: Lorem ipsum dolor</b></p>
-						<p class="card-text text-muted">Mañana 12:00<br>90 asistentes</p>
-						<div class="row justify-content-center">
-							<div class="col-6">
-								<a href="#" class="btn btn-block btn-outline-dark" role="button">Ver</a>
+						<div class="row mb-5">
+							<div class="col-4">
+								<img width="80%" class="circled-img-left" src="../img/eventos/blue_am.png">
+							</div>
+							<div class="col-8">
+								<div class="card-body text-center mt-5">
+									<p class="card-text"><b>Webinar: Lorem ipsum dolor</b></p>
+									<p class="card-text text-muted">Mañana 12:00<br>90 asistentes</p>
+									<div class="row justify-content-center">
+										<div class="col-6">
+											<a href="evento_individual" class="btn btn-block btn-outline-dark" role="button">Ver</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
 					</div>
 				</div>
 			</div>
@@ -94,10 +104,11 @@
 			<div class="row mb-4">
 				<div class="col-md-6">
 					<div class="card">
-					<img class="card-img-top" src="https://via.placeholder.com/500x200">
-					<img class="circled-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdDvt33vWhZe9pUL-Lt3RBIkVH6dki5iAgNw&usqp=CAU">
+					<br><br>
+					<img class="circled-img-center" src="../img/eventos/worange_am.png">
 					<div class="card-body text-center mt-5">
-						<p class="card-text"><b>Webinar: Lorem ipsum dolor</b></p>
+						<br>
+						<p class="card-text mt-5"><b>Webinar: Lorem ipsum dolor</b></p>
 						<p class="card-text text-muted">Mañana 12:00<br>90 asistentes</p>
 						<div class="row justify-content-center">
 							<div class="col-6">
@@ -109,10 +120,11 @@
 				</div>
 				<div class="col-md-6">
 					<div class="card">
-					<img class="card-img-top" src="https://via.placeholder.com/500x200">
-					<img class="circled-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdDvt33vWhZe9pUL-Lt3RBIkVH6dki5iAgNw&usqp=CAU">
+					<br><br>
+					<img class="circled-img-center" src="../img/eventos/wgreen_am.png">
 					<div class="card-body text-center mt-5">
-						<p class="card-text"><b>Webinar: Lorem ipsum dolor</b></p>
+						<br>
+						<p class="card-text mt-5"><b>Webinar: Lorem ipsum dolor</b></p>
 						<p class="card-text text-muted">Mañana 12:00<br>90 asistentes</p>
 						<div class="row justify-content-center">
 							<div class="col-6">

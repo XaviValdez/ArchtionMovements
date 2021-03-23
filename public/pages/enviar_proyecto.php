@@ -6,51 +6,63 @@
 
 <main class="container mb-5">
 	<div class="row mt-5">
-		<div class="col-md-5 bg-light pl-5 pt-5">
+		<div class="col-md-6 bg-light pl-5 pt-5">
 			<div class="mb-3">
 				<h1 class="display-5 font-weight-bold">Compartir proyecto</h1>
-				<form class="mr-5">
-
-					<div class="form-group">
-						<label>Autor</label>
-						<input type="text" class="form-control" id="a" placeholder="Autor*">
-					</div>
-
-					<div class="form-group">
-						<label>Email</label>
-						<input type="text" class="form-control" id="a" placeholder="Email*">
-					</div>
-
+				<form class="mr-5 mt-3" id="enviar_proyecto">
 					<div class="form-group">
 						<label>Nombre del proyecto</label>
-						<input type="text" class="form-control" id="a" placeholder="Nombre del proyecto*">
+						<input type="text" class="form-control" name="name" placeholder="Nombre del proyecto*">
 					</div>
 
 					<div class="form-group">
 						<label>Ubicación</label>
-						<input type="text" class="form-control" id="a" placeholder="Ubicación*">
+						<input type="text" class="form-control" name="location" placeholder="Ubicación*">
 					</div>
 
 					<div class="form-group">
-						<label>Descripción</label>
-						<textarea class="form-control" id="a" rows="3" placeholder="Mensaje"></textarea>
+						<label>Descripción</label><br>
+						<textarea class="form-control" name="descr" rows="6" placeholder="Descripción*"></textarea>
 					</div>
 
+					<div class="form-group">
+						<label>Social</label>
+						<textarea class="form-control" name="social" rows="3" placeholder="Social*"></textarea>
+					</div>
+					
+					<div class="form-group">
+						<label>Ambiental</label>
+						<textarea class="form-control" name="ambiental" rows="3" placeholder="Ambiental*"></textarea>
+					</div>
+
+					<div class="form-group">
+						<label>Económico</label>
+						<textarea class="form-control" name="economico" rows="3" placeholder="Económico*"></textarea>
+					</div>
+
+					<div class="form-group">
+						<label>Objetivo</label>
+						<textarea class="form-control" name="objectivo" rows="10" placeholder="Objetivo*"></textarea>
+					</div>
+
+					
+					<button type="submit" class="btn btn-dark fixed-btn-size">Enviar</button><br>
+					<label class="text-center mt-3">Al registrarme acepto y estoy de acuerdo con los <a href="terminosycondiciones">términos y condiciones</a></label>
+
 				</form>
-
-				<button class="btn btn-dark">Enviar</button>
-
 			</div>
 		</div>
 
 		<!-- FILE UPLOAD -->
-		 <div class="col-md-7"> 
+		 <div class="col-md-6">
+		 	<div class="row">
 			<div class="bg-light" id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
 				<div id="drag_upload_file" class="p-3 text-center">
 					<p>Arrastra las fotos de tu proyecto</p>
 					
 					<input type="file" id="Abrir explorador" multiple>
 				</div>
+			</div>
 			</div>
 		</div>
 	
@@ -59,6 +71,9 @@
 	</div><!-- /.row -->
 	
 </main><!-- /.container -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/ajaxes/send_proyecto.js"></script>
 
 <?php include('../templates/_loginmodal.php') ?>
 <?php include('../templates/_footer.html') ?>

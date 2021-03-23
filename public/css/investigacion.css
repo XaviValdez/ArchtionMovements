@@ -44,3 +44,7 @@
     font-size: 16px;
     padding: 16px 32px;
 }
+
+.btn-outline-success:hover {
+    background-color: #00B388;
+}

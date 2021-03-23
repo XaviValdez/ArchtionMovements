@@ -11,3 +11,8 @@
 .fill {
     min-width: 100%;
 }
+
+.block {
+    height: 290px;
+    width: 30%;
+}

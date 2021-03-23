@@ -1,5 +1,6 @@
 <?php include('../templates/_header.php') ?>
 <?php include('../templates/_navbar.php') ?>
+<?php include('../templates/_loginmodal2.php') ?>
 
 <?php 
 	require_once("../assets/config/config.php");
@@ -40,7 +41,7 @@
 					<div class="text">
 						<?php
 							if(!isset($_SESSION['user_id'])) { // Usr sin iniciar sesión
-								echo '<a href="#" data-toggle="modal" data-target="#ModalLogin"'. $data["url"] .'" class="btn bg-pink">Leer completo</a>';
+								echo '<a href="#" data-toggle="modal" data-target="#ModalLogin2"'. $data["url"] .'" class="btn bg-pink">Leer completo</a>';
 							}
 							else {
 								echo '<a href="leer.php?id='. $data["id"] .'" class="btn bg-pink">Leer completo</a>';

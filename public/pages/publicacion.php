@@ -97,8 +97,8 @@
 	</div>
 
 	<p class="text-center"><img class="img-fluid rounded-circle mt-5" src="https://via.placeholder.com/100x100"></p>
-	<h3 class="text-center"><b><?php echo $author["first_name"]. " " . $author["last_name"] ?></b></h3>
-	<p class="text-center lead" style="letter-spacing: 3px;"><?php echo $project["name"] ?></p>
+	<h3 class="text-center"><b><?php echo $project["name"] ?></b></h3>
+	<p class="text-center lead" style="letter-spacing: 3px;"><?php echo $author["first_name"]. " " . $author["last_name"] ?></p>
 
 
 

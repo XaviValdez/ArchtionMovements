@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="../css/contacto.css">
 
 <div class="container mt-3">
-	<h1 class="display-5 font-weight-bold mt-5">Contáctanos</h1>
+	<h2 class="display-5 font-weight-bold mt-5">Contáctanos</h1>
 	<div class="row mt-3">
 		<div class="col-sm-7 mr-5 cut">
 			<div class="row">
@@ -24,7 +24,7 @@
 						<label for="message">Tu mensaje</label>
 						<textarea class="form-control" id="message" name="message" rows="3" placeholder="Mensaje" style="border-width: 2px; border-radius: 0.6rem; padding: 10px 20px;"></textarea>
 					</div>
-					<button type="submit" class="btn btn-dark">Enviar</button>
+					<button type="submit" class="btn btn-dark fixed-btn-size">Enviar</button>
 					</form>
 				</div>
 				<div class="col-sm-5 bg-blue adjust-mobile">
@@ -53,8 +53,7 @@
 					<br>
 					<br>
 					<br>
-					<p class="lead pl-3">T. 123 444 5566</p>
-					<p class="lead pl-3">hola@archtion.com</p>
+					<p class="pl-3 mb-0">T. 123 444 5566<br>hola@archtion.com</p>
 				</div>
 			</div>
 		</div>
