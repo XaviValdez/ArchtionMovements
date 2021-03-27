@@ -48,3 +48,7 @@
 .btn-outline-success:hover {
     background-color: #00B388;
 }
+
+.bg-notsolight {
+    background-color: rgb(228, 228, 228);
+}

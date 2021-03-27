@@ -79,24 +79,24 @@
               <div class="modal-block bg-green text-white p-3 m-3 rounded">
                 <h5 class="text-left">Plan <br>gratuito</h5>
                 <br><br><br>
-                <button type="button" class="btn btn-outline-light">Conoce más</button>
+                <button type="button" onclick="location.href = 'index#PlanesUsuarios';" class="btn btn-outline-light">Conoce más</button>
               </div>
               <div class="modal-block bg-green text-white p-3 m-3 rounded">
                 <h5 class="text-left">Plan <br>plus</h5>
                 <br><br><br>
-                <button type="button" class="btn btn-outline-light">Conoce más</button>
+                <button type="button" onclick="location.href = 'index#PlanesUsuarios';" class="btn btn-outline-light">Conoce más</button>
               </div>
             </div>
             <div class="d-flex justify-content-center">
               <div class="modal-block bg-blue text-white p-3 m-3 rounded">
                 <h5 class="text-left">Plan <br>publicitario<br>profesionista</h5>
                 <br><br>
-                <button type="button" class="btn btn-outline-light">Conoce más</button>
+                <button type="button" onclick="location.href = 'index#PlanesPublicitarios';" class="btn btn-outline-light">Conoce más</button>
               </div>
               <div class="modal-block bg-blue text-white p-3 m-3 rounded">
                 <h5 class="text-left">Plan <br>publicitario<br>empresarial</h5>
                 <br><br>
-                <button type="button" class="btn btn-outline-light">Conoce más</button>
+                <button type="button" onclick="location.href = 'index#PlanesPublicitarios';" class="btn btn-outline-light">Conoce más</button>
               </div>
             </div>
 

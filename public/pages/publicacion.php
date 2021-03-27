@@ -1,5 +1,6 @@
 <?php include('../templates/_header.php') ?>
 <?php include('../templates/_navbar.php') ?>
+<?php include('../templates/_loginmodal2.php') ?>
 <?php 
 	require_once("../assets/config/config.php");
 	require_once("../assets/functions/functions.php");
@@ -96,11 +97,20 @@
 		</div>
 	</div>
 
-	<p class="text-center"><img class="img-fluid rounded-circle mt-5" src="https://via.placeholder.com/100x100"></p>
-	<h3 class="text-center"><b><?php echo $project["name"] ?></b></h3>
-	<p class="text-center lead" style="letter-spacing: 3px;"><?php echo $author["first_name"]. " " . $author["last_name"] ?></p>
-
-
+	<?php 
+		if(!isset($_SESSION['user_id'])) { // Not logged
+			echo '<p class="text-center"><img class="img-fluid rounded-circle mt-5" src="https://via.placeholder.com/100x100"></p>
+			<h3 class="text-center"><b>'. $project["name"] .'</b></h3>
+			<p class="text-center lead" style="letter-spacing: 3px;">'. $author["first_name"]. " " . $author["last_name"] .'</p>
+			<br> <p class="text-center"><a href="#" data-toggle="modal" data-target="#ModalLogin2" class="btn bg-pink fixed-btn-size"> Contactar </a></p>';
+		}
+		else {
+			echo '<p class="text-center"><img class="img-fluid rounded-circle mt-5" src="https://via.placeholder.com/100x100"></p>
+			<h3 class="text-center"><b>'. $project["name"] .'</b></h3>
+			<p class="text-center lead" style="letter-spacing: 3px;">'. $author["first_name"]. " " . $author["last_name"] .'</p>
+			<br> <p class="text-center lead">Contacto:<br>'. $author["email"] .'</p>';
+		}
+	?>
 
 </div>
 <br><br><br><br>

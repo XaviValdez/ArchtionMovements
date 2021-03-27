@@ -100,7 +100,7 @@
 
 <br>
 <!-- ---------------- Planes para usuarios ------------------- -->
-<div class="container bg-light p-5 border-rounded border-green mb-3 disapear">
+<div class="container bg-light p-5 border-rounded border-green mb-3 disapear line-height" id="PlanesUsuarios">
 	
 	<div class="bg-light">
 		<div class="row mb-5">
@@ -120,13 +120,13 @@
 			</div>
 			<div class="col-2 bg-light p-3 border-right">
 				<div>
-					<h3 class="text-green"><b>Plan gratuito</b></h3>
+					<h3 class="text-green line-height"><b>Plan gratuito</b></h3>
 					<p class="text-muted">$0 al mes</p>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3">
 				<div>
-					<h3 class="text-green"><b>Plan premium</b></h3>
+					<h3 class="text-green line-height"><b>Plan premium</b></h3>
 					<p class="text-muted">$60 al mes</p>
 				</div>
 			</div>
@@ -525,7 +525,7 @@
 <!-- PLANES PUBLICITARIOS -->
 <br>
 <br>
-<div class="container bg-light p-5 border-rounded border-blue mt-5 mb-5 disapear">
+<div class="container bg-light p-5 border-rounded border-blue mt-5 mb-5 disapear line-height" id="PlanesPublicitarios">
 	
 	<div class="bg-light">
 		<div class="row mb-5">
@@ -545,13 +545,13 @@
 			</div>
 			<div class="col-2 bg-light p-3 border-right">
 				<div>
-					<h3 class="text-blue"><b>Plan publicitario profesional</b></h3>
+					<h3 class="text-blue line-height"><b>Plan publicitario profesional</b></h3>
 					<p class="text-muted">$500 al mes</p>
 				</div>
 			</div>
 			<div class="col-2 bg-light p-3">
 				<div>
-					<h3 class="text-blue"><b>Plan publicitario empresarial</b></h3>
+					<h3 class="text-blue line-height"><b>Plan publicitario empresarial</b></h3>
 					<p class="text-muted">$500 al mes</p>
 				</div>
 			</div>

@@ -70,7 +70,7 @@
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare bibendum fermentum. Fusce vitae egestas lectus. Cras faucibus diam quis nisl elementum convallis. Nam mollis nibh turpis, nec ullamcorper nulla imperdiet sed. Nunc et mi et nisl hendrerit lacinia vitae et nibh. Quisque arcu nunc, vestibulum id orci eget, fringilla ultrices magna. Mauris congue scelerisque molestie. Phasellus ornare porta ex elementum pellentesque. Praesent interdum lorem lacinia lacinia laoreet. Ut finibus purus tellus, mollis vulputate arcu facilisis sit amet.
 			</p>
 			<br>
-			<div class="bg-light p-5 mb-3">
+			<div class="p-0 mb-3">
 				<iframe width="100%" height="545" src="https://www.youtube.com/embed/y9j-BL5ocW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 

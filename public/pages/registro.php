@@ -3,7 +3,7 @@
 
 <link rel="stylesheet" type="text/css" href="../css/registro.css">
 
-<div class="container mt-3 mb-5 bg-light">
+<div class="container mt-3 mb-5">
     <div class="row">
         <img class="img-fluid" src="../img/patron-lg.png">
     </div>
