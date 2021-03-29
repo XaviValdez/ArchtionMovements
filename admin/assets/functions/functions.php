@@ -209,6 +209,36 @@ function getListLanguajes($status, $id=null){
     echo "<pre>";
     print_r($row);
 }
+function getProyectsTypes(){
+    global $DBH;
+    
+        $query = $DBH->prepare('SELECT * from proyect_type;');
+        $query->execute();
+    
+
+    $query->setFetchMode(PDO::FETCH_ASSOC);
+    $row = $query->fetchAll();
+    if($row)
+        return $row;
+    return false;
+    echo "<pre>";
+    print_r($row);
+}
+function getProyectsClasification(){
+    global $DBH;
+    
+        $query = $DBH->prepare('SELECT * from project_clasification;');
+        $query->execute();
+    
+
+    $query->setFetchMode(PDO::FETCH_ASSOC);
+    $row = $query->fetchAll();
+    if($row)
+        return $row;
+    return false;
+    echo "<pre>";
+    print_r($row);
+}
 function getListCountry($country_code=null, $id=null){
     global $DBH;
     if(empty($id) && !empty($country_code)){
@@ -250,13 +280,15 @@ function insertImagesProject($id, $filename, $status=1){
         ':status'=>$status
     ));
 }
-function insertProject($name, $user_id, $status=1){
+function insertProject($name, $user_id, $clasification,$project_type, $status=1){
     global $DBH;
-    $q='insert into projects (name,user_id,status) VALUES(:name,:user_id,:status)';
+    $q='insert into projects (name,user_id,status,clasification,project_type) VALUES(:name,:user_id,:status,:clasification,:project_type)';
     $query = $DBH->prepare($q);
     $query->execute(array(
         ':name'=>$name,
         ':user_id'=>$user_id,
+        ':clasification'=>$clasification,
+        ':project_type'=>$project_type,
         ':status'=>$status
     ));
     return $DBH->lastInsertId();

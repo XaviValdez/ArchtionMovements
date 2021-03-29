@@ -5,7 +5,7 @@ $response=array();
 $project_by_name=getProyects(null,null,$_POST['name']);
 if(empty($project_by_name)){
 	//means project is new
-	$project_id=insertProject($_POST['name'], $_POST['user_id']);
+	$project_id=insertProject($_POST['name'], $_POST['user_id'], $_POST['clasification'], $_POST['project_type']);
 	if(!empty($project_id)){
 		insertProjectTxn($_POST['description'],$_POST['location'], $_POST['social'], $_POST['environment'], $_POST['economy'], $_POST['objective'], $project_id);
 		// File upload configuration 

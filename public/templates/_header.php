@@ -24,5 +24,8 @@ global $version;
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+
 </head>
 <body>
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v10.0&appId=480293539839971&autoLogAppEvents=1" nonce="sPLYqsgL"></script>

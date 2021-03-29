@@ -121,6 +121,32 @@ global $version;
                         </select>
                       </div>
                     </div>
+                    <div class="col-md-4 pr-1">
+                      <div class="form-group">
+                        <label>Tipo</label>
+                        <select name='project_type' class="form-control">
+                          <?php
+                          $p_type=getProyectsTypes();//getting active users
+                          foreach ($p_type as $value) {
+                            echo '<option value="'.$value['id'].'">'.$value['description'].'</option>';
+                          }
+                          ?>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-4 pr-1">
+                      <div class="form-group">
+                        <label>Clasificacion</label>
+                        <select name='clasification' class="form-control">
+                          <?php
+                          $p_clasification=getProyectsClasification();//getting active users
+                          foreach ($p_clasification as $value) {
+                            echo '<option value="'.$value['id'].'">'.$value['description'].'</option>';
+                          }
+                          ?>
+                        </select>
+                      </div>
+                    </div>
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Descripción</label>
