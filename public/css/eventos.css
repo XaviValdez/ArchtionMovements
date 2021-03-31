@@ -10,7 +10,7 @@
 /* IMAGE ON IMAGE OVERLAY */
 .card .circled-img
 {
-    border: 2px solid gainsboro;
+    border: 2px solid white;
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
@@ -22,19 +22,19 @@
 
 .card .circled-img-center
 {
-    border: 2px solid gainsboro;
+    border: 2px solid white;
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
     position: absolute;
-    top: 7%;
-    left: 37%;
-    width: 26%;
+    top: 12%;
+    left: 40%;
+    width: 20%;
 }
 
 .card .circled-img-left
 {
-    border: 2px solid gainsboro;
+    border: 2px solid white;
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
@@ -45,7 +45,7 @@
 
 .card .circled-img-right
 {
-    border: 2px solid gainsboro;
+    border: 2px solid white;
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
@@ -57,7 +57,7 @@
 /* IMAGE ON IMAGE OVERLAY para proyecto abierto */
 .card .circled-img-big
 {
-    border: 2px solid gainsboro;
+    border: 2px solid white;
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;

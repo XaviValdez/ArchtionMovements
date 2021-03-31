@@ -31,6 +31,12 @@
               <i class="now-ui-icons education_atom"></i>
               <p>Research</p>
             </a>
-          </li>               
+          </li>
+          <li>
+            <a href="./eventos.php">
+              <i class="now-ui-icons design_app"></i>
+              <p>Eventos</p>
+            </a>
+          </li>              
         </ul>
       </div>

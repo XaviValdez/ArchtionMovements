@@ -87,7 +87,7 @@
 
 				echo '<div class="col-md-4 pr-1">
 						<div class="card mb-4 box-shadow hover_img">
-							<a href="publicacion.php?id=' . $project["p_id"] . '">
+							<a href="publicacion?id=' . $project["p_id"] . '">
 								<img class="card-img-top standarized_img" src="../img/uploads/' . $img[0]["url"] . '" alt="Card image cap">
 							</a>
 							<div class="mt-3">

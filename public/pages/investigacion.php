@@ -8,10 +8,29 @@
 	$investigaciones=getResearch(1); // get them all
 ?>
 
+
+<script>
+// When the user clicks on div, open the popup
+function Contact(id) {
+  var other = document.getElementById("cita-popup"+id);
+  var popup = document.getElementById("contacto-popup"+id);
+  popup.classList.toggle("show");
+  other.classList.remove('show');
+}
+
+function Cita(id) {
+  var other = document.getElementById("contacto-popup"+id);
+  var popup = document.getElementById("cita-popup"+id);
+  popup.classList.toggle("show");
+  other.classList.remove('show');
+}
+</script>
+
 <link rel="stylesheet" type="text/css" href="../css/investigacion.css">
 
 <div class="container text-center">
-	<img src="../img/investigacion/investigacionbanner.png" class="banner">
+	<img src="../img/investigacion/investigacionbanner.png" class="banner w-100">
+	<!-- <img src="http://placehold.it/1250x250" class="banner w-100"> -->
 </div>
 
 <div class="container mt-4">
@@ -201,20 +220,22 @@
 								<a href="preview.php'. "?id=" . $investigacion["r_id"] .'" class="btn btn-block btn-outline-success">Previsualizar</a>
 								</div>
 								<div class="row">
-									<div class="col-4">
-									<a href="#" data-toggle="tooltip" title="Contactar al autor">
+									<div class="col-4 popup">
+									<a onclick="Contact('. $investigacion["r_id"] .');" data-toggle="tooltip" title="Contactar al autor">
 										<img src="../img/icons/contacto.png" width="32px">
 									</a>
+									<span class="popuptext" id="contacto-popup'.$investigacion["r_id"].'">Contacto:<br>'.$investigacion["author_email"].'<br>'.$investigacion["author_mobile"].'</span>
 									</div>
 									<div class="col-4">
-									<a href="#" data-toggle="tooltip" title="Descargar">
+									<a href="../uploaded_files_research/'.$investigacion["url"].'" data-toggle="tooltip" title="Descargar" download>
 										<img src="../img/icons/download.png" width="32px">
 									</a>
 									</div>
-									<div class="col-4">
-									<a href="#" data-toggle="tooltip" title="Citar">
+									<div class="col-4 popup">
+									<a onclick="Cita('. $investigacion["r_id"] .');" data-toggle="tooltip" title="Citar">
 										<img src="../img/icons/cita.png" width="32px">
 									</a>
+									<span class="popuptext2" id="cita-popup'.$investigacion["r_id"].'">'.$investigacion["author"].". (".substr($investigacion["published_date"], 0, -15)."). ".$investigacion["name"].'.</span>
 									</div>
 								</div>
 							</div>

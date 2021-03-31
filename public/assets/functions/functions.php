@@ -59,6 +59,36 @@ function getProjects($status=null,$id=null,$name=null){
     return false;
 }
 
+// Fetch Eventos
+function getEventos($status=null,$id=null,$name=null){
+    global $DBH;
+    if(!empty($status)){
+        //get them all
+        $query = $DBH->prepare('SELECT * FROM eventos WHERE status=:status;');
+        $query->execute(array(
+            ':status'=>$status
+        ));
+    }else if(!empty($id)){
+        //searching for specific evento
+        $query = $DBH->prepare('SELECT * FROM eventos WHERE id=:evento_id;');
+        $query->execute(array(
+            ':evento_id'=>$id
+        ));
+    }else if(!empty($name)){
+        //searching for specific evento
+        $query = $DBH->prepare('SELECT * FROM eventos WHERE name=:evento_name;');
+        $query->execute(array(
+            ':evento_name'=>$name
+        ));
+    }
+    $query->setFetchMode(PDO::FETCH_ASSOC);
+    $row = $query->fetchAll();
+
+    if($row)
+        return $row;
+    return false;
+}
+
 // FETCH RESEARCH
 function getResearch($status=null,$id=null,$name=null){
     global $DBH;

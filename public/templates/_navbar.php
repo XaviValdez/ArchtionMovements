@@ -60,7 +60,7 @@
         </div>
         <div class="text-center">
             <a href="index">
-                <img class="mt-4 logo hvr-rotate" src="../img/logo.png">
+                <img class="mt-4 logo" src="../img/logo.png">
             </a>
         </div>
     </div>
@@ -72,7 +72,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbar1">
 
-            <a class="navbar-brand hvr-rotate" href="index">
+            <a class="navbar-brand" href="index">
                 <img id="navbar-logo" src="../img/small_logo.png" alt="Logo">
             </a>
 
@@ -112,10 +112,10 @@
                 <li class="nav-item m-3 active">
                     <?php 
                     if(strpos($current_url, 'red')) {
-                        echo '<a class="nav-link" href="#"><u>Red de trabajo</u></a>';
+                        echo '<a class="nav-link" href="red_de_trabajo"><u>Red de trabajo</u></a>';
                     }
                     else {
-                        echo '<a class="nav-link" href="#">Red de trabajo</a>';
+                        echo '<a class="nav-link" href="red_de_trabajo">Red de trabajo</a>';
                     }
                     ?>
                 </li>
@@ -131,7 +131,7 @@
                 </li>
                 <li class="nav-item m-3 active">
                     <?php 
-                    if(strpos($current_url, 'tienda')) {
+                    if(strpos($current_url, 'tienda') || strpos($current_url, 'producto')) {
                         echo '<a class="nav-link" href="tienda"><u>Tienda</u></a>';
                     }
                     else {

@@ -1,5 +1,26 @@
 <?php include('../templates/_header.php') ?>
 <?php include('../templates/_navbar.php') ?>
+<?php 
+require_once("../assets/config/config.php");
+require_once("../assets/functions/functions.php");
+
+$evento = getEventos(null,$_GET["id"],null)[0];
+$color = "";
+switch (rand(0,3)) {
+	case 0:
+		$color = "blue";
+		break;
+	case 1:
+		$color = "green";
+		break;
+	case 2:
+		$color = "orange";
+		break;
+	case 3:
+		$color = "pink";
+		break;
+}
+?>
 
 <link rel="stylesheet" type="text/css" href="../css/eventos.css">
 
@@ -8,30 +29,47 @@
 	<!-- CARDS -->
 	<div class="row disapear">
 		<div class="col-12">
-		<div class="card">
-			<img class="card-img-top" src="https://via.placeholder.com/1200x200">
+		<div class="card border-0">
+			<img class="card-img-top" src="../img/eventos/banner.png">
 			<div class="card-img-overlay">
-				<h1><b>WEBINAR: Lorem Ipsum</b></h1>
-				<h4 class="text-white text-muted">Mañana: 12:00</h4>
+				<h1><b><?php echo $evento["name"]; ?></b></h1>
+				<h4 class="text-white text-muted"><?php echo substr($evento["date"], 10, 12); ?></h4>
 			</div>
-			<img class="circled-img-big" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdDvt33vWhZe9pUL-Lt3RBIkVH6dki5iAgNw&usqp=CAU">
+			<img class="circled-img-big" <?php echo 'src="../img/eventos/w'.$color.'_am.png"'; ?>>
 			<div class="card-body text-center mt-2">
 				<div class="row">
 					<div class="col-2"></div>
 					<div class="col-2"> <!-- FECHA -->
 						<p class="card-text">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar icon" viewBox="0 0 16 16">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar icon mr-1" viewBox="0 0 16 16">
 						<path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
 						</svg>
-						<b>21/05/2021</b>
+						<b><?php echo substr(str_replace("-","/",$evento["date"]), 0, -8);?></b>
 						</p>
 					</div>
 					<div class="col-2"> <!-- MODALIDAD -->
 						<p class="card-text">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-laptop icon" viewBox="0 0 16 16">
-						<path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
-						</svg>
-						<b>ONLINE</b>
+						
+						
+						
+						<?php 
+						switch ($evento["type"]) {
+							case 1:
+								echo '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-laptop icon mr-1" viewBox="0 0 16 16">
+								<path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
+								</svg> <b>';
+								echo "ONLINE";
+								break;
+							case 2:
+								echo '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-check-fill icon mr-1" viewBox="0 0 16 16">
+								<path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+								<path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+							  	</svg> <b>';
+								echo "PRESENCIAL";
+								break;
+						}
+						?>
+						</b>
 						</p>
 					</div>
 				</div>
@@ -52,32 +90,51 @@
 			<div class="bg-light p-5 mb-3">
 				<div class="row">
 					<div class="col-md-2">
-					<p class="text-center disapear"><img class="img-fluid rounded-circle" src="https://via.placeholder.com/100x100"></p>
+					<p class="text-center disapear"><img class="img-fluid rounded-circle" src="http://placehold.it/100x100"></p>
 					</div>
 					<div class="col-md-10">
-						<h4><b>Nombre apellido</b></h4>
-						<h5 class="text-muted">Ubicación</h5>
+						<h4><b><?php echo $evento["speaker_name"]; ?></b></h4>
+						<h5 class="text-muted"><?php echo $evento["location"]; ?></h5>
 						<br>
 						<p class="lead">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare bibendum fermentum. Fusce vitae egestas lectus. Cras faucibus diam quis nisl elementum convallis.
+						<?php echo $evento["speaker_description"]; ?>						
 						</p>
 					</div>
 				</div>
 			</div>
 
-			<h2 class="mt-5 mb-5"><b>Webinar: Lorem Ipsum</b></h2>
+			<h2 class="mt-5 mb-5"><b><?php echo $evento["name"]; ?></b></h2>
 			<p class="lead">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare bibendum fermentum. Fusce vitae egestas lectus. Cras faucibus diam quis nisl elementum convallis. Nam mollis nibh turpis, nec ullamcorper nulla imperdiet sed. Nunc et mi et nisl hendrerit lacinia vitae et nibh. Quisque arcu nunc, vestibulum id orci eget, fringilla ultrices magna. Mauris congue scelerisque molestie. Phasellus ornare porta ex elementum pellentesque. Praesent interdum lorem lacinia lacinia laoreet. Ut finibus purus tellus, mollis vulputate arcu facilisis sit amet.
+			<?php echo $evento["description"]; ?>			
 			</p>
 			<br>
-			<div class="p-0 mb-3">
-				<iframe width="100%" height="545" src="https://www.youtube.com/embed/y9j-BL5ocW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
+			<?php
+				$mystring = $evento["url"];
+				$findme   = 'youtube';
+				$pos = strpos($mystring, $findme);
+
+				if ($pos !== false) {
+					$url = str_replace("watch?v=","embed/",$evento["url"]);
+					echo '
+					<div class="p-0 mb-3">
+						<iframe width="100%" height="545" src="'.$url.'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					';
+				} else {
+					echo '
+					<div class="p-0 mb-3">
+						<h5>Link</h5>
+						<p class="lead"><a class="btn bg-blue btn-lg" href="'.$evento["url"].'">'.$evento["url"].'</a></p>
+					</div>
+					';				
+				}
+			?>
+			
 
 		</div>
 
 		<div class="col-md-4">
-		<img class="img-fluid disapear" src="https://via.placeholder.com/500x1000">
+		<img class="img-fluid disapear" src="http://placehold.it/500x1000">
 		</div>
 	</div>
 	<br><br><br><br><br><br>

@@ -12,10 +12,28 @@
 	$withoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $pdf_url);
 ?>
 
+<script>
+// When the user clicks on div, open the popup
+function Contact(id) {
+  var other = document.getElementById("cita-popup"+id);
+  var popup = document.getElementById("contacto-popup"+id);
+  popup.classList.toggle("show");
+  other.classList.remove('show');
+}
+
+function Cita(id) {
+  var other = document.getElementById("contacto-popup"+id);
+  var popup = document.getElementById("cita-popup"+id);
+  popup.classList.toggle("show");
+  other.classList.remove('show');
+}
+</script>
+
+
 <link rel="stylesheet" type="text/css" href="../css/investigacion.css">
 
 <div class="container text-center mt-3">
-	<img src="../img/investigacion/investigacionbanner.png" class="banner">
+	<img src="../img/investigacion/investigacionbanner.png" class="banner w-100">
 </div>
 
 <div class="container mt-4">
@@ -27,24 +45,29 @@
 				<?php echo '<p class="lead">'.substr($data["published_date"], 0, -8).'</p>'; ?>
 				<br>
 				<?php echo '<p class="lead">'.$data["author"].'</p>'; ?>
-				<div class="row mt-5">
-					<div class="col-2">
-					<a href="#" data-toggle="tooltip" title="Contactar al autor">
+				<div class="row bg-light mt-5">
+					<div class="col-2 popup">
+					<a onclick="Contact('<?php echo $_GET['id']; ?>');" data-toggle="tooltip" title="Contactar al autor">
 						<img src="../img/icons/contacto.png" width="32px">
 					</a>
+					<span class="popuptext" id="contacto-popup<?php echo $_GET['id']; ?>">Contacto:<br><?php echo $data['author_email']; ?><br><?php echo $data['author_mobile']; ?></span>
 					</div>
+
 					<div class="col-2">
-					<a href="#" data-toggle="tooltip" title="Descargar">
+					<a href="../uploaded_files_research/'<?php echo $pdf_url; ?>'" data-toggle="tooltip" title="Descargar" download>
 						<img src="../img/icons/download.png" width="32px">
 					</a>
 					</div>
-					<div class="col-2">
-					<a href="#" data-toggle="tooltip" title="Citar">
+
+					<div class="col-2 popup">
+					<a onclick="Cita('<?php echo $_GET['id']; ?>');" data-toggle="tooltip" title="Citar">
 						<img src="../img/icons/cita.png" width="32px">
 					</a>
+					<span class="popuptext2" id="cita-popup<?php echo $_GET['id']; ?>"><?php echo $data['author']; ?>. (<?php echo substr($data["published_date"], 0, -15); ?>). <?php echo $data["name"];?>.</span>
 					</div>
 				</div>
 			</div>
+			
 		</div>
 
 		<div class="col-sm-8 bg-light p-5 pr-5 pb-4 mb-5 text-right">

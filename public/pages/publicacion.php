@@ -25,7 +25,7 @@
 		</div>
 
 		<div class="col-sm-8">
-			<img class="fill" src="<?php echo '../img/uploads/' . $images[0]["url"] ?>">
+			<img class="fill w-100" src="<?php echo '../img/uploads/' . $images[0]["url"] ?>">
 		</div>
 	
 	</div>

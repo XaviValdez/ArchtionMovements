@@ -83,6 +83,55 @@ function getProyects($status=null,$id=null,$name=null){
     return false;
 }
 
+
+function getEventos($status=null,$id=null,$name=null){
+    global $DBH;
+    if(!empty($status)){
+        //get them all
+        $query = $DBH->prepare('SELECT * FROM eventos WHERE status=:status;');
+        $query->execute(array(
+            ':status'=>$status
+        ));
+    }else if(!empty($id)){
+        //searching for specific evento
+        $query = $DBH->prepare('SELECT * FROM eventos WHERE id=:evento_id;');
+        $query->execute(array(
+            ':evento_id'=>$id
+        ));
+    }else if(!empty($name)){
+        //searching for specific evento
+        $query = $DBH->prepare('SELECT * FROM eventos WHERE name=:evento_name;');
+        $query->execute(array(
+            ':evento_name'=>$name
+        ));
+    }
+    $query->setFetchMode(PDO::FETCH_ASSOC);
+    $row = $query->fetchAll();
+
+    if($row)
+        return $row;
+    return false;
+}
+function insertEvento($name, $description, $location,$evento_type, $speaker_name, $speaker_description, $url, $date, $status=1){
+    global $DBH;
+    $q='insert into eventos (name,description,location,type,speaker_name,speaker_description,url,date,status) VALUES(:name,:description,:location,:type,:speaker_name,:speaker_description,:url,:date,:status)';
+    $query = $DBH->prepare($q);
+    $query->execute(array(
+        ':name'=>$name,
+        ':description'=>$description,
+        ':location'=>$location,
+        ':type'=>$evento_type,
+        ':speaker_name'=>$speaker_name,
+        ':speaker_description'=>$speaker_description,
+        ':url'=>$url,
+        ':date'=>$date,
+        ':status'=>$status
+    ));
+    return $DBH->lastInsertId();
+}
+
+
+
 function table_helper_projects($array,$table_head){
     $table='';
     foreach ($array as $value) {
