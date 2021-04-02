@@ -211,13 +211,15 @@ function getImg($p_id,$status=1){
 }
 
 // Insert new user into DB
-function setUser($first_name,$last_name,$email,$password,$status=1){
+function setUser($first_name,$last_name,$email,$password,$status=1, $middle_name=null, $second_last_name=null){
     global $DBH;
-    $q='insert into users_arch (first_name,last_name,email,password,status) VALUES(:first_name,:last_name,:email,:password,:status)';
+    $q='insert into users_arch (first_name,middle_name,last_name,second_last_name,email,password,status) VALUES(:first_name,:middle_name,:last_name,:second_last_name,:email,:password,:status)';
     $query = $DBH->prepare($q);
     $query->execute(array(
         ':first_name'=>$first_name,
         ':last_name'=>$last_name,
+        ':middle_name'=>$middle_name,
+        ':second_last_name'=>$second_last_name,
         ':email'=>$email,
         ':password'=>hash('sha256', $password),
         ':status'=>$status
@@ -298,4 +300,8 @@ function verify_entries($arr, $required_entries){
     return true;
 }
 
+
+function isLoggedIn(){
+    return isset($_SESSION['user_id']);
+}
 ?>

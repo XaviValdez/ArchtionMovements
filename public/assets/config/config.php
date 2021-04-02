@@ -18,7 +18,7 @@ catch(PDOException $e) {
 }
 
 global $version;
-$version="1.0.0";
+$version="1.0.1";
 
 global $fb_app_id;
 $fb_app_id="480293539839971";

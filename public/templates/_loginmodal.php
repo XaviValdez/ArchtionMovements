@@ -11,7 +11,7 @@
         <h2 class="text-center"><b>¡Hola!</b></h2>
         <h5 class="text-center"><small><b>Inicia sesión o regístrate</b></small></h5>
         <div class="center col-12">
-          <div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="true"></div>
+          <div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="true" onlogin="checkLoginState();"></div>
         </div>
         
 

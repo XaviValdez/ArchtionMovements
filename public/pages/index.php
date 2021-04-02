@@ -840,4 +840,4 @@
 <img class="long-img disapear mb-5 mt-5" src="../img/index/longpatron.png" alt="Card image">
 
 <?php include('../templates/_loginmodal.php') ?>
-<?php include('../templates/_footer.html') ?>
+<?php include('../templates/_footer.php') ?>
