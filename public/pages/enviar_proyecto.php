@@ -6,10 +6,11 @@
 
 <main class="container mb-5">
 	<div class="row mt-5">
-		<div class="col-md-6 bg-light pl-5 pt-5">
+		<form class="col-12" id="enviar_proyecto" enctype="multipart/form-data">
+		<div class="col-6 bg-light pl-5 pt-5">
 			<div class="mb-3">
 				<h1 class="display-5 font-weight-bold">Compartir proyecto</h1>
-				<form class="mr-5 mt-3" id="enviar_proyecto">
+				
 					<div class="form-group">
 						<label>Nombre del proyecto</label>
 						<input type="text" class="form-control" name="name" placeholder="Nombre del proyecto*">
@@ -49,22 +50,28 @@
 					<button type="submit" class="btn btn-dark fixed-btn-size">Enviar</button><br>
 					<label class="text-center mt-3">Al registrarme acepto y estoy de acuerdo con los <a href="terminosycondiciones">términos y condiciones</a></label>
 
-				</form>
 			</div>
 		</div>
 
 		<!-- FILE UPLOAD -->
-		 <div class="col-md-6">
+		 <div class="col-6">
 		 	<div class="row">
 			<div class="bg-light" id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
 				<div id="drag_upload_file" class="p-3 text-center">
 					<p>Arrastra las fotos de tu proyecto</p>
 					
-					<input type="file" id="Abrir explorador" multiple>
+					<input  type="file" name="files[]" id="files" multiple required=""/>
 				</div>
 			</div>
 			</div>
+			<div class="row">
+				<div class="min_img">
+                          
+                </div>
+                <input type="text" name="order" hidden="true">
+			</div>
 		</div>
+		</form>
 	
 	
 	
@@ -73,7 +80,7 @@
 </main><!-- /.container -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="../js/ajaxes/send_proyecto.js"></script>
+<script src="../js/ajaxes/send_proyecto.js?v=<?php echo $version; ?>"></script>
 
 <?php include('../templates/_loginmodal.php') ?>
 <?php include('../templates/_footer.php') ?>

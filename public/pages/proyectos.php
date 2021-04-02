@@ -11,10 +11,10 @@
 
 	<!-- MENU -->
 	<div class="row mb-5">
+		<form id="search_project" class="col-sm-12">
 		<div class="col-sm-3 mt-2">
-			<form>
-			<input class="form-control form-control-lg" type="text" placeholder="Palabra clave">
-			</form>
+			
+			<input class="form-control form-control-lg" type="text" placeholder="Palabra clave" name="textField">
 		</div>
 
 		<div class="col-sm-3 mt-2">
@@ -40,42 +40,49 @@
 			</div>
 		</div>
 
-		<div class="col-sm-2 mt-2">
-			<div class="dropdown">
-				<a class="btn btn-lg btn-block text-center bg-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Sector
-				</a>
-				
-				<div class="dropdown-menu text-center w-100" aria-labelledby="dropdownMenuLink2">
-					<a class="dropdown-item" href="#">Salud</a>
-					<a class="dropdown-item" href="#">Vivienda</a>
-					<a class="dropdown-item" href="#">Monumento</a>
-					<a class="dropdown-item" href="#">Oficinas</a>
-					<a class="dropdown-item" href="#">Educación</a>
-					<a class="dropdown-item" href="#">Otro</a>
-				</div>
-			</div>
-		</div>
+		<div class="col-md-4 pr-1">
+          <div class="form-group">
+            <label>Tipo</label>
+            <select name='project_type' class="form-control">
+              <?php
+              $p_type=getProyectsTypes();//getting active users
+                echo '<option value="0">Todos</option>';
+
+              foreach ($p_type as $value) {
+                echo '<option value="'.$value['id'].'">'.$value['description'].'</option>';
+              }
+              ?>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-4 pr-1">
+          <div class="form-group">
+            <label>Clasificacion</label>
+            <select name='clasification' class="form-control">
+              <?php
+              $p_clasification=getProyectsClasification();//getting active users
+              echo '<option value="0">Todos</option>';
+              foreach ($p_clasification as $value) {
+                echo '<option value="'.$value['id'].'">'.$value['description'].'</option>';
+              }
+              ?>
+            </select>
+          </div>
+        </div>
 
 		<div class="col-sm-2 mt-2">
-			<div class="dropdown">
-				<a class="btn btn-lg btn-block text-center bg-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Tipo
-				</a>
-				
-				<div class="dropdown-menu text-center w-100" aria-labelledby="dropdownMenuLink3">
-					<a class="dropdown-item" href="#">Proyecto</a>
-					<a class="dropdown-item" href="#">Obra</a>
-				</div>
-			</div>
+			<a href="#" class="btn btn-lg btn-block text-center bg-white btn-border" onclick="document.getElementById('search_project').reset();$('#search_project').submit();">Mostrar todo</a>
 		</div>
+		<div class="col-md-3">
+                      <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">Buscar</button>
+                      </div>
+                    </div>
+		</form>
 
-		<div class="col-sm-2 mt-2">
-			<a href="#" class="btn btn-lg btn-block text-center bg-white btn-border">Mostrar todo</a>
-		</div>
 	</div>
 	<!-- CARDS -->
-	<div class="row">
+	<div class="row" id="projectsDiv">
 		<?php
 			foreach ($projects as $project) {
 
@@ -108,5 +115,7 @@
 	</div>
 </div>
 
+
 <?php include('../templates/_loginmodal.php') ?>
 <?php include('../templates/_footer.php') ?>
+<script src='../js/ajaxes/search_project.js?v=<?php echo $version; ?>'></script>

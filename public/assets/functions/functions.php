@@ -58,7 +58,36 @@ function getProjects($status=null,$id=null,$name=null){
         return $row;
     return false;
 }
+function getProyectsTypes(){
+    global $DBH;
+    
+        $query = $DBH->prepare('SELECT * from proyect_type;');
+        $query->execute();
+    
 
+    $query->setFetchMode(PDO::FETCH_ASSOC);
+    $row = $query->fetchAll();
+    if($row)
+        return $row;
+    return false;
+    echo "<pre>";
+    print_r($row);
+}
+function getProyectsClasification(){
+    global $DBH;
+    
+        $query = $DBH->prepare('SELECT * from project_clasification;');
+        $query->execute();
+    
+
+    $query->setFetchMode(PDO::FETCH_ASSOC);
+    $row = $query->fetchAll();
+    if($row)
+        return $row;
+    return false;
+    echo "<pre>";
+    print_r($row);
+}
 // Fetch Eventos
 function getEventos($status=null,$id=null,$name=null){
     global $DBH;
@@ -241,7 +270,18 @@ function sendContact($p_name,$p_email,$p_message,$p_status){
 }
 
 // Insert new project into DB
-function insertProject($name, $user_id, $status=1){
+function insertImagesProject($id, $filename, $order, $status=1){
+    global $DBH;
+    $q='insert into project_images (project_id, url, order_img, status) VALUES(:project_id, :url, :order, :status);';
+    $query = $DBH->prepare($q);
+    $query->execute(array(
+        ':project_id'=>$id,
+        ':url'=>$filename,
+        ':order'=>$order,
+        ':status'=>$status
+    ));
+}
+function insertProject($name, $user_id, $status=2){
     global $DBH;
     $q='insert into projects (name,user_id,status) VALUES(:name,:user_id,:status)';
     $query = $DBH->prepare($q);

@@ -18,7 +18,7 @@ if(empty($project_by_name)){
 	    	$order=json_decode($_POST['order'],1);// this give us an array with the order
 	        foreach($_FILES['files']['name'] as $key=>$val){ 
 	            // File upload path 
-	            $fileName = basename($_FILES['files']['name'][$key]); 
+	            $fileName = $_POST['user_id'].basename($_FILES['files']['name'][$key]); 
 	            $targetFilePath = $targetDir . $fileName; 
 	             
 	            // Check whether file type is valid 
@@ -27,7 +27,7 @@ if(empty($project_by_name)){
 	                // Upload file to server 
 	                if(move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetFilePath)){ 
 	                    // Image db insert sql 
-	                    insertImagesProject($project_id, $fileName,array_search($fileName, $order));
+	                    insertImagesProject($project_id, $fileName,array_search(str_replace($_POST['user_id'], '', $fileName), $order));
 	                    $response['success']=true;
 						$response['error']="project_uploaded";
 	                }else{ 

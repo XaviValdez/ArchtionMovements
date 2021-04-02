@@ -1,21 +1,43 @@
-$("#enviar_proyecto").on('submit', function (event) {
+$("#search_project").on('submit', function (event) {
     console.log("button pressed");
 
 	event.preventDefault();
-	$.ajax('/ArchtionMovements/public/assets/functions/ajaxes/send_proyecto.php', {
+	$.ajax('/ArchtionMovements/public/assets/functions/ajaxes/search_project.php', {
 	    type: 'POST',  // http method
 	    data : new FormData(this),  // data to submit
 	    contentType:false,
         processData:false,
 	    success: function (data, status, xhr) {
 	    	if(data.success){
-				alert("Proyecto enviado correctamente");
-	    		window.location.href = '/ArchtionMovements/public/pages/index.php';
+				//update front end
+				debugger;
+				$('#projectsDiv').html("");
+				data.projects.forEach( function(valor, indice, array) {
+					$('#projectsDiv').append('<div class="col-md-4 pr-1">'+
+						'<div class="card mb-4 box-shadow hover_img">'+
+							'<a href="publicacion?id=' + valor.p_id + '">'+
+								'<img class="card-img-top standarized_img" src="../img/uploads/' + valor.url + '" alt="Card image cap">'+
+							'</a>'+
+							'<div class="mt-3">'+
+								'<div class="row">'+
+									'<div class="col-10">'+
+										'<h5 class="card-title">' + valor.name + '</h5>'+
+										'<h6 class="card-subtitle mb-2 text-muted">' + valor.description.substr(0,20) + '...' + '</h6>'+
+									'</div>'+
+									'<div class="col-2 text-right">'+
+										'<h5 class="card-title"><img class="img-fluid premio-icon" src="../img/icons/premio.png"></h5>'+
+									'</div>'+
+								'</div>'+
+							'</div>'+
+						'</div>'+
+					'</div>');
+				});
 	    	}
 			else if(data.error == "missing_fields"){
 				alert("No se han llenado todos los campos");
 			}
 			else {
+				//TODO no projects found 
 				alert("¡Error inesperado!");
 			}
 	    },
