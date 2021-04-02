@@ -29,7 +29,7 @@ function Cita(id) {
 <link rel="stylesheet" type="text/css" href="../css/investigacion.css">
 
 <div class="container text-center">
-	<img src="../img/investigacion/investigacionbanner.png" class="banner w-100">
+	<img src="../img/investigacion/investigacionbanner.jpg" class="banner w-100">
 	<!-- <img src="http://placehold.it/1250x250" class="banner w-100"> -->
 </div>
 

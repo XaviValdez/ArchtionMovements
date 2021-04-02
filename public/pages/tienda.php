@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="../css/investigacion.css">
 
 <div class="container text-center">
-	<img src="../img/tienda/tiendabanner.png" class="banner w-100">
+	<img src="../img/tienda/tiendabanner.jpg" class="banner w-100">
 	<!-- <img src="http://placehold.it/1250x250" class="banner w-100"> -->
 </div>
 

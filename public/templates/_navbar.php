@@ -111,7 +111,7 @@
                 </li>
                 <li class="nav-item m-3 active">
                     <?php 
-                    if(strpos($current_url, 'red')) {
+                    if(strpos($current_url, 'red') || strpos($current_url, 'profile')) {
                         echo '<a class="nav-link" href="red_de_trabajo"><u>Red de trabajo</u></a>';
                     }
                     else {

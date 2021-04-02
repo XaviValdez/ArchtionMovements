@@ -5,7 +5,7 @@
 
 <!-- ----------- BANNER ----------------- -->
 <div class="container text-center mt-3 disapear">
-	<img src="../img/enviar_material/quequiereshacer.png" class="banner w-100">
+	<img src="../img/enviar_material/quequiereshacer.jpg" class="banner w-100">
 	<!-- <img src="http://placehold.it/1250x250" class="banner w-100"> -->
 </div>
 

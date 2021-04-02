@@ -151,7 +151,7 @@
                 echo '
                 <div class="col-sm-4 pr-5 pl-5">
                     <div class="card mb-4 box-shadow hover_img_big">
-                        <a href="#">
+                        <a href="profile">
                             <img class="card-img-top square-img" src="http://placehold.it/500x500" alt="Card image cap">
                         </a>
                         <div class="mt-3 pl-3">
