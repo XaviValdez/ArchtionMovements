@@ -179,4 +179,4 @@
 </div>
 
 <?php include('../templates/_loginmodal.php') ?>
-<?php include('../templates/_footer.html') ?>
+<?php include('../templates/_footer.php') ?>
