@@ -47,30 +47,25 @@ function setAdminUser($user_name,$password,$status=1){
 
 function getProyects($status=null,$id=null,$name=null){
     global $DBH;
+    $queryStr="SELECT u.id as u_id, p.id as p_id, ptxt.id as ptxt_id, name,ptxt.description, ptxt.social, ptxt.environment, ptxt.economy, ptxt.objective,ptxt.location,p.project_type,p.clasification, p.crated_date, p.`status`                    FROM `projects` p 
+                                STRAIGHT_JOIN projects_text_fields ptxt ON p.id=ptxt.project_id
+                                STRAIGHT_JOIN users_arch u ON u.id=p.user_id ";
     if(!empty($status)){
         //get them all
-        $query = $DBH->prepare('SELECT u.id as "u_id", p.id as "p_id", name, ptxt.description, ptxt.social, ptxt.environment, ptxt.economy, ptxt.objective, p.crated_date, p.`status`                    FROM `projects` p 
-                                STRAIGHT_JOIN projects_text_fields ptxt ON p.id=ptxt.project_id
-                                STRAIGHT_JOIN users_arch u ON u.id=p.user_id
-                                WHERE p.status=:status;');
+        $finalq=$queryStr."WHERE p.status=:status;";
+        $query = $DBH->prepare($finalq);
         $query->execute(array(
             ':status'=>$status
         ));
     }else if(!empty($id)){
         //searching for specific project
-        $query = $DBH->prepare('SELECT u.id as "u_id", p.id as "p_id", name, ptxt.description, ptxt.social, ptxt.environment, ptxt.economy, ptxt.objective, p.crated_date, p.`status`                    FROM `projects` p 
-                                STRAIGHT_JOIN projects_text_fields ptxt ON p.id=ptxt.project_id
-                                STRAIGHT_JOIN users_arch u ON u.id=p.user_id
-                                WHERE p.id=:project_id;');
+        $query = $DBH->prepare($queryStr.'WHERE p.id=:project_id;');
         $query->execute(array(
             ':project_id'=>$id
         ));
     }else if(!empty($name)){
         //searching for specific project
-        $query = $DBH->prepare('SELECT u.id as "u_id", p.id as "p_id", name, ptxt.description, ptxt.social, ptxt.environment, ptxt.economy, ptxt.objective, p.crated_date, p.`status`                    FROM `projects` p 
-                                STRAIGHT_JOIN projects_text_fields ptxt ON p.id=ptxt.project_id
-                                STRAIGHT_JOIN users_arch u ON u.id=p.user_id
-                                WHERE p.name=:name;');
+        $query = $DBH->prepare($queryStr.'WHERE p.name=:name;');
         $query->execute(array(
             ':name'=>$name
         ));
@@ -82,8 +77,39 @@ function getProyects($status=null,$id=null,$name=null){
         return $row;
     return false;
 }
+function getImages($what,$id,$status=1){
+    if($what=="projects"){
+        $query="select * from project_images where project_id=:id and status=:status";
+    }
+    global $DBH;
+    $query = $DBH->prepare($query);
+    $query->execute(array(
+        ':id'=>$id,
+        ':status'=>$status
+    ));
+    $query->setFetchMode(PDO::FETCH_ASSOC);
+    $row = $query->fetchAll();
 
-
+    if($row)
+        return helperFrontEndImages($row);
+    return false;
+}
+function helperFrontEndImages($rows){
+    $div_img="";
+    $order="{";
+    $numItems = count($rows);
+    $i = 0;
+    foreach ($rows as $key => $value) {
+        $div_img.="<div class='order_picker' data-name='".$value['url']."' data-order='".$value['order_img']."'><img style='max-height:200px;'  src='./../public/img/uploads/".$value['url']."' alt='' /></div>";
+        
+        if(++$i === $numItems) {
+            $order.='"'.$value['order_img'].'":"'.$value['url'].'"';
+          }else{
+            $order.='"'.$value['order_img'].'":"'.$value['url'].'",';
+          }
+    }
+    return [$div_img,$order."}"];
+}
 function getEventos($status=null,$id=null,$name=null){
     global $DBH;
     if(!empty($status)){
@@ -166,6 +192,11 @@ function table_helper_projects($array,$table_head){
                 </td>
                 <td>
                   '.$value["status"].'
+                </td>
+                <td>
+                  <a href="edit_project.php?id='.$value["p_id"].'">
+                    <button class="btn btn-primary btn-block">Editar</button>
+                  </a>
                 </td>
               </tr>
             ';
@@ -319,13 +350,14 @@ function getListCountry($country_code=null, $id=null){
     print_r($row);
 }
 
-function insertImagesProject($id, $filename, $status=1){
+function insertImagesProject($id, $filename, $order, $status=1){
     global $DBH;
-    $q='insert into project_images (project_id,url,status) VALUES(:project_id,:url,:status)';
+    $q='insert into project_images (project_id, url, order_img, status) VALUES(:project_id, :url, :order, :status);';
     $query = $DBH->prepare($q);
     $query->execute(array(
         ':project_id'=>$id,
         ':url'=>$filename,
+        ':order'=>$order,
         ':status'=>$status
     ));
 }
@@ -356,7 +388,45 @@ function insertProjectTxn($description,$location, $social, $environment, $econom
         ':project_id'=>$project_id
     ));
 }
-
+function updateProject($id, $name, $user_id, $clasification,$project_type, $status=1){
+    global $DBH;
+    $q='replace into projects (id, name,user_id,status,clasification,project_type) VALUES(:id,:name,:user_id,:status,:clasification,:project_type)';
+    $query = $DBH->prepare($q);
+    $query->execute(array(
+        ':id'=>$id,
+        ':name'=>$name,
+        ':user_id'=>$user_id,
+        ':clasification'=>$clasification,
+        ':project_type'=>$project_type,
+        ':status'=>$status
+    ));
+    return $DBH->lastInsertId();
+}
+function updateProjectTxn($id, $description,$location, $social, $environment, $economy, $objective, $project_id){
+    global $DBH;
+    $q='replace into projects_text_fields (id, description,location,social,environment,economy,objective,project_id) VALUES(:id,:description,:location,:social,:environment,:economy,:objective,:project_id)';
+    $query = $DBH->prepare($q);
+    $query->execute(array(
+        ':id'=>$id,
+        ':description'=>$description,
+        ':location'=>$location,
+        ':social'=>$social,
+        ':environment'=>$environment,
+        ':economy'=>$economy,
+        ':objective'=>$objective,
+        ':project_id'=>$project_id
+    ));
+}
+function updateImagesProject($id, $status=0){
+    global $DBH;
+    $q='update project_images set status=:status where project_id=:project_id';
+    $query = $DBH->prepare($q);
+    $query->execute(array(
+        ':project_id'=>$id,
+        ':status'=>$status
+    ));
+    
+}
 function getResearch($status=null,$id=null,$name=null){
     global $DBH;
     if(!empty($status)){

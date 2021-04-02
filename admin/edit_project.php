@@ -5,6 +5,8 @@ if(!isCurrentActiveSession()){
   header("Location:login.php");
 }
 global $version;
+$project=getProyects(null,$_GET['id']);
+list($div_img,$order)=getImages("projects",$_GET['id']);
 ?>
 <!--
 
@@ -66,7 +68,7 @@ global $version;
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Crear proyecto</a>
+            <a class="navbar-brand" href="#pablo">Modifica proyecto</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -97,15 +99,15 @@ global $version;
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h5 class="title">Crea un proyecto</h5>
+                <h5 class="title">Modifica un proyecto</h5>
               </div>
               <div class="card-body">
-                <form id="create_project" enctype="multipart/form-data">
+                <form id="edit_project" enctype="multipart/form-data">
                   <div class="row">
                     <div class="col-md-5 pr-1">
                       <div class="form-group">
                         <label>Nombre</label>
-                        <input type="text" class="form-control" placeholder="Nombre" name='name'>
+                        <input type="text" class="form-control" placeholder="Nombre" name='name' value="<?php echo $project[0]['name'] ?>">
                       </div>
                     </div>
                     <div class="col-md-4 pr-1">
@@ -115,7 +117,11 @@ global $version;
                           <?php
                           $users=getListUser(1);//getting active users
                           foreach ($users as $value) {
-                            echo '<option value="'.$value['id'].'">'.$value['first_name'].' '.$value['last_name'].' '.$value['email'].'</option>';
+                            $option='<option value="'.$value['id'].'">'.$value['first_name'].' '.$value['last_name'].' '.$value['email'].'</option>';
+                            if($value['id']==$project[0]['u_id']){
+                              $option='<option value="'.$value['id'].'" selected>'.$value['first_name'].' '.$value['last_name'].' '.$value['email'].'</option>';
+                            }
+                            echo $option;
                           }
                           ?>
                         </select>
@@ -128,7 +134,11 @@ global $version;
                           <?php
                           $p_type=getProyectsTypes();//getting active users
                           foreach ($p_type as $value) {
-                            echo '<option value="'.$value['id'].'">'.$value['description'].'</option>';
+                            $option='<option value="'.$value['id'].'">'.$value['description'].'</option>';
+                            if($value['id']==$project[0]['project_type']){
+                              $option='<option value="'.$value['id'].'" selected>'.$value['description'].'</option>';
+                            }
+                            echo $option;
                           }
                           ?>
                         </select>
@@ -141,7 +151,11 @@ global $version;
                           <?php
                           $p_clasification=getProyectsClasification();//getting active users
                           foreach ($p_clasification as $value) {
-                            echo '<option value="'.$value['id'].'">'.$value['description'].'</option>';
+                            $option='<option value="'.$value['id'].'">'.$value['description'].'</option>';
+                            if($value['id']==$project[0]['clasification']){
+                              $option='<option value="'.$value['id'].'" selected>'.$value['description'].'</option>';
+                            }
+                            echo $option;
                           }
                           ?>
                         </select>
@@ -150,37 +164,37 @@ global $version;
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Descripción</label>
-                        <textarea type="text" class="form-control" placeholder="Country" name='description' required=""> </textarea> 
+                        <textarea type="text" class="form-control" placeholder="Country" name='description' ><?php echo $project[0]['description']; ?> </textarea> 
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Ubicación</label>
-                        <textarea type="text" class="form-control" placeholder="Country" name='location' required=""> </textarea> 
+                        <textarea type="text" class="form-control" placeholder="Country" name='location' ><?php echo $project[0]['location']; ?> </textarea> 
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Social</label>
-                        <textarea type="text" class="form-control" placeholder="Country" name='social' required=""> </textarea> 
+                        <textarea type="text" class="form-control" placeholder="Country" name='social' > <?php echo $project[0]['social']; ?></textarea> 
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Ambiente</label>
-                        <textarea type="text" class="form-control" placeholder="Country" name='environment' required=""> </textarea> 
+                        <textarea type="text" class="form-control" placeholder="Country" name='environment' > <?php echo $project[0]['environment']; ?></textarea> 
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Economico</label>
-                        <textarea type="text" class="form-control" placeholder="Country" name='economy' required=""> </textarea> 
+                        <textarea type="text" class="form-control" placeholder="Country" name='economy' > <?php echo $project[0]['economy']; ?></textarea> 
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Objetivo</label>
-                        <textarea type="text" class="form-control" placeholder="Country" name='objective' required=""> </textarea> 
+                        <textarea type="text" class="form-control" placeholder="Country" name='objective' > <?php echo $project[0]['objective']; ?></textarea> 
                       </div>
                     </div>
                   </div>
@@ -189,11 +203,13 @@ global $version;
                       <div class="form-group">
                         <label>Selecciona una o varias imágenes secundarias</label> 
                         <i class="now-ui-icons arrows-1_cloud-upload-94"></i>
-                        <input class="form-control" type="file" name="files[]" id="files" multiple required=""/>
+                        <input class="form-control" type="file" name="files[]" id="files" multiple />
                         <div class="min_img">
-                          
+                          <?php echo $div_img; ?>
                         </div>
-                        <input type="text" name="order" hidden="true">
+                        <input type="text" name="order" hidden="true" value="<?php echo htmlspecialchars($order); ?>">
+                        <input type="text" name="id" hidden="true" value="<?php echo $_GET['id']; ?>">
+                        <input type="text" name="ptxt_id" hidden="true" value="<?php echo $project[0]['ptxt_id']; ?>">
                       </div>
                     </div>
                   </div>

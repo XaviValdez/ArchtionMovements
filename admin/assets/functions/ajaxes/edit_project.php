@@ -2,12 +2,12 @@
 require_once("../../config/config.php");
 require_once("../functions.php");
 $response=array();
-$project_by_name=getProyects(null,null,$_POST['name']);
-if(empty($project_by_name)){
+$project_by_id=getProyects(null,$_POST['id']);
+if(!empty($project_by_id)){
 	//means project is new
-	$project_id=insertProject($_POST['name'], $_POST['user_id'], $_POST['clasification'], $_POST['project_type']);
+	$project_id=updateProject($_POST['id'],$_POST['name'], $_POST['user_id'], $_POST['clasification'], $_POST['project_type']);
 	if(!empty($project_id)){
-		insertProjectTxn($_POST['description'],$_POST['location'], $_POST['social'], $_POST['environment'], $_POST['economy'], $_POST['objective'], $project_id);
+		updateProjectTxn($_POST['ptxt_id'],$_POST['description'],$_POST['location'], $_POST['social'], $_POST['environment'], $_POST['economy'], $_POST['objective'], $project_id);
 		// File upload configuration 
 	    $targetDir = "../../../../../ArchtionMovements/public/img/uploads/"; 
 	    $allowTypes = array('jpg','png','jpeg','gif'); 
@@ -15,6 +15,8 @@ if(empty($project_by_name)){
 	    $statusMsg = $errorMsg = $insertValuesSQL = $errorUpload = $errorUploadType = ''; 
 	    $fileNames = array_filter($_FILES['files']['name']); 
 	    if(!empty($fileNames)){ 
+
+	        updateImagesProject($project_id);
 	    	$order=json_decode($_POST['order'],1);// this give us an array with the order
 	        foreach($_FILES['files']['name'] as $key=>$val){ 
 	            // File upload path 
