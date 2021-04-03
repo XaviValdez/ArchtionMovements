@@ -162,7 +162,8 @@ global $version;
             </div>
           </div>';
           echo $row_active;
-        }else if(!empty($projects_inactives)){
+        }
+         if(!empty($projects_inactives)){
           //get the inactives
           $table_inactive=table_helper_projects($projects_inactives,$table_head);
           $table_inactive.='</tbody>
@@ -182,7 +183,7 @@ global $version;
             </div>
           </div>';
           echo $row_inactive;
-        }else if(!empty($projects_pending)){
+        } if(!empty($projects_pending)){
           //get the pendings
           $table_pending=table_helper_projects($projects_pending,$table_head);
           $table_pending.='</tbody>
@@ -202,7 +203,7 @@ global $version;
             </div>
           </div>';
           echo $row_pending;
-        }else if(!empty($projects_rejected)){
+        } if(!empty($projects_rejected)){
           //get the rejected
           $table_rejected=table_helper_projects($projects_rejected,$table_head);
           $table_rejected.='</tbody>

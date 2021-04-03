@@ -585,4 +585,43 @@ function deleteAcercade(){
     $query = $DBH->prepare($q);
     $query->execute();
 }
+function table_helper_events($array,$table_head){
+    $table='';
+    foreach ($array as $value) {
+        $type=$value["type"]=='1'?"online":"presencial";
+        $table.= $table_head.'
+              <tr>
+                <td>
+                  '.$value["id"].'
+                </td>
+                <td>
+                  '.$value["name"].'
+                </td>
+                <td>
+                  '.$value["description"].'
+                </td>
+                <td>
+                  '.$value["location"].'
+                </td>
+                <td>
+                  '.$type.'
+                </td>
+                <td>
+                  '.$value["speaker_name"].'
+                </td>
+                <td>
+                  '.$value["url"].'
+                </td>
+                <td>
+                  '.$value["date"].'
+                </td>
+                <td>
+                  '.$value["status"].'
+                </td>
+                
+              </tr>
+            ';
+    }
+    return $table;
+}
 ?>

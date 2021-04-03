@@ -13,7 +13,7 @@ $response['error']="";
 	//TODO pass the query to a function for future usages across the web
 	$queryStr="SELECT url, u.id as u_id, p.id as p_id, ptxt.id as ptxt_id, name,ptxt.description, ptxt.social, ptxt.environment, ptxt.economy, ptxt.objective,ptxt.location,p.project_type,p.clasification, p.crated_date, p.`status`                    FROM `projects` p 
                                 STRAIGHT_JOIN projects_text_fields ptxt ON p.id=ptxt.project_id
-                                STRAIGHT_JOIN (select url,project_id from project_images group by project_id) pi ON pi.project_id=p.id
+                                STRAIGHT_JOIN (select url,project_id from project_images where status=1 group by project_id) pi ON pi.project_id=p.id
                                 STRAIGHT_JOIN users_arch u ON u.id=p.user_id where p.status = 1 ";//hack to build the search
     
     

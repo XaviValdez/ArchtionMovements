@@ -161,6 +161,18 @@ list($div_img,$order)=getImages("projects",$_GET['id']);
                         </select>
                       </div>
                     </div>
+                    <div class="col-md-4 pr-1">
+                      <div class="form-group">
+                        <label>Clasificacion</label>
+                        <select name='status' class="form-control">
+                          <option value="1" <?php echo $project[0]['status']=="1"?"selected":""; ?>>Activo</option>
+                          <option value="2" <?php echo $project[0]['status']=="2"?"selected":""; ?>>Pendiente</option>
+                          <option value="3" <?php echo $project[0]['status']=="3"?"selected":""; ?>>Rechazado</option>
+                          <option value="4" <?php echo $project[0]['status']=="4"?"selected":""; ?>>Inactivo</option>
+                         
+                        </select>
+                      </div>
+                    </div>
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Descripción</label>

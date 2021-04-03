@@ -108,25 +108,59 @@ global $version;
         $eventos_inactives=getEventos(4);
         $eventos_pending=getEventos(2);
         $eventos_rejected=getEventos(3);
-      ?>
-
-      <?php 
-      if(!empty($eventos_actives)) {
-        foreach ($eventos_actives as &$evento) {
-          echo '
-          <div class="row">
+        $table_head='<table class="table">
+          <thead class=" text-primary">
+            <th>
+              ID
+            </th>
+            <th>
+              Nombre
+            </th>
+            <th>
+              Descripción
+            </th>
+            <th>
+              Location
+            </th>
+            <th>
+              Tipo
+            </th>
+            <th>
+              Speaker
+            </th>
+            <th>
+              Url
+            </th>
+            <th>
+              Fecha
+            </th>
+            <th>
+              Estado
+            </th>
+          </thead>
+          <tbody>';
+      
+      if(!empty($eventos_actives)){
+          //get the actives
+          $table_actives=table_helper_events($eventos_actives,$table_head);
+          $table_actives.='</tbody>
+                  </table>';
+          $row_active='<div class="row">
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header">
-                  <h4 class="card-title">'.$evento["name"].'</h4>
+                  <h4 class="card-title"> Eventos activos</h4>
                 </div>
-                
+                <div class="card-body">
+                  <div class="table-responsive">
+                     '.$table_actives.'
+                  </div>
+                </div>
               </div>
             </div>
-          </div>   
-          ';
+          </div>';
+          echo $row_active;
         }
-      }
       ?>
         <div class="row">
           <div class="col-md-12">
