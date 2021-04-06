@@ -16,19 +16,19 @@
 	if(!isset($_SESSION['user_id'])) { // Not logged
 		echo '<div class="col-6 bg-light">
 		<div class="row">
-			<h3 class="mt-4 mb-3">Compartir tus propuestas</h3>
+			<h3 class="mt-4 mb-3">Compartir:</h3>
 		</div>
 		<div class="row text-center mb-5">
 			<div class="m-3 bg-green p-3 text-white cut hover_animation block" style="cursor: pointer;" data-toggle="modal" data-target="#ModalLogin">
 				<p class="text-center"><img class="img-fluid mt-5 local_icon" src="../img/icons/1.png"></p>
 
-				<h4><b>Compartir Proyectos y Obras</b></h4>
+				<h4><b>Proyectos y Obras</b></h4>
 			</div>
 
 			<div class="m-3 bg-orange p-3 text-white cut hover_animation block" style="cursor: pointer;" data-toggle="modal" data-target="#ModalLogin">
 				<p class="text-center"><img class="img-fluid mt-5 local_icon" src="../img/icons/3.png"></p>
 
-				<h4 class="mt-3"><b>Compartir Investigación</b></h4>
+				<h4 class="mt-3"><b>Investigación</b></h4>
 			</div>
 		</div>
 	</div>';
@@ -36,19 +36,19 @@
 	else {
 		echo '<div class="col-6 bg-light">
 		<div class="row">
-			<h3 class="mt-4 mb-3">Compartir tus propuestas</h3>
+			<h3 class="mt-4 mb-3">Compartir:</h3>
 		</div>
 		<div class="row text-center mb-5">
 			<div class="m-3 bg-green p-3 text-white cut hover_animation block" style="cursor: pointer;" onclick="location.href='."'enviar_proyecto'".';">
 				<p class="text-center"><img class="img-fluid mt-5 local_icon" src="../img/icons/1.png"></p>
 
-				<h4><b>Compartir Proyectos y Obras</b></h4>
+				<h4><b>Proyectos y Obras</b></h4>
 			</div>
 
 			<div class="m-3 bg-orange p-3 text-white cut hover_animation block" style="cursor: pointer;" onclick="location.href='."'enviar_investigacion'".';">
 				<p class="text-center"><img class="img-fluid mt-5 local_icon" src="../img/icons/3.png"></p>
 
-				<h4 class="mt-3"><b>Compartir Investigación</b></h4>
+				<h4 class="mt-3"><b>Investigación</b></h4>
 			</div>
 		</div>
 	</div>';
@@ -58,7 +58,7 @@
 	?>
 		<div class="col-6 bg-light">
 			<div class="row">
-				<h3 class="mt-4 mb-3">Eventos y red de trabajo</h3>
+				<h3 class="mt-4 mb-3">Otros:</h3>
 			</div>
 			<div class="row text-center mb-5">
 				<div class="m-3 bg-red p-3 text-white cut hover_animation block" style="cursor: pointer;" onclick="location.href='eventos';">
@@ -70,7 +70,7 @@
 				<div class="m-3 bg-blue p-3 text-white cut hover_animation block" style="cursor: pointer;" onclick="location.href='."'red_trabajo'".';">
 					<p class="text-center"><img class="img-fluid mt-5 local_icon" src="../img/icons/2.png"></p>
 
-					<h4><b>Subir Perfil para Red de Trabajo</b></h4>
+					<h4><b>Perfil para Red de Trabajo</b></h4>
 				</div>
 			</div>
 		</div>

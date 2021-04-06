@@ -189,11 +189,24 @@ global $version;
                       <div class="form-group">
                         <label>Selecciona una o varias imágenes secundarias</label> 
                         <i class="now-ui-icons arrows-1_cloud-upload-94"></i>
-                        <input class="form-control" type="file" name="files[]" id="files" multiple required=""/>
-                        <div class="min_img">
-                          
-                        </div>
+                        <input class="form-control" type="file" name="files[]" id="files" multiple required=""></input>
+                        
+                        <!-- Show current images -->
+                        <style>
+                          .select-portada {
+                            position: relative;
+                            z-index: 999;
+                          }
+                          .select-portada:hover {
+                            opacity: 0.5;
+                          }
+                        </style>
+                        <div class="min_img row">  </div>
+                        
+                        <!-- ORDER INPUT -->
                         <input type="text" name="order" hidden="true">
+
+
                       </div>
                     </div>
                   </div>

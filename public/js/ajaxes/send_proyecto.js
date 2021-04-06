@@ -37,7 +37,7 @@ function readURL(input) {
 		    reader.onload = function(e) {
 		    
 
-		      $('.min_img').append("<div class='order_picker' data-name='"+e.target.fileName[0]+"' data-order='"+e.target.fileName[1]+"'><img style='max-height:200px;'  src='"+e.target.result+"' alt='' /></div>");
+		      $('.min_img').append("<div class='col-3'><div class='order_picker' data-name='"+e.target.fileName[0]+"' data-order='"+e.target.fileName[1]+"'><img style='max-height:200px;'  src='"+e.target.result+"' alt='' /></div></div>");
 		    	$('input[name="order"]').val(JSON.stringify(order));
 		    }
 		    

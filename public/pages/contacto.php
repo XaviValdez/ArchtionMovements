@@ -4,13 +4,13 @@
 <link rel="stylesheet" type="text/css" href="../css/contacto.css">
 
 <div class="container mt-3">
-	<h2 class="display-5 font-weight-bold mt-5">Contáctanos</h1>
+	<h2 class="font-weight-bold mt-5">Contáctanos</h1>
 	<div class="row mt-3">
 		<div class="col-sm-7 mr-5 cut">
 			<div class="row">
 				<div class="col-sm-7 bg-light adjust-mobile">
 					<br>
-					<h2 class="display-5 font-weight-bold pl-3 mt-5">Escríbenos</h2>
+					<h2 class="font-weight-bold pl-3 mt-5">Escríbenos</h2>
 					<form id="contact_form" class="m-3 mb-5">
 					<div class="form-group">
 						<label for="name">Nombre</label>
@@ -29,7 +29,7 @@
 				</div>
 				<div class="col-sm-5 bg-blue adjust-mobile">
 					<br>
-					<h2 class="display-5 font-weight-bold pl-3 mt-5">Síguenos</h2>
+					<h2 class="font-weight-bold pl-3 mt-5">Síguenos</h2>
 					<div class="row p-3">
 						<div class="col-sm text-right">
 							<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-instagram mt-3" viewBox="0 0 16 16">

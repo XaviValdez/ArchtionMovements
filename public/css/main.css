@@ -315,6 +315,16 @@ a:hover { color: gray;}
 	margin: 0;
 }
 
+/* Default image for profile */
+.profile {
+	width: 100px;
+}
+
+.text-bold {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold !important;
+}
+
 
 
 /* Container width SIZE*/

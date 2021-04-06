@@ -6,11 +6,11 @@
 
 <main class="container mb-5">
 	<div class="row mt-5">
-		<form class="col-12" id="enviar_proyecto" enctype="multipart/form-data">
-		<div class="col-6 bg-light pl-5 pt-5">
-			<div class="mb-3">
-				<h1 class="display-5 font-weight-bold">Compartir proyecto</h1>
-				
+		
+			<div class="col-6 bg-light pl-5 pt-5">
+				<div class="mb-3">
+					<form class="col-12" id="enviar_proyecto" enctype="multipart/form-data">
+					<h1 class="font-weight-bold">Compartir proyecto</h1>
 					<div class="form-group">
 						<label>Nombre del proyecto</label>
 						<input type="text" class="form-control" name="name" placeholder="Nombre del proyecto*">
@@ -27,17 +27,17 @@
 					</div>
 
 					<div class="form-group">
-						<label>Social</label>
+						<label>Impacto social</label>
 						<textarea class="form-control" name="social" rows="3" placeholder="Social*"></textarea>
 					</div>
 					
 					<div class="form-group">
-						<label>Ambiental</label>
+						<label>Impacto ambiental</label>
 						<textarea class="form-control" name="ambiental" rows="3" placeholder="Ambiental*"></textarea>
 					</div>
 
 					<div class="form-group">
-						<label>Económico</label>
+						<label>Impacto económico</label>
 						<textarea class="form-control" name="economico" rows="3" placeholder="Económico*"></textarea>
 					</div>
 
@@ -45,33 +45,46 @@
 						<label>Objetivo</label>
 						<textarea class="form-control" name="objectivo" rows="10" placeholder="Objetivo*"></textarea>
 					</div>
+					<br><br>
+					<!-- FILE UPLOAD -->
+					<div class="col-12">
+						<div class="row">
+							<div class="bg-light" id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
+								<div id="drag_upload_file" class="p-3 text-center">
+									<p>Selecciona las fotos de tu proyecto</p>
+									<input  type="file" name="files[]" id="files" multiple required=""/>
+								</div>
 
+								<div class="row">
+									<div class="min_img row p-5"></div>
+									<input type="text" name="order" hidden="true">
+								</div>
+								
+							</div>
+						</div>
+					</div>
+
+					<br><br>
 					
 					<button type="submit" class="btn btn-dark fixed-btn-size">Enviar</button><br>
-					<label class="text-center mt-3">Al registrarme acepto y estoy de acuerdo con los <a href="terminosycondiciones">términos y condiciones</a></label>
-
-			</div>
-		</div>
-
-		<!-- FILE UPLOAD -->
-		 <div class="col-6">
-		 	<div class="row">
-			<div class="bg-light" id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
-				<div id="drag_upload_file" class="p-3 text-center">
-					<p>Arrastra las fotos de tu proyecto</p>
-					
-					<input  type="file" name="files[]" id="files" multiple required=""/>
+					<label class="text-center mt-3 mb-5">Al registrarme acepto y estoy de acuerdo con los <a href="terminosycondiciones">términos y condiciones</a></label>
+					</form>
 				</div>
 			</div>
+		
+		<div class="col-md-6 pl-5">
+
+			<div class="row bg-light p-5">
+				<h3 class="font-weight-bold">
+				Encuentra nuestras recomendaciones para enviar material 
+				<a href="#" class="">aquí</a>
+				</h3>
+				
 			</div>
-			<div class="row">
-				<div class="min_img">
-                          
-                </div>
-                <input type="text" name="order" hidden="true">
-			</div>
+	
 		</div>
-		</form>
+		
+		
 	
 	
 	

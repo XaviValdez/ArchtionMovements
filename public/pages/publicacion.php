@@ -88,7 +88,7 @@
 	$half2 = substr($project["objective"], $middle);  // "Jumped Over The Lazy / Dog"
 
 	?>
-	<div class="row">
+	<div class="row mb-5">
 		<div class="col-6 pr-5">
 			<p class="lead text-justify"><?php echo $half1 ?></p>
 		</div>
@@ -96,16 +96,20 @@
 			<p class="lead text-justify"><?php echo $half2 ?></p>
 		</div>
 	</div>
-
+	<div class="row justify-content-center">
+		<div class="col-2">
+			<img class="w-100" src="../img/icons/premio-pink.png">
+		</div>
+	</div>
 	<?php 
 		if(!isset($_SESSION['user_id'])) { // Not logged
-			echo '<p class="text-center"><img class="img-fluid rounded-circle mt-5" src="https://via.placeholder.com/100x100"></p>
+			echo '<p class="text-center"><img class="img-fluid rounded-circle mt-5 profile" src="../img/icons/default.jpg"></p>
 			<h3 class="text-center"><b>'. $project["name"] .'</b></h3>
 			<p class="text-center lead" style="letter-spacing: 3px;">'. $author["first_name"]. " " . $author["last_name"] .'</p>
-			<br> <p class="text-center"><a href="#" data-toggle="modal" data-target="#ModalLogin2" class="btn bg-pink fixed-btn-size"> Contactar </a></p>';
+			<br> <p class="text-center"><a href="#" data-toggle="modal" data-target="#ModalLogin2" class="btn bg-green fixed-btn-size"> Contactar </a></p>';
 		}
 		else {
-			echo '<p class="text-center"><img class="img-fluid rounded-circle mt-5" src="https://via.placeholder.com/100x100"></p>
+			echo '<p class="text-center"><img class="img-fluid rounded-circle mt-5 profile" src="../img/icons/default.jpg"></p>
 			<h3 class="text-center"><b>'. $project["name"] .'</b></h3>
 			<p class="text-center lead" style="letter-spacing: 3px;">'. $author["first_name"]. " " . $author["last_name"] .'</p>
 			<br> <p class="text-center lead">Contacto:<br>'. $author["email"] .'</p>';

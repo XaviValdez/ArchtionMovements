@@ -94,63 +94,70 @@ function Cita(id) {
 			<div class="bg-notsolight p-4">
 				<h4 class="mb-3">Filtros</h4>
 				
-				<h5><b>Tipo de publicación</b></h5><hr>
+				<p><b>Tipo de publicación</b></p><hr>
 				
 				<div class="form-check">
 				<input class="form-check-input" type="checkbox" value="" id="todos"/>
 				<label class="form-check-label" for="todos">
-					<h5>Todos</h5>
+					<p>Todos</p>
 				</label>
 				</div>
 
 				<div class="form-check">
 				<input class="form-check-input" type="checkbox" value="" id="articulo"/>
 				<label class="form-check-label" for="articulo">
-					<h5>Artículo</h5>
+					<p>Artículo</p>
 				</label>
 				</div>
 
 				<div class="form-check">
 				<input class="form-check-input" type="checkbox" value="" id="libro"/>
 				<label class="form-check-label" for="libro">
-					<h5>Libro</h5>
+					<p>Libro</p>
 				</label>
 				</div>
 
 				<div class="form-check">
 				<input class="form-check-input" type="checkbox" value="" id="conferencia"/>
 				<label class="form-check-label" for="conferencia">
-					<h5>Paper de conferencia</h5>
+					<p>Ensayo</p>
+				</label>
+				</div>
+
+				<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="conferencia"/>
+				<label class="form-check-label" for="conferencia">
+					<p>Resumen</p>
 				</label>
 				</div>
 
 				<div class="form-check">
 				<input class="form-check-input" type="checkbox" value="" id="otros"/>
 				<label class="form-check-label" for="otros">
-					<h5>Otros</h5>
+					<p>Otros</p>
 				</label>
 				</div>
 
-				<h5 class="mt-3"><b>Idioma</b></h5><hr>
+				<p class="mt-3"><b>Idioma</b></p><hr>
 
 				<div class="form-check">
 				<input class="form-check-input" type="checkbox" value="" id="todosIdioma"/>
 				<label class="form-check-label" for="todosIdioma">
-					<h5>Todos</h5>
+					<p>Todos</p>
 				</label>
 				</div>
 
 				<div class="form-check">
 				<input class="form-check-input" type="checkbox" value="" id="espanol"/>
 				<label class="form-check-label" for="espanol">
-					<h5>Español</h5>
+					<p>Español</p>
 				</label>
 				</div>
 
 				<div class="form-check">
 				<input class="form-check-input" type="checkbox" value="" id="ingles"/>
 				<label class="form-check-label" for="ingles">
-					<h5>Inglés</h5>
+					<p>Inglés</p>
 				</label>
 				</div>
 
@@ -167,12 +174,12 @@ function Cita(id) {
 							<div class="col-sm-3">
 								<img class="img-fluid" src="//placehold.it/300x400">
 							</div>
-							<div class="col-sm-6">
+							<div class="col-sm-7">
 								<h4 class="card-title text-green"><b>'. $investigacion["name"] .'</b></h4>
 								<p class="card-text mb-0 mt-4"><b>'. $investigacion["author"] .'</b><br></p>
 								<p class="card-text text-muted"><b> Publicado el: '. $investigacion["published_date"] .'</b><br></p>
 							</div>
-							<div class="col-sm-3 text-center">
+							<div class="col-sm-2 text-center">
 								<div class="row mb-4">
 								<a href="registro" data-toggle="modal" data-target="#ModalLogin"'. $investigacion["url"] .'" class="btn btn-block btn-outline-dark">Leer</a>
 								</div>
@@ -180,17 +187,17 @@ function Cita(id) {
 								<a href="preview.php'. "?id=" . $investigacion["r_id"] .'" class="btn btn-block btn-outline-success">Previsualizar</a>
 								</div>
 								<div class="row justify-content-center">
-									<div class="col-3">
+									<div class="col-4">
 									<a href="registro" data-toggle="modal" data-target="#ModalLogin" data-toggle="tooltip" title="Contactar al autor">
 										<img src="../img/icons/contacto2.png" width="32px">
 									</a>
 									</div>
-									<div class="col-3">
+									<div class="col-4">
 									<a href="registro" data-toggle="modal" data-target="#ModalLogin" data-toggle="tooltip" title="Descargar">
 										<img src="../img/icons/download2.png" width="32px">
 									</a>
 									</div>
-									<div class="col-3">
+									<div class="col-4">
 									<a href="registro" data-toggle="modal" data-target="#ModalLogin" data-toggle="tooltip" title="Citar">
 										<img src="../img/icons/cita2.png" width="32px">
 									</a>
@@ -207,12 +214,12 @@ function Cita(id) {
 							<div class="col-sm-3">
 								<img class="img-fluid" src="//placehold.it/300x400">
 							</div>
-							<div class="col-sm-6">
+							<div class="col-sm-7">
 								<h4 class="card-title text-green">'. $investigacion["name"] .'</h4>
 								<p class="card-text"><b>'. $investigacion["author"] .'</b><br></p>
 								<p class="card-text text-muted"><b> Publicado el: '. substr($investigacion["published_date"], 0, -8) .'</b><br></p>
 							</div>
-							<div class="col-sm-3 text-center">
+							<div class="col-sm-2 text-center">
 								<div class="row mb-4">
 								<a href="leer.php?id='. $investigacion["r_id"] .'" class="btn btn-block btn-outline-dark">Leer</a>
 								</div>

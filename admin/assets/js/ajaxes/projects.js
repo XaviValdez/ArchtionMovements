@@ -48,12 +48,10 @@ function readURL(input) {
 		    order[i]=input.files[i].name;
 
 		    reader.onload = function(e) {
-		    
-
-		      $('.min_img').append("<div class='order_picker' data-name='"+e.target.fileName[0]+"' data-order='"+e.target.fileName[1]+"'><img style='max-height:200px;'  src='"+e.target.result+"' alt='' /></div>");
-		    	$('input[name="order"]').val(JSON.stringify(order));
+		      	$('.min_img').append("<div class='mb-3 col-3' data-name='"+e.target.fileName[0]+"' data-order='"+e.target.fileName[1]+"'><img class='select-portada' style='width:300px;'  src='"+e.target.result+"' alt='' /></div>");
+		    	$('input[name="order"]').val(JSON.stringify(order)); // Send order back to html form
 		    }
-		    
+
 		    reader.readAsDataURL(input.files[i]); // convert to base64 string
 		}
   	}

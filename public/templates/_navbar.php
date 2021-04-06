@@ -81,10 +81,10 @@
                     <?php $current_url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
                     <?php 
                     if(strpos($current_url, 'acerca_de')) {
-                        echo '<a class="nav-link" href="acerca_de"><u>Acerca de</u></a>';
+                        echo '<a class="nav-link font-weight-bold" href="acerca_de"><u>Acerca de</u></a>';
                     }
                     else {
-                        echo '<a class="nav-link" href="acerca_de">Acerca de</a>';
+                        echo '<a class="nav-link font-weight-bold" href="acerca_de">Acerca de</a>';
                     }
                     ?>
                     
@@ -92,50 +92,50 @@
                 <li class="nav-item m-3 active">
                     <?php 
                     if(strpos($current_url, 'proyectos') || strpos($current_url, 'publicacion')) {
-                        echo '<a class="nav-link" href="proyectos"><u>Proyectos & Obras</u></a>';
+                        echo '<a class="nav-link font-weight-bold" href="proyectos"><u>Proyectos & Obras</u></a>';
                     }
                     else {
-                        echo '<a class="nav-link" href="proyectos">Proyectos & Obras</a>';
+                        echo '<a class="nav-link font-weight-bold" href="proyectos">Proyectos & Obras</a>';
                     }
                     ?>
                 </li>
                 <li class="nav-item m-3 active">
                     <?php 
                     if(strpos($current_url, 'investigacion') || strpos($current_url, 'preview') || strpos($current_url, 'leer')) {
-                        echo '<a class="nav-link" href="investigacion"><u>Investigación</u></a>';
+                        echo '<a class="nav-link font-weight-bold" href="investigacion"><u>Investigación</u></a>';
                     }
                     else {
-                        echo '<a class="nav-link" href="investigacion">Investigación</a>';
+                        echo '<a class="nav-link font-weight-bold" href="investigacion">Investigación</a>';
                     }
                     ?>
                 </li>
                 <li class="nav-item m-3 active">
                     <?php 
                     if(strpos($current_url, 'red') || strpos($current_url, 'profile')) {
-                        echo '<a class="nav-link" href="red_de_trabajo"><u>Red de trabajo</u></a>';
+                        echo '<a class="nav-link font-weight-bold" href="red_de_trabajo"><u>Red de trabajo</u></a>';
                     }
                     else {
-                        echo '<a class="nav-link" href="red_de_trabajo">Red de trabajo</a>';
+                        echo '<a class="nav-link font-weight-bold" href="red_de_trabajo">Red de trabajo</a>';
                     }
                     ?>
                 </li>
                 <li class="nav-item m-3 active">
                     <?php 
                     if(strpos($current_url, 'evento')) {
-                        echo '<a class="nav-link" href="eventos"><u>Eventos</u></a>';
+                        echo '<a class="nav-link font-weight-bold" href="eventos"><u>Eventos</u></a>';
                     }
                     else {
-                        echo '<a class="nav-link" href="eventos">Eventos</a>';
+                        echo '<a class="nav-link font-weight-bold" href="eventos">Eventos</a>';
                     }
                     ?>
                 </li>
                 <li class="nav-item m-3 active">
                     <?php 
                     if(strpos($current_url, 'tienda') || strpos($current_url, 'producto')) {
-                        echo '<a class="nav-link" href="tienda"><u>Tienda</u></a>';
+                        echo '<a class="nav-link font-weight-bold" href="tienda"><u>Tienda</u></a>';
                     }
                     else {
-                        echo '<a class="nav-link" href="tienda">Tienda</a>';
+                        echo '<a class="nav-link font-weight-bold" href="tienda">Tienda</a>';
                     }
                     ?>
                 </li>
