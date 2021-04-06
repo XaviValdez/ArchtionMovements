@@ -281,13 +281,15 @@ function insertImagesProject($id, $filename, $order, $status=1){
         ':status'=>$status
     ));
 }
-function insertProject($name, $user_id, $status=2){
+function insertProject($name, $user_id, $clasification,$project_type, $status=1){
     global $DBH;
-    $q='insert into projects (name,user_id,status) VALUES(:name,:user_id,:status)';
+    $q='insert into projects (name,user_id,status,clasification,project_type) VALUES(:name,:user_id,:status,:clasification,:project_type)';
     $query = $DBH->prepare($q);
     $query->execute(array(
         ':name'=>$name,
         ':user_id'=>$user_id,
+        ':clasification'=>$clasification,
+        ':project_type'=>$project_type,
         ':status'=>$status
     ));
     return $DBH->lastInsertId();

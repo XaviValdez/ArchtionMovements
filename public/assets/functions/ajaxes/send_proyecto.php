@@ -11,7 +11,7 @@ $required_entries = ['name','location','descr','social','ambiental','economico',
 if(verify_entries($_POST,$required_entries)){
 	
 
-	$last_id = insertProject($_POST["name"],$_SESSION['user_id'],2); 
+	$last_id = insertProject($_POST["name"],$_SESSION['user_id'], $_POST['clasification'], $_POST['project_type'],2); 
 	insertProjectTxn($_POST["descr"],$_POST["location"], $_POST["social"], $_POST["ambiental"], $_POST["economico"], $_POST["objectivo"], $last_id);
 // File upload configuration 
 	    $targetDir = "../../../img/uploads/"; 
