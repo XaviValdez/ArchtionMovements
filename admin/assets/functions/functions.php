@@ -47,8 +47,10 @@ function setAdminUser($user_name,$password,$status=1){
 
 function getProyects($status=null,$id=null,$name=null){
     global $DBH;
-    $queryStr="SELECT u.id as u_id, p.id as p_id, ptxt.id as ptxt_id, name,ptxt.description, ptxt.social, ptxt.environment, ptxt.economy, ptxt.objective,ptxt.location,p.project_type,p.clasification, p.crated_date, p.`status`                    FROM `projects` p 
+    $queryStr="SELECT pt.description as p_type, pc.description as clasification_d,u.id as u_id, p.id as p_id, ptxt.id as ptxt_id, name,ptxt.description, ptxt.social, ptxt.environment, ptxt.economy, ptxt.objective,ptxt.location,p.project_type,p.clasification, p.crated_date, p.`status`                    FROM `projects` p 
                                 STRAIGHT_JOIN projects_text_fields ptxt ON p.id=ptxt.project_id
+                                STRAIGHT_JOIN proyect_type pt ON pt.id=p.project_type
+                                STRAIGHT_JOIN project_clasification pc ON pc.id=p.clasification
                                 STRAIGHT_JOIN users_arch u ON u.id=p.user_id ";
     if(!empty($status)){
         //get them all
@@ -186,6 +188,12 @@ function table_helper_projects($array,$table_head){
                 </td>
                 <td>
                   '.$value["objective"].'
+                </td>
+                <td>
+                  '.$value["p_type"].'
+                </td>
+                <td>
+                  '.$value["clasification_d"].'
                 </td>
                 <td>
                   '.$value["crated_date"].'

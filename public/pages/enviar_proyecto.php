@@ -45,6 +45,27 @@
 						<label>Objetivo</label>
 						<textarea class="form-control" name="objectivo" rows="10" placeholder="Objetivo*"></textarea>
 					</div>
+					<div class="form-group">
+                        <label>Tipo</label>
+                        <select name='project_type' class="form-control">
+                          <?php
+                          $p_type=getProyectsTypes();//getting active users
+                          foreach ($p_type as $value) {
+                            echo '<option value="'.$value['id'].'">'.$value['description'].'</option>';
+                          }
+                          ?>
+                        </select>
+                      </div>
+					 <label>Clasificacion</label>
+                        <select name='clasification' class="form-control">
+                          <?php
+                          $p_clasification=getProyectsClasification();//getting active users
+                          foreach ($p_clasification as $value) {
+                            echo '<option value="'.$value['id'].'">'.$value['description'].'</option>';
+                          }
+                          ?>
+                        </select>
+                      </div>
 					<br><br>
 					<!-- FILE UPLOAD -->
 					<div class="col-12">

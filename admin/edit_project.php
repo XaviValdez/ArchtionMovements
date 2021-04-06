@@ -163,7 +163,7 @@ list($div_img,$order)=getImages("projects",$_GET['id']);
                     </div>
                     <div class="col-md-4 pr-1">
                       <div class="form-group">
-                        <label>Clasificacion</label>
+                        <label>Status</label>
                         <select name='status' class="form-control">
                           <option value="1" <?php echo $project[0]['status']=="1"?"selected":""; ?>>Activo</option>
                           <option value="2" <?php echo $project[0]['status']=="2"?"selected":""; ?>>Pendiente</option>

@@ -135,6 +135,12 @@ global $version;
               Objetivo
             </th>
             <th>
+              Tipo
+            </th>
+            <th>
+              Clasificacion
+            </th>
+            <th>
               Creado
             </th>
             <th>
